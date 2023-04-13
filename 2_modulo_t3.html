@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <title> Sistemas Operacionais </title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">  
+        <meta name="author" content="Daniel">
+        <meta name="description" content="descrição bacanuda">
+        <meta name="keywords" content="html5, tecnologia">
+
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+        <!-- Fonts -->
+        <link href='http://fonts.googleapis.com/css?family=Sintony:400,700' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+        
+      <link rel="stylesheet" href="style/normalize.css">
+        <link rel="stylesheet" href="style/main.css">
+      
+    </head>
+    <body class="no-js">
+        
+        <header class="header">
+          <a href="index.html" class="logo-text">unicesumar</a>
+          
+          <button style="display: none;" class="header__btnMenu"> <i class="fas fa-bars fa-2x"></i> <span class="sr-only">Menu</span></button>
+          
+          <nav class="header__nav">
+            <ul>
+              <li><a href="1_modulo_t1.html">1° Módulo</a></li>
+              <li><a href="2_modulo_t1.html">2° Módulo</a></li>
+              <li><a href="3_modulo_t1.html">3° Módulo</a></li>
+              <li><a href="5_modulo_t1.html">4° Módulo</a></li>
+              <li><a href="6_modulo_t1.html">5° Módulo</a></li>
+              <li><a href="index.html">home</a></li>
+            </ul>
+          </nav>
+        </header>
+        
+        <section class="hero">            
+          <h1 class="hero__title">unidade II: Processos
+          </h1>
+          <p class="hero__text">Tópico III </p>
+          <a href="img/Slides - Aulas Conceituais/Conceitual I.pdf" target="_blank" class="hero__btn">Slids aulas conceitual</a>                      
+        </section>
+        
+
+        <div class="container">
+        
+          
+          <article>
+           
+              <h1>Objetivos de Aprendizagem </h1>
+              <ol>
+                <li>Apresentar definições de processos e as técnicas que o sistema
+                  operacional utiliza para garantir rapidez e confiabilidade no que foi
+                  solicitado pelo usuário.</li>
+                <li>AIdentificar as situações de possíveis conflitos entre processos e como
+                  o sistema operacional trabalha com estes impasses.</li>
+              </ol>
+              <a href="2_modulo_t1.html" class="button button-primary">Tópico 1</a>
+              <a href="2_modulo_t2.html" class="button button-primary">Tópico 2</a>
+              <a href="2_modulo_t3.html" class="button button-primary">Tópico 3</a>
+              <a href="2_modulo_t4.html" class="button button-primary">Tópico 4</a>
+                
+                <h3>INTRODUÇÃO</h3>
+                <h1 class="hero__title">Escalonamento de processos</h1>
+                <section id="parteVideo">
+                  <video class="video-screen" width="100%" height="50%" controls="controls" src="img/aula7.mp4" ></video>
+                </section> 
+                <hr>
+                <a href="#parteVideo"><button onclick="tempo(22)"  class="button-secundary">Ir para trexo da aula</button>  
+                  <img src="img/imagens19.png" alt=""  onclick="tempo(22)" >
+                  <button class="hero__btn" onclick="tempo(12)">pular intro</button>
+                </a>
+                <hr>
+                <h2>ESCALONAMENTO DE PROCESSOS</h2>
+                <p>O escalonamento consiste em utilizar algoritmos para decidir qual processo deve
+                  ser utilizado. Tanenbaum (2010) define que em quatro determinadas situações
+                  deve haver escalonamento. São elas:</p>
+                <ul>
+                  <li>Quando um processo é encerrado.</li>
+                  <li>Quando há um novo processo e existe a necessidade de tomar a decisão
+                    de executar o processo pai ou o processo filho.</li>
+                  <li>Quando um processo é bloqueado por um dispositivo de entrada/saída.</li>
+                  <li>Quando ocorre uma interrupção de entrada/saída.</li>
+                </ul>
+                <p>Vamos exemplificar. Na primeira situação, um programa estava sendo executado
+                  e o usuário clicou no X no canto superior direito (caso o sistema operacional
+                  seja Windows). Com esta ação o processo é encerrado e o sistema operacional não tem mais que se preocupar com este, podendo assim escalonar e permitir
+                  que outros programas sejam processados.</p>
+                <p>Na segunda situação podemos imaginar que um usuário clicou duas vezes em
+                  um programa e este entrou em execução (iniciou um novo processo). Mas este
+                  processo precisa primeiro fazer uma consulta à base de dados para uma atualização para depois permitir que o usuário acesse suas funcionalidades. Compete
+                  ao escalonamento decidir qual processo terá prioridade, o de consultar a base
+                  de dados buscando atualizações ou o processo de iniciar o programa e apresentar as funcionalidades.</p>
+                <p>Na terceira situação, imagine um usuário gravando um CD-R. O escalonamento poderá bloquear alguns processos (incluindo outros dispositivos de
+                  entrada e saída) até que este processo de gravação chegue ao fim.</p>
+                <p>Na quarta situação, imagine um usuário digitando um texto e logo em
+                  seguida ele clica no botão IMPRIMIR. O escalonamento deve priorizar o processo de envio de solicitação de uso da impressora para depois voltar a permitir
+                  a inserção de texto. Logo que a impressão é finalizada, a impressora (que é um
+                  dispositivo de entrada e saída) emite uma interrupção informando a conclusão.
+                  O escalonamento para o processo atual, identifica a interrupção e a direciona
+                  para o processo correspondente.</p>
+                <p>O sistema operacional possuiu um conjunto grande de algoritmos de escalonamento que podem ser utilizados. Eles são divididos em:</p>
+                <ul>
+                  <li><b>Algoritmos de escalonamento preemptivo:</b> o processo é executado por
+                    um tempo máximo fixado.</li>
+                  <li><b>Algoritmos de escalonamento preemptivo:</b> O processo é executado até que seja bloqueado.</li>
+                </ul>
+                <P>Abaixo ieremos estudar alguns destes algoritimos. </P>
+                  <hr>
+                <a href="#parteVideo"><button onclick="tempo(130)"  class="button-secundary">Ir para trexo da aula</button>  
+                  <img src="img/u2_t3_1.png" alt=""  onclick="tempo(130)" >
+                </a>
+                <hr>
+                <a href="#parteVideo"><button onclick="tempo(269)"  class="button-secundary">Ir para trexo da aula</button>  
+                  <img src="img/u2_t3_2.png" alt=""  onclick="tempo(269)" >
+                </a>
+                <hr>
+                <a href="#parteVideo"><button onclick="tempo(295)"  class="button-secundary">Ir para trexo da aula</button>  
+                  <img src="img/u2_t3_3.png" alt=""  onclick="tempo(295)" >
+                </a>
+ 
+                <a href="#parteVideo"><button onclick="tempo(356)"  class="button-secundary">Ir para trexo da aula</button>  
+                  <img src="img/u2_t3_4.png" alt=""  onclick="tempo(356)" >
+                </a>
+                <hr>
+                <h2>PRIMEIRO A CHEGAR, PRIMEIRO A SER SERVIDO</h2>
+                <p>É o mais simples dos algoritmos de escalonamento. Também chamado de FCFS
+                  (first come, first served). Neste algoritmo, o processo que solicitar a CPU por primeiro é o que vai usá-la. Quando o processo é finalizado, o próximo processo
+                  da fila será escalonado para o processamento. Este algoritmo é muito comum
+                  em sistemas operacionais de computadores de grande porte com processamento
+                  em lote (batch jobs).</p>
+                <p>Uma desvantagem deste algoritmo é quando na fila existem dois processos de tamanhos distintos e o maior deles é processado por primeiro. O
+                  segundo processo ficará aguardando um bom tempo até que o primeiro processo seja finalizado. Com isto, o usuário que solicitou o segundo processo
+                  terá que ficar aguardando.</p>
+               
+            <hr>
+            <a href="#parteVideo"><button onclick="tempo(370)"  class="button-secundary">Ir para trexo da aula</button>  
+              <img src="img/u2_t3_5.png" alt=""  onclick="tempo(370)" >
+            </a>
+          <hr>
+          <h2>TAREFA MAIS CURTA PRIMEIRO</h2>
+          <p>Conhecido como algoritmo SJF (shortest job first). Quando existem várias tarefas igualmente importantes à espera de uso da CPU, o escalonador decide por
+            executar a tarefa mais curta primeiro. </p>
+          <p>Este algoritmo também é comum em sistemas operacionais de grande porte
+            (batch jobs), mas também pode ser utilizado em sistemas operacionais multitarefas (como os de computadores pessoais). A restrição desde algoritmo é que todas
+            as tarefas estejam simultaneamente disponíveis para serem usadas pela CPU.</p>
+          <hr>
+          <a href="#parteVideo"><button onclick="tempo(407)"  class="button-secundary">Ir para trexo da aula</button>  
+            <img src="img/u2_t3_6.png" alt=""  onclick="tempo(407)" >
+          </a>
+        <hr>
+        <h2>PRÓXIMO DE MENOR TEMPO RESTANTE</h2>
+        <p>É muito semelhante à tarefa mais curta primeiro, mas em uma versão preemptiva (envolvendo tempo máximo fixado). Neste algoritmo, o tempo de execução
+          de cada processo deve ser previamente conhecido e o escalonador irá decidir
+          pelo que levará menos tempo para ser finalizado.</p>
+        
+        <hr>
+        <a href="#parteVideo"><button onclick="tempo(448)"  class="button-secundary">Ir para trexo da aula</button>  
+          <img src="img/u2_t3_7.png" alt=""  onclick="tempo(448)" >
+        </a>
+      <hr>
+      <h2>CHAVEAMENTO CIRCULAR (ROUND-ROBIN)</h2>
+      <p>Este algoritmo é semelhante ao FCFS, mas com a adição de preempção para
+        permitir que o sistema alterne entre os processos não gerando um tempo de
+        espera excessivo para o usuário. Em cada processo é atribuída uma unidade
+        de tempo denominada quantum, que representará o tempo que o processo
+        terá para o processamento. </p>
+      <p>Quando é chegado ao final do quantum, a CPU é chaveada para outro processo. Caso o processo não tenha chegado ao seu fim, o mesmo ficará com estado
+        bloqueado e voltará a ser processado quando chegar a sua vez novamente e ter
+        decorrido o quantum dos demais processos.</p>
+      <p>Com esta técnica os processos na fila são atendidos de pouco em pouco.
+        Como as atuais CPUs são muito rápidas, o usuário tem a falsa sensação que múltiplas tarefas ocorrem ao mesmo tempo.</p>
+      <hr>
+      <a href="#parteVideo"><button onclick="tempo(482)"  class="button-secundary">Ir para trexo da aula</button>  
+        <img src="img/u2_t3_8.png" alt=""  onclick="tempo(482)" >
+      </a>
+    <hr>
+    <h2>ESCALONAMENTO POR PRIORIDADE</h2>
+    <p>O chaveamento circular trata todos os processos de forma igual, mas em algumas situações alguns processos são mais importantes que outros e obedecendo estes critérios de prioridades, o sistema operacional pode decidir de maneira
+      diferente a forma como escalonar</p>
+    <p>Estas prioridades podem ser adicionadas interna e externamente. Caso você
+      utilize Windows, abra o gerenciador de tarefas (pressione simultaneamente
+      CTRL+ALT+DEL) e clique na aba PROCESSOS. Clique com o botão direito
+      em qualquer processo e selecione DEFINIR PRIORIDADE (conforme mostra
+      a figura abaixo). Perceba os níveis de prioridade existentes. Isto irá interferir em
+      como o escalonador irá trabalhar.</p>
+    <hr>
+    <img src="img/u2_t3_10.png" alt="">
+    <hr>
+      <a href="#parteVideo"><button onclick="tempo(518)"  class="button-secundary">Ir para trexo da aula</button>  
+        <img src="img/u2_t3_9.png" alt=""  onclick="tempo(518)" >
+      </a>
+  <hr>
+  <a href="#parteVideo"><button onclick="tempo(568)"  class="button-secundary">Ir para trexo da aula</button>  
+    <img src="img/u2_t3_11.png" alt=""  onclick="tempo(568)" >
+  </a>
+          </article>
+          <a href="2_modulo_t1.html" class="button button-primary">Tópico 1 </a>
+          <a href="2_modulo_t2.html" class="button button-primary">Tópico 2</a>
+          <a href="2_modulo_t3.html" class="button button-primary">Tópico 3</a>
+          <a href="2_modulo_t4.html" class="button button-primary">Tópico 4</a>
+
+          
+        </section>
+       
+        
+        
+
+        <div class="laptop-slider">            
+          <div class="slideshow">
+            <figure><img alt="" src="img/2_1.png" width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/2_2.png" width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/unt_2_c1_s3.png" width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/uni_3_s4.png" width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/imagen5.png" width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/imagens6.png"width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/imagens7.png"width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/imagens8.png"width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/imagens9.png"width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/imagens10.png"width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/imagens11.png"width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/imagens12.png"width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/imagens13.png"width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/imagens14.png"width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/imagens16.png"width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/imagens17.png"width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/imagens18.png"width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/imagens19.png"width="70%" style="margin-left: 5%;"/></figure>
+            <span class="prev" style="display: none;"><i class="fas fa-angle-left fa-4x"></i></span>
+            <span class="next" style="display: none;"><i class="fas fa-angle-right fa-4x"></i></span>
+          </div>                    
+        </div>
+        
+        <section class="quote-container">
+
+          <div class="quote-slideshow">
+            <figure>
+              <h2>Conheça os integrantes do consórcio de empresas que colaboram com o
+                desenvolvimento do SO Android. Este grupo é chamado OHA.</h2>
+              <figcaption>
+                <a href="http://www.openhandsetalliance.com/oha_members.html">clique aqui</a>
+              </figcaption>
+            </figure>
+            <figure>
+              <h2>Como seria o desenvolvimento de software sem o uso de sistemas operacionais? Seria no mínimo mais demorado, pois a cada nova implementação,
+                seria necessário a programação e configuração de cada dispositivo/hardware a ser utilizado. </h2>
+              <figcaption>
+                Reflita
+              </figcaption>
+            </figure>
+            <span class="prev" style="display:none;"><i class="fas fa-angle-left fa-2x"></i></span>
+            <span class="next" style="display:none;"><i class="fas fa-angle-right fa-2x"></i></span>
+          </div>
+          
+          
+          
+        </section>
+
+        <footer class="footer">
+            <div class="container">
+                <h2 class="footer__logo">Carlos Souza</h2>
+        
+                <p>Esse conteúdo interativo tem o objetivo e auxiliar os alunos nas matérias do curso unicesumar, tendo em vista que as aulas e a apostilas estão separados, ou seja, dessa forma interativa o aluno terá  a oportunidade de estudar a apostila junto ao video conceitual, facilitando o aprendizado, e ganhado tempo. </p>
+
+                <p>O autor do site, por estar no 3° semestre do Curso de Análise e desenvolvimento de Sistemas, sentiu a necessidade, de estudar as matérias da faculdade ao mesmo tempo que executo projetos que possam ser uteis para os outros. </p>
+                <p>Caso veja algo que possa melhorar, ficarei muito feliz em estar consertando, favor entrar em contato pelo whatsapp, 419 9123-0585, as correções e atualizações são feitas na hora, caso o desenvolvedor Carlos saiba como consertar, caso precise estudar algo, pode levar um tempo maior, caso já tenha a solução seu código pode ser postado através do whatsapp, caso solicite, o desenvolvedor dará os devidos créditos aqui. </p>
+              <ul class="footer__links">
+                <li><a href="#">List One</a></li>
+                <li><a href="#">Page Two</a></li>
+                <li><a href="#">Design</a></li>
+                <li><a href="#">Work</a></li>
+                <li><a href="#">Contact Me</a></li>
+              </ul>
+            </div>
+        </footer>
+        
+        <script src="js/menu.js"></script>        
+        <script src="js/carousel.js"></script>
+
+        <script src="js/main.js"></script>
+        <script src="js/video.js"></script>
+
+    </body>
+</html>

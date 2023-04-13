@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <title> Sistemas Operacionais </title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">  
+        <meta name="author" content="Daniel">
+        <meta name="description" content="descrição bacanuda">
+        <meta name="keywords" content="html5, tecnologia">
+
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+        <!-- Fonts -->
+        <link href='http://fonts.googleapis.com/css?family=Sintony:400,700' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+        
+      <link rel="stylesheet" href="style/normalize.css">
+        <link rel="stylesheet" href="style/main.css">
+      
+    </head>
+    <body class="no-js">
+        
+        <header class="header">
+          <a href="index.html" class="logo-text" >Unicesumar</a>
+          
+          <button style="display: none;" class="header__btnMenu"> <i class="fas fa-bars fa-2x"></i> <span class="sr-only">Menu</span></button>
+          
+          <nav class="header__nav">
+            <ul>
+              <li><a href="#">1° Módulo</a></li>
+              <li><a href="#">2° Módulo</a></li>
+              <li><a href="#">3° Módulo</a></li>
+              <li><a href="#">4° Módulo</a></li>
+              <li><a href="#">5° Módulo</a></li>
+              <li><a href="#">home</a></li>
+            </ul>
+          </nav>
+        </header>
+        
+        <section class="hero">            
+          <h1 class="hero__title">unidade I:Tipos de sistemas operacionais  
+          </h1>
+          <p class="hero__text">Tópico II </p>
+          <a href="img/Slides - Aulas Conceituais/Conceitual I.pdf" target="_blank" class="hero__btn">Slids aulas conceitual</a>                      
+        </section>
+        
+
+        <div class="container">
+        
+          
+          <article>
+           
+              <h1>Objetivos de Aprendizagem </h1>
+              <ol>
+                <li>Apresentar conceitos e tipos de sistemas operacionais.</li>
+                <li>Apresentar os sistemas operacionais de maior uso e influência.</li>
+              </ol>
+              <a href="1_modulo_t1.html" class="button button-primary">Tópico 1 </a>
+              <a href="1_modulo_t2.html" class="button button-primary">Tópico 2</a>
+              <a href="1_modulo_t3.html" class="button button-primary">Tópico 3</a>
+              <a href="1_modulo_t4.html" class="button button-primary">Tópico 4</a>
+
+              
+              
+              <h1 class="hero__title">História do Sistema operacional</h1>
+              <section id="parteVideo">
+                <video class="video-screen"  width="100%" height="50%" controls="controls" src="img/video2.mp4" ></video>
+                <button class="hero__btn" onclick="tempo(12)">pular intro</button>
+              </section>
+              <p>Como o Sistema Operacinal evoluiu ao longo do tempo?</p>
+              <img src="img/articles/evolucao.png" alt="">
+              
+              
+              <p>Mas, afinal, quando começamos a utilizar sistemas operacionais nos computadores modernos?</p>
+              <p>            
+                Você deve se lembrar das cinco gerações de computadores já estudadas: </p>
+                <a href="#parteVideo"><button onclick="tempo(144)"  class="button-secundary">Ir para trexo da aula</button>  
+                  <img src="img/geracaoCompu.png" alt="" onclick="tempo(144)">
+                </a>
+                <p>Na
+                  primeira geração (1945-1955) praticamente não tivemos sistemas operacionais,
+                  já que boa parte do trabalho realizado era manual, utilizando válvulas e necessitando de muitas pessoas para operá-lo. Podemos citar o ENIAC como exemplo
+                  de computador desta geração.</p>
+                  <a href="#parteVideo"><button onclick="tempo(195)"  class="button-secundary">Ir para trexo da aula</button>  
+                <img src="img/primeiraGeracao.png" alt="" onclick="tempo(195)">
+              </a> 
+                <a href="#parteVideo"><button onclick="tempo(260)"  class="button-secundary">Ir para trexo da aula</button>   
+
+                <img src="img/unec.png" alt="" onclick="tempo(260)">
+                  </a>
+                <p>Na segunda geração (1955-1965), devido ao uso de transistores, os computadores tornaram-se mais confiáveis se comparados com as válvulas que geravam
+                    muito calor e queimavam facilmente. Nesta geração surgiram os computadores
+                    de grande porte, também chamados de mainframes. Muitos deles utilizavam à
+                    técnica de cartão perfurado para a inserção de instruções e foram criados pela
+                    empresa IBM.</p>
+                    <p>Os principais modelos de mainframes utilizados eram o 7094 e o 1401, ambos
+                      da IBM, e os sistemas operacionais mais utilizados eram o FMS (Fortran Monitor
+                      System) e o IBSYS, ambos desenvolvidos pela IBM para rodar no 7094. Estes sistemas operacionais são conhecidos como sistemas operacionais em lote (batch)
+                      e trabalhavam da seguinte maneira:</p>   
+      
+                    <a href="#parteVideo"><button onclick="tempo(361)"  class="button-secundary">Ir para trexo da aula</button>   
+
+                      <img src="img/segundageracao.png" alt="" onclick="tempo(361)">
+                        </a>   
+               
+                <ul>
+                    <li> Havia uma entrada de dados, geralmente em cartões perfurados. Cada
+                        nova entrada era chamada de job.</li>
+                    <li>O job era processado, utilizando o máximo do processador e sem executar outra tarefa de leitura ou escrita. </li>
+                    <li>Após o processamento, os dados resultantes eram escritos em cartões perfurados ou impressos em tela ou em papel.</li>
+                </ul>
+                <a href="#parteVideo"><button onclick="tempo(500)"  class="button-secundary">Ir para trexo da aula</button>   
+
+                  <img src="img/segundaBatch.png" alt="" onclick="tempo(500)">
+                    </a>   
+                <a href="#parteVideo"><button onclick="tempo(550)"  class="button-secundary">Ir para trexo da aula</button>   
+
+                      <img src="img/operacaoSegunda.png" alt="" onclick="tempo(550)">
+                        </a> 
+                          
+
+                <p>Com o uso frequente destas máquinas foi percebido que enquanto os dados eram
+                    escritos, o processador ficava ocioso. Esta situação foi resolvida, com o uso da técnica de multiprogramação na terceira geração de computadores (1965-1980), ou
+                    seja, enquanto uma ação de entrada/saída era realizada, o processador poderia ser
+                    usado por outro job e quem deveria gerenciar este uso seria o sistema operacional.
+                    </p>
+                <p>    Além desta técnica, outro diferencial nos sistemas operacionais para computadores da terceira geração foi o uso da técnica SPOOL (Simultaneous Peripheral
+                    Operation On Line) e TIMESHARING.</p>
+                <p>O spool consiste em permitir que o processamento de um job fosse iniciado
+                    automaticamente quando outro job fosse finalizado. Cabe ao sistema operacional gerenciar o início da execução destes jobs.</p>
+                <p>O timesharing permitia que cada usuário pudesse se conectar por meio de
+                    um terminal on-line. Caso um usuário conectado não tivesse utilizando recursos do hardware, o mesmo era alocado para os usuários que estavam utilizando
+                    estes recursos, com isto permitia melhor tempo de resposta para processamento.
+                    </p>
+                <p>Podemos citar como exemplos de sistemas operacionais desta geração:</p>
+                <ul>
+                    <li>IBM OS/360, que era utilizado nos computadores modelo IBM 360.</li>
+                    <li>UNIX, tornou-se muito popular no mundo acadêmico, em agências governamentais e em empresas.</p>
+                    </li>
+                </ul> 
+                <a href="#parteVideo"><button onclick="tempo(614)"  class="button-secundary">Ir para trexo da aula</button>   
+
+                  <img src="img/ter1.png" alt="" onclick="tempo(614)">
+                   </a> 
+                <a href="#parteVideo"><button onclick="tempo(698)"  class="button-secundary">Ir para trexo da aula</button>   
+
+                  <img src="img/ter2.png" alt="" onclick="tempo(698)">
+                     </a>   
+                <a href="#parteVideo"><button onclick="tempo(820)"  class="button-secundary">Ir para trexo da aula</button>   
+
+                  <img src="img/ter3.png" alt="" onclick="tempo(820)">
+                       </a>   
+                    
+               
+              <p>
+                  
+                        <figcaption><img src="img/para_aula1.png" alt="" ><br> Figura: Painel de controle do IBM 360
+                     
+                        Fonte: http://www.columbia.edu/cu/computinghistory/36091.html </figcaption>
+                
+        
+                <p>A quarta geração (1980-atual) tornou os computadores cada vez menores e
+                    populares. Dentre os microcomputadores podemos citar os projetos IBM PC e
+                    Apple Lisa. O primeiro utilizou o sistema operacional MS-DOS (Disk Operating
+                    System - distribuído pela Microsoft), o qual utilizava somente a shell e teve grande
+                    sucesso no mercado. O computador Apple Lisa foi um fracasso, mas o fundador da Apple (Steve Jobs), não ficou abatido e na sua segunda tentativa, lançou
+                    o Apple Macintosh, este por sinal foi um sucesso comercial devido ao uso efetivo de uma interface gráfica (GUI), destinada a usuários que não sabiam nada
+                    sobre computadores.
+                   </p>        
+                <p> A partir deste momento, estava declarada a guerra entre Apple (Steve Jobs)
+                    e Microsoft (Bill Gates). </p>
+
+                <p>Com os microcomputadores foi possível ter um computador em casa e
+                    devido a nanotecnologia, cada vez mais os computadores estão ficando
+                    menores. Dentre estes computadores podemos citar os notebooks, ultrabooks, tablets e smartphones.
+               </p>
+               <p>Nas categorias smartphones e tablets, temos a existência de outros sistemas
+                operacionais em especial o IO’s e o Android. Estes sistemas operacionais serão
+                abordados com maiores detalhes logo a seguir.
+                </p>    
+                <p> Nas categorias de computador pessoal (desktop), ultrabook e notebook,
+                    podemos citar o Apple OS X, Microsoft Windows e o Linux. Estes também serão
+                    detalhados logo a seguir.</p>
+           
+          </article>
+          <a href="1_modulo_t1.html" class="button button-primary">Tópico 1 </a>
+          <a href="1_modulo_t2.html" class="button button-primary">Tópico 2</a>
+          <a href="1_modulo_t3.html" class="button button-primary">Tópico 3</a>
+          <a href="1_modulo_t4.html" class="button button-primary">Tópico 4</a>
+
+          
+          </div>
+        </section>
+        
+        
+        
+
+        <div class="laptop-slider">            
+          <h1 style="text-align: center;">SLID DO FINAL DA AULA E MAIS:</h1>
+          <div class="slideshow">
+            <figure><img alt="" src="img/q1.png" width="70%" style="margin-left: 5%;" /></figure>
+            <figure><img alt="" src="img/q3.png" width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/q2.png" width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/q4.png" width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/q5.png" width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/q6.png" width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/q7.png" width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/q8.png" width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/q9.png" width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/q10.png"width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/q11.png"width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/q12.png"width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/q13.png"width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/q14.png"width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/q15.png"width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/q16.png"width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/q17.png"width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/q18.png"width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/q19.png"width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/q20.png"width="70%" style="margin-left: 5%;"/></figure>
+                      <span class="prev" style="display: none;"><i class="fas fa-angle-left fa-4x"></i></span>
+            <span class="next" style="display: none;"><i class="fas fa-angle-right fa-4x"></i></span>
+          </div>                    
+        </div>
+        
+        <section class="quote-container">
+
+          <div class="quote-slideshow">
+            <figure>
+              <h2>A Apple é uma empresa
+                fundada por Steve Jobs e
+                nos últimos anos boa partes dos lançamentos e de
+                inovação que surgiram no
+                mundo foram apresentadas
+                nas conferências da Apple.
+                O sistema operacional IOs
+                concentra operações para
+                tablet (Ipad) e smartphone (Iphone). Sua principal característica é a facilidade
+                de uso revelada após testes com crianças de três anos. O IOs é um sistema operacional proprietário e só pode ser utilizado em aparelhos fabricados pela Apple. </h2>
+              <figcaption>
+                APPLE IOS
+              </figcaption>
+            </figure>
+            <figure>
+              <h2>O Android é uma resposta
+                ao grande mercado de tecnologia e dispositivos mobiles.
+                Ele é baseado na versão 2.6
+                do kernel do Linux e tem disputado a liderança entre os
+                sistemas operacionais para
+                dispositivos portáteis junto
+                com o IOs.
+                Muitos pensam que o
+                Google é o dono do Android.
+                Na verdade, um grupo de empresas do mercado de telefonia é quem cuida do
+                Android. Este grupo é chamado de Open Handset Alliance (OHA). Este grupo
+                é liderado pelo Google, mas não torna esta empresa como única proprietária
+                deste sistema operacional.</h2>
+              <figcaption>
+                ANDROID
+              </figcaption>
+            </figure>
+            <span class="prev" style="display:none;"><i class="fas fa-angle-left fa-2x"></i></span>
+            <span class="next" style="display:none;"><i class="fas fa-angle-right fa-2x"></i></span>
+          </div>
+          
+          
+          
+        </section>
+
+        <footer class="footer">
+            <div class="container">
+                <h2 class="footer__logo">Carlos Souza</h2>
+        
+                <p>Esse conteúdo interativo tem o objetivo e auxiliar os alunos nas matérias do curso unicesumar, tendo em vista que as aulas e a apostilas estão separados, ou seja, dessa forma interativa o aluno terá  a oportunidade de estudar a apostila junto ao video conceitual, facilitando o aprendizado, e ganhado tempo. </p>
+
+                <p>O autor do site, por estar no 3° semestre do Curso de Análise e desenvolvimento de Sistemas, sentiu a necessidade, de estudar as matérias da faculdade ao mesmo tempo que executo projetos que possam ser uteis para os outros. </p>
+                <p>Caso veja algo que possa melhorar, ficarei muito feliz em estar consertando, favor entrar em contato pelo whatsapp, 419 9123-0585, as correções e atualizações são feitas na hora, caso o desenvolvedor Carlos saiba como concertar, caso precise estudar algo, pode levar um tempo maior, caso já tenha a solução seu código pode ser postado através do whatsapp, caso solicite, o desenvolvedor dará os devidos créditos aqui. </p>
+              <ul class="footer__links">
+                <li><a href="#">List One</a></li>
+                <li><a href="#">Page Two</a></li>
+                <li><a href="#">Design</a></li>
+                <li><a href="#">Work</a></li>
+                <li><a href="#">Contact Me</a></li>
+              </ul>
+            </div>
+        </footer>
+        
+        <script src="js/menu.js"></script>        
+        <script src="js/carousel.js"></script>
+
+        <script src="js/main.js"></script>
+        <script src="js/video.js"></script
+
+    </body>
+</html>

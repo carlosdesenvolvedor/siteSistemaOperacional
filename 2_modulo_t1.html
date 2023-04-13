@@ -1,0 +1,458 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <title> Sistemas Operacionais </title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">  
+        <meta name="author" content="Daniel">
+        <meta name="description" content="descrição bacanuda">
+        <meta name="keywords" content="html5, tecnologia">
+
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+        <!-- Fonts -->
+        <link href='http://fonts.googleapis.com/css?family=Sintony:400,700' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+        
+      <link rel="stylesheet" href="style/normalize.css">
+        <link rel="stylesheet" href="style/main.css">
+      
+    </head>
+    <body class="no-js">
+        
+        <header class="header">
+          <a href="index.html" class="logo-text">unicesumar</a>
+          
+          <button style="display: none;" class="header__btnMenu"> <i class="fas fa-bars fa-2x"></i> <span class="sr-only">Menu</span></button>
+          
+          <nav class="header__nav">
+            <ul>
+              <li><a href="1_modulo_t1.html">1° Módulo</a></li>
+              <li><a href="2_modulo_t1.html">2° Módulo</a></li>
+              <li><a href="3_modulo_t1.html">3° Módulo</a></li>
+              <li><a href="5_modulo_t1.html">4° Módulo</a></li>
+              <li><a href="6_modulo_t1.html">5° Módulo</a></li>
+              <li><a href="index.html">home</a></li>
+            </ul>
+          </nav>
+        </header>
+        
+        <section class="hero">            
+          <h1 class="hero__title">unidade II: Processos
+          </h1>
+          <p class="hero__text">Tópico I </p>
+          <a href="img/Slides - Aulas Conceituais/Conceitual I.pdf" target="_blank" class="hero__btn">Slids aulas conceitual</a>                      
+        </section>
+        
+
+        <div class="container">
+        
+          
+          <article>
+           
+              <h1>Objetivos de Aprendizagem </h1>
+              <ol>
+                <li>Apresentar definições de processos e as técnicas que o sistema
+                  operacional utiliza para garantir rapidez e confiabilidade no que foi
+                  solicitado pelo usuário.</li>
+                <li>AIdentificar as situações de possíveis conflitos entre processos e como
+                  o sistema operacional trabalha com estes impasses.</li>
+              </ol>
+              <a href="2_modulo_t1.html" class="button button-primary">Tópico 1</a>
+              <a href="2_modulo_t2.html" class="button button-primary">Tópico 2</a>
+              <a href="2_modulo_t3.html" class="button button-primary">Tópico 3</a>
+              <a href="2_modulo_t4.html" class="button button-primary">Tópico 4</a>
+                
+                <h3>INTRODUÇÃO</h3>
+                <h1 class="hero__title">Definição de processos e threads</h1>
+                <section id="parteVideo">
+                  <video class="video-screen" width="100%" height="50%" controls="controls" src="img/aula5.mp4" ></video>
+                  <button class="hero__btn" onclick="tempo(12)">pular intro</button>
+                </section>   
+              <p>Caro(a) aluno(a), a partir desta unidade iremos estudar, de forma mais aprofundada, a estrutura de um sistema operacional, que consiste em:</p>
+            <hr>
+            <a href="#parteVideo"><button onclick="tempo(32)"  class="button-secundary">Ir para trexo da aula</button>  
+              <img src="img/2_1.png" alt=""  onclick="tempo(32)" >
+            </a>
+                        
+            <hr>
+              <p>Nesta unidade iremos abordar exclusivamente Gerência do processador/processos e suas definições. </p>
+              <p>Muitos de nós quando utilizamos os nossos computadores pessoais, gostamos de realizar várias atividades ao mesmo tempo. Podemos citar como
+                exemplo navegar na internet, escutar música e nos corresponder com amigos
+                por meio des redes sociais. Cada um destes itens corresponde a um processo
+                que é gerenciado pelo SO. É a função do SO garantir que os processos sempre
+                funcionem, sem travamentos e sem demora. Além destes processos, um computador pessoal possui vários outros processos que são executados de tempos
+                em tempos como, por exemplo, a atualização do antivírus, que é executada
+                sem intervenção do usuário. A velocidade que este processamento ocorre é tão
+                rápida que temos a falsa sensação que tudo está sendo executado no mesmo
+                momento. Vamos às definições de processos e ao detalhamento de como o SO
+                faz a execução destes processos</p>
+              <p>Segundo Maziero (2011), a gerência do processador é também conhecida
+                como gerência de processos ou atividades. Onde visa distribuir a capacidade de
+                processamento de forma justa entre as aplicações. Caso não ocorra esta distribuição igualitária, uma aplicação irá monopolizar o uso do processador. Cabe
+                ao sistema operacional gerenciar as múltiplas requisições de processos e coordenar o acesso aos recursos.</p>
+
+                <hr>
+               
+                <a href="#parteVideo"><button onclick="tempo(65)" class="button-secundary" >Ir para trexo da aula</button>  
+                  <img src="img/2_2.png" alt=""  onclick="tempo(65)">
+                </a>
+                <hr>
+                 
+              <a href="#parteVideo"><button onclick="tempo(128)"  class="button-secundary">Ir para trexo da aula</button>  
+                <img src="img/unt_2_c1_s3.png" alt=""  onclick="tempo(128)" >
+              </a>
+              <h2>PROCESSOS E THREADS</h2>
+              <h3>Mas, afinal, o que são os processos?</h3>
+              <p>Um processo pode ser considerado um programa em execução. Por exemplo: imagine que desejamos ler um livro em nosso computador (os chamados
+                e-books). O livro somente poderá ser lido quando ele estiver em execução e para
+                isto é necessário clicar duas vezes sob ele para a sua abertura. Com isto, um processador de texto será aberto. A partir deste momento temos um processo em
+                execução (no caso o processador de texto com o e-book sendo exibido). E como
+                ele entrou em execução?</p>
+              <p>O sistema operacional estava monitorando o dispositivo de entrada (mouse)
+                e identificou que houve uma instrução de clique duplo sobre um determinado
+                arquivo. O sistema operacional identificou o tipo do arquivo e consultou a lista
+                de programas que poderiam executar e interpretar este arquivo (isto será visto
+                com mais detalhes na unidade de Gerenciamento de Arquivos). Após ter encontrado o programa ideal para executar o arquivo, o sistema operacional solicitou o
+                uso do processador que realizou o processamento, gerando assim um processo,
+                ou seja, um programa em execução.</p>
+              <p>Como acabamos de ver, um processo precisa de recursos – como tempo de
+                CPU, memória, arquivos e dispositivos de entrada/saída – para executar a sua
+                tarefa. À medida que os processos são criados ou são mantidos em execução
+                estes recursos são alocados ao processo.</p>
+              <p>Importante termos bem claro em nossa mente qual o tipo de computador o
+                sistema operacional está atuando. Caso ainda exista alguma dúvida, verifique a
+                unidade anterior para maiores esclarecimentos.</p>
+                <hr>
+            <a href="#parteVideo"><button onclick="tempo(210)"  class="button-secundary">Ir para trexo da aula</button>  
+              <img src="img/uni_3_s4.png" alt=""  onclick="tempo(210)" >
+            </a>
+            <hr>
+            <a href="#parteVideo"><button onclick="tempo(334)"  class="button-secundary">Ir para trexo da aula</button>  
+              <img src="img/imagens7.png" alt=""  onclick="tempo(334)" >
+            </a>
+              <p>Em computadores que executam tarefas em lote (batch), por tradição chamamos os processos de job. Nestes computadores é natural que um único processo
+                permaneça em processamento boa parte do tempo e quando o mesmo for finalizado outro processo entrará em execução.</p>
+            <p>Mas os computadores pessoais não podem ser assim. Imagine você podendo
+              usar só um programa por vez. Caso todos os computadores pessoais utilizassem
+              sistemas operacionais semelhantes ao de computadores que executam tarefas em lote, seria impossível navegar na internet (processo A) e ouvir música
+              (processo B) ao mesmo tempo. Agora pare e pense, como que o sistema operacional faz este gerenciamento? Até o final desta unidade você estará apto a
+              responder esta pergunta.
+            </p>
+            <p>Talvez você tenha feito a comparação entre processo e o código-fonte de um
+              programa que você criou e chegou a conclusão que ao executar este código-fonte,
+              você tem um processo. Infelizmente, um processo não pode ser comparado
+              somente ao código-fonte que produzimos. Conforme mostra a figura abaixo
+              percebemos que um processo consiste em quatro grandes áreas:</p>
+              <ol>
+                <li><strong>Seção de texto:</strong> área que contém o código do programa. Também inclui
+                  o contador do programa e o conteúdo dos registradores do processador</li>
+                <li><strong>Seção de dados:</strong> área que contém as variáveis globais.</li>
+                <li><strong>Heap:</strong> representa o espaço para alocação dinâmica de memória durante
+                  a execução do processo.</li>
+                <li><strong>Pilha:</strong> contém os dados temporários (como parâmetros de função, endereços de retorno e variáveis locais).</li>
+              </ol>
+            
+              <a href="#parteVideo"><button onclick="tempo(427)"  class="button-secundary">Ir para trexo da aula</button>  
+                <img src="img/imagens6.png" alt=""  onclick="tempo(427)" >
+              </a>
+              <hr>
+              <p>Perceba que as áreas <b>heap</b> e <b>pilha</b> podem aumentar de tamanho à medida que
+                o processo é executado.</p>
+              <p>Quando compilamos um código-fonte e executamos o mesmo, estamos
+                utilizando todas as seções de um processo (texto, dados, heap e pilha). Se um
+                programa não está sendo executado, não temos um processo.</p>
+                
+
+                <hr>
+              <a href="#parteVideo"><button onclick="tempo(531)"  class="button-secundary">Ir para trexo da aula</button>  
+                  <img src="img/imagens8.png" alt=""  onclick="tempo(531)" >
+                </a>
+                <hr>
+              <h2>Criação do Processo</h2>
+              <p>Segundo Tanenbaum (2010, p. 52), um processo pode ser criado mediante quatro situações:</p>          
+            <ul>
+              <li><b>Início do Sistema:</b> quando ligamos o computador e o sistema operacional é iniciado, temos alguns programas que automaticamente entram em
+                execução, dentre eles podemos citar o antivírus</li>
+              <li><b> Requisição de um usuário para criar um novo processo:</b> quando desejamos executar um determinado programa, geralmente clicamos duas
+                vezes sobre ele e o mesmo é executado pelo sistema operacional.</li>
+              <li><b>Criação de processo por um processo em execução:</b>: quando estamos
+                utilizando um processador de texto e desejamos imprimir o que foi produzido, temos um processo (processador de texto) solicitando a criação
+                de um outro processo (gerenciador de impressão).</li>
+              <li><b>Tarefas em lote (batch job):</b> somente utilizada em sistemas de grande
+                porte. O sistema operacional irá executar o processo até finalizá-lo para
+                daí começar a executar outro processo.</li>
+            </ul>
+            <a href="#parteVideo"><button onclick="tempo(576)"  class="button-secundary">Ir para trexo da aula</button>  
+              <img src="img/imagens9.png" alt=""  onclick="tempo(576)" >
+            </a>
+            <hr>
+            <h2>TÉRMINO DO PROCESSO</h2>  
+            <p>Para Tanenbaum (2010, p. 53) todo processo em execução chega ao fim. Esta
+              ação de término pode ocorrer mediante quatro situações:</p>
+            <ul>
+              <li><b>Término normal voluntário:</b> ocorre quando o processo cumpre com
+                êxito a sua finalidade ou então quando o usuário solicita voluntariamente
+                o encerramento do processo (por exemplo, clicando na figura X no canto
+                superior direito, caso o processo esteja sendo executado no Windows).</li>
+              <li><b>Término por erro voluntário:</b>  ocorre quando o processo descobre a existência de um erro fatal, e com isto o estado de encerramento é acionado.
+                Por exemplo, no console do Linux, quando tentamos abrir um arquivo que não existe, o processo informa que o arquivo não existe e finaliza as
+                chamadas de abertura de arquivo.</li>
+              <li><b>Erro fatal involuntário:</b> ocorre durante a execução de um processo no
+                momento que uma instrução ilegal ou não planejada/testada é executada.
+                Podemos citar como exemplo, uma calculadora que não teve a operação de
+                divisão por 0 (zero) tratada. Podemos fazer um comparativo com alguns
+                programas que travam em meio ao processamento e emitem mensagens
+                que podem assustar o usuário mais leigo.</li>
+              <li><b>Cancelamento por outro processo involuntário:</b>ocorre quando um
+                processo é finalizado a partir de um determinado programa que possui
+                autoridade para realizar esta finalização. No Linux temos o comando kill
+                e no Windows temos o Finalizar Processo, que pode ser acionado a partir do gerenciador de tarefas, e clicando com o botão direito do mouse em
+                cima do processo. Esta técnica é utilizada quando um determinado programa não responde as solicitações dos dispositivos de entrada (como o
+                teclado e o mouse). O programa parece que congelou e para voltar ao seu
+                funcionamento é necessário finalizá-lo e novamente solicitar a execução
+                do programa, gerando assim um novo processo. </li>
+            </ul>    
+            <p>Vale ressaltar que a diferença do encerramento por erro e por erro fatal, consiste
+              no tratamento da exceção de erro por parte de quem desenvolveu o software.
+              Caso a exceção não tenha sido prevista durante o desenvolvimento do software,
+              consideramos como término por erro fatal.</p>        
+              <hr>
+            <a href="#parteVideo"><button onclick="tempo(655)"  class="button-secundary">Ir para trexo da aula</button>  
+                <img src="img/imagens10.png" alt=""  onclick="tempo(655)" >
+              </a>
+              <hr>
+              <h2>ESTADO DO PROCESSO</h2>
+              <p>Conforme visto nos itens acima, um processo pode ser iniciado e terminado.
+                O sistema operacional sabe se o processo está em execução ou não, por meio
+                da técnica de troca de estados. Silberschatz (2011) define cinco tipos de estados
+                para os processos:</p>
+              <ul>
+                <li><b>Novo: </b>: na imagem abaixo é chamado de NEW. Este estado é atribuído ao
+                  processo quando uma das quatro ações de criação de processo ocorre.</li>
+                <li><b>Em execução: </b>na imagem abaixo é chamado de RUNNING. É atribuído pelo sistema operacional quando instruções estão sendo executadas.</li>
+                <li><b>Em espera: </b>na imagem abaixo é chamado de WAITING. Ocorre quando
+                  um processo aguarda uma resposta externa (por exemplo, de um dispositivo de E/S). Imagine um processo que envia uma instrução à impressão
+                  solicitando que um arquivo seja impresso, mas esta impressora está desligada. Até que a impressora seja ligada o processo para imprimir o
+                  documento ficará em espera.</li>
+                <li><b>Pronto: </b>na imagem abaixo é chamado de READY. O processo está esperando ser atribuído a um processador. Por exemplo, ocorre quando
+                  solicitamos a abertura à calculadora do Windows e logo após o processo
+                  ser iniciado, nenhum cálculo é realizado. O processo está pronto para
+                  ser usado.</li>
+                <li><b>Concluído: </b>na imagem abaixo é chamado de TERMINATED. O processo
+                  terminou sua execução mediante a ocorrência de alguma das quatro situações de término de processo.</li>
+              </ul>
+              <a href="#parteVideo"><button onclick="tempo(776)"  class="button-secundary">Ir para trexo da aula</button>  
+                <img src="img/imagens11.png" alt=""  onclick="tempo(776)" >
+              </a>
+              <hr>
+              <a href="#parteVideo"><button onclick="tempo(832)"  class="button-secundary">Ir para trexo da aula</button>  
+                <img src="img/imagens12.png" alt=""  onclick="tempo(832)" >
+              </a>
+              <hr>
+              <a href="#parteVideo"><button onclick="tempo(885)"  class="button-secundary">Ir para trexo da aula</button>  
+                <img src="img/imagens13.png" alt=""  onclick="tempo(885)" >
+              </a>
+              <hr> 
+              <p>Para fixar o entendimento, vamos utilizar a execução do processador de texto
+                Microsoft Word como exemplo de criação, término e estado do processo. </p>
+                <p>Imaginemos que José é estudante de informática e precisa digitar o trabalho
+                  que seu professor solicitou. José possui um computador com sistema operacional Windows. Após iniciar o sistema operacional é apresentada uma interface
+                  gráfica com vários ícones. José inicia o programa Microsoft Word a partir do
+                  duplo clique do mouse em cima do ícone deste programa (criação de processo
+                  por requisição do usuário). Logo após o clique, o cursor do mouse torna-se
+                  uma ampulheta e José aguarda para poder digitar o texto (estado do processo
+                  NOVO). Logo após a abertura do Word, um cursor fica piscando em uma folha
+                  branca (estado do processo PRONTO, após ação admitida ou admited). </p>
+                <p>Quando José pressiona uma tecla no teclado a letra é exibida no documento
+                  de texto. Caso ele pare de digitar o cursor continua piscando aguardando novas
+                  letras do teclado. (neste ponto temos a mudança do estado pronto para em execução e quando não há mais nada sendo digitado, o estado volta para pronto.
+                  Isto ocorre mediante as ações de despacho do agendador (scheluder dispatch)
+                  e interrupção (interrupt)).</p>
+                <p>Após ter digitado todo o texto, José necessita imprimir o trabalho para entregar ao professor. Ele usa o mouse para clicar na figura de uma impressora. Esta
+                  ação faz com que uma nova solicitação de uso da impressora ocorra (criação
+                  de processo por um processo já em execução, no caso o Word cria um processo para o gerenciador de impressora). Nesta situação o processo Word passa
+                  do estado pronto para em execução, e permanece neste estado até que a impressão fique pronta.</p>
+                <p>José percebe que a impressão está demorando para ser iniciada e identifica
+                  que a impressora está sem papel (neste ponto, o processo Word que estava monitorando a impressão passou de em execução para em espera, por meio da ação
+                  espera por evento ou por operação de I/O (I/O or event wait)). </p>
+                <p>José adiciona o papel na impressora e o processo identifica que já há papel
+                  para impressão (mudança de estado de em espera para pronto, mediante
+                  a ação conclusão de evento ou de operação de I/O (I/O or event completion)). Logo em seguida, a impressora começa a imprimir o trabalho de José
+                  (estado em execução). </p>
+                <p>José verificou que a impressão está correta (logo após a conclusão da
+                  impressão, o estado do processo muda de em execução para pronto) e decide
+                  encerrar o Word. Para isto clica no ícone X no canto superior direito do seu
+                  monitor (processo muda de pronto para em execução e quando finaliza o
+                  encerramento (saída/exit) muda o estado para encerrado e o processo deixa
+                  de existir no sistema operacional). A este encerramento chamamos de término normal do processo.</p>
+              
+                <h2>THREADS</h2>
+                <p>Até o momento, tratamos somente de um processo realizando uma única atividade. A atividade de um processo é chamado de thread, ele faz a interpretação
+                  do que está sendo digitado no teclado e faz exibição do mesmo no monitor. Caso
+                  José quisesse utilizar o corretor de texto enquanto fosse digitando o trabalhão
+                  não seria possível. </p>
+                <p>Pensando nisto, os sistemas operacionais modernos são capazes de trabalhar com processos com múltiplos threads (atividades). Anteriormente, cada ação
+                  representava um novo processo (no exemplo acima, o Word seria um processo,
+                  o corretor ortográfico seria um segundo processo distinto e o salvar automaticamente a cada 5 minutos seria outro processo). </p>
+                <p>Em sistemas de processamento em lote (batch jobs) é normal cada processo
+                  possuir só um thread, já que o processamento não envolve múltiplas atividades.
+                  Chamamos os processos destes computadores de monothread. </p>
+                <p>Nos computadores domésticos a interação com o usuário é constante e fazse necessário o uso de processos com múltiplos threads. Chamamos os processos
+                  destes computadores de multithread.</p>
+                <p>Chegamos à conclusão que todo processo contém pelo menos um thread
+                  e que estes são como mini processos dentro de um processo. O uso de threads
+                  permite múltiplas execuções em um processo.</p>
+                <hr>
+                <a href="#parteVideo"><button onclick="tempo(1222)"  class="button-secundary">Ir para trexo da aula</button>  
+                  <img src="img/imagens17.png" alt=""  onclick="tempo(1222)" >
+                </a>
+                <hr>
+                <a href="#parteVideo"><button onclick="tempo(1285)"  class="button-secundary">Ir para trexo da aula</button>  
+                  <img src="img/imagens18.png" alt=""  onclick="tempo(1285)" >
+                </a>
+                <hr>
+                <a href="#parteVideo"><button onclick="tempo(1325)"  class="button-secundary">Ir para trexo da aula</button>  
+                  <img src="img/imagens19.png" alt=""  onclick="tempo(1325)" >
+                </a>
+                <hr>
+                <h2>COMUNICAÇÃO ENTRE PROCESSOS</h2>
+                <p>Você já deve ter percebido que os processos de alguma maneira têm que se
+                  comunicar com outros processos (Word e gerenciador de impressão no exemplo acima). Cabe ao sistema operacional garantir esta comunicação de forma
+                  bem estruturada e sem interrupções. </p>
+                <p>Caso haja alguma falha na comunicação, existe a possibilidade de concorrência entre os processos ou threads. Se isto ocorrer temos a situação denominada
+                  condição de corrida. Nesta situação, diferentes processos ou threads em execução
+                  dependem de um estado compartilhado e o resultado desta execução depende
+                  do escalonamento de processo (assunto que será abordado logo em seguida). </p>
+                <p>Imaginemos que dois processos distintos estão solicitando o uso de um
+                  determinado arquivo ao mesmo tempo. O resultado desta disputa (condição de
+                  corrida) será uma catastrófica corrupção dos dados do arquivo.</p>
+                <p>Mas como evitar estas condições de disputa entre os processos e threads?
+                  Todo processo precisa de um espaço em memória durante a sua execução e
+                  um pedaço desta memória é compartilhado entre outros processos. Este compartilhamento é chamado de região crítica. A melhor maneira para que não ocorra
+                  condição de corrida é realizando a exclusão mútua. Nesta técnica os processos
+                  são impedidos de acessar uma variável ou arquivo compartilhado na região crítica e que já esteja em uso por outro processo.</p>
+                <p>Tanenbaum (2010, p. 71) define que uma boa solução de exclusão mútua
+                  deve atender os seguintes critérios:</p>
+                  <ul>
+                    <li>Dois processos nunca podem estar simultaneamente em suas regiões
+                      críticas.</li>
+                    <li>Nada pode ser afirmado sobre a velocidade ou sobre o número de CPUs</li>
+                    <li>Nenhum processo executando fora de sua região crítica pode bloquear
+                      outros processos.</li>
+                    <li>Nenhum processo deve esperar eternamente para entrar em sua região
+                      crítica.</li>
+                  </ul>
+                <p>Iremos estudar uma série de técnicas que foram desenvolvidas para que o sistema
+                  operacional pudesse gerenciar corretamente a comunicação entre os processos.
+                  Iremos começar das mais simples para as mais complexas.</p>
+                  <hr>
+                <h2>DESABILITAR INTERRUPÇÕES</h2>
+                <p>Para que um processo seja executado na CPU, o sistema operacional emite um
+                  sinal de interrupção. O objetivo desta abordagem é impedir o uso de CPU por
+                  outro processo até que o processamento fosse concluído. Quando o processo estivesse utilizando a região crítica, eram desabilitadas as chamadas de interrupções
+                  e ao fim do processamento, as interrupções eram habilitadas. </p>
+                <p>Esta abordagem não é interessante, pois um processo do usuário poderia ter
+                  mais prioridade que um processo que o sistema operacional criou. Além disto,
+                  esta abordagem só funciona quando o computador possui uma única CPU.</p>
+
+                <a href="#parteVideo"><button onclick="tempo(1018)"  class="button-secundary">Ir para trexo da aula</button>  
+                    <img src="img/imagens14.png" alt=""  onclick="tempo(1018)" >
+                  </a>
+                  <hr>
+                  <a href="#parteVideo"><button onclick="tempo(1096)"  class="button-secundary">Ir para trexo da aula</button>  
+                    <img src="img/imagens15.png" alt=""  onclick="tempo(1096)" >
+                  </a>
+                  <hr>
+                  <a href="#parteVideo"><button onclick="tempo(1192)"  class="button-secundary">Ir para trexo da aula</button>  
+                    <img src="img/imagens16.png" alt=""  onclick="tempo(1192)" >
+                  </a>
+                  <hr>
+
+          </article>
+          <a href="2_modulo_t1.html" class="button button-primary">Tópico 1 </a>
+          <a href="2_modulo_t2.html" class="button button-primary">Tópico 2</a>
+          <a href="2_modulo_t3.html" class="button button-primary">Tópico 3</a>
+          <a href="2_modulo_t4.html" class="button button-primary">Tópico 4</a>
+
+          
+        </section>
+       
+        
+        
+
+        <div class="laptop-slider">            
+          <div class="slideshow">
+            <figure><img alt="" src="img/2_1.png" width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/2_2.png" width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/unt_2_c1_s3.png" width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/uni_3_s4.png" width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/imagen5.png" width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/imagens6.png"width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/imagens7.png"width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/imagens8.png"width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/imagens9.png"width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/imagens10.png"width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/imagens11.png"width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/imagens12.png"width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/imagens13.png"width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/imagens14.png"width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/imagens16.png"width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/imagens17.png"width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/imagens18.png"width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/imagens19.png"width="70%" style="margin-left: 5%;"/></figure>
+            <span class="prev" style="display: none;"><i class="fas fa-angle-left fa-4x"></i></span>
+            <span class="next" style="display: none;"><i class="fas fa-angle-right fa-4x"></i></span>
+          </div>                    
+        </div>
+        
+        <section class="quote-container">
+
+          <div class="quote-slideshow">
+            <figure>
+              <h2>Conheça os integrantes do consórcio de empresas que colaboram com o
+                desenvolvimento do SO Android. Este grupo é chamado OHA.</h2>
+              <figcaption>
+                <a href="http://www.openhandsetalliance.com/oha_members.html">clique aqui</a>
+              </figcaption>
+            </figure>
+            <figure>
+              <h2>Como seria o desenvolvimento de software sem o uso de sistemas operacionais? Seria no mínimo mais demorado, pois a cada nova implementação,
+                seria necessário a programação e configuração de cada dispositivo/hardware a ser utilizado. </h2>
+              <figcaption>
+                Reflita
+              </figcaption>
+            </figure>
+            <span class="prev" style="display:none;"><i class="fas fa-angle-left fa-2x"></i></span>
+            <span class="next" style="display:none;"><i class="fas fa-angle-right fa-2x"></i></span>
+          </div>
+          
+          
+          
+        </section>
+
+        <footer class="footer">
+            <div class="container">
+                <h2 class="footer__logo">Carlos Souza</h2>
+        
+                <p>Esse conteúdo interativo tem o objetivo e auxiliar os alunos nas matérias do curso unicesumar, tendo em vista que as aulas e a apostilas estão separados, ou seja, dessa forma interativa o aluno terá  a oportunidade de estudar a apostila junto ao video conceitual, facilitando o aprendizado, e ganhado tempo. </p>
+
+                <p>O autor do site, por estar no 3° semestre do Curso de Análise e desenvolvimento de Sistemas, sentiu a necessidade, de estudar as matérias da faculdade ao mesmo tempo que executo projetos que possam ser uteis para os outros. </p>
+                <p>Caso veja algo que possa melhorar, ficarei muito feliz em estar consertando, favor entrar em contato pelo whatsapp, 419 9123-0585, as correções e atualizações são feitas na hora, caso o desenvolvedor Carlos saiba como consertar, caso precise estudar algo, pode levar um tempo maior, caso já tenha a solução seu código pode ser postado através do whatsapp, caso solicite, o desenvolvedor dará os devidos créditos aqui. </p>
+              <ul class="footer__links">
+                <li><a href="#">List One</a></li>
+                <li><a href="#">Page Two</a></li>
+                <li><a href="#">Design</a></li>
+                <li><a href="#">Work</a></li>
+                <li><a href="#">Contact Me</a></li>
+              </ul>
+            </div>
+        </footer>
+        
+        <script src="js/menu.js"></script>        
+        <script src="js/carousel.js"></script>
+
+        <script src="js/main.js"></script>
+        <script src="js/video.js"></script>
+
+    </body>
+</html>

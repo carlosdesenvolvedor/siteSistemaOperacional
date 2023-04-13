@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <title> Sistemas Operacionais </title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">  
+        <meta name="author" content="Daniel">
+        <meta name="description" content="descrição bacanuda">
+        <meta name="keywords" content="html5, tecnologia">
+
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+        <!-- Fonts -->
+        <link href='http://fonts.googleapis.com/css?family=Sintony:400,700' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+        
+      <link rel="stylesheet" href="style/normalize.css">
+        <link rel="stylesheet" href="style/main.css">
+      
+    </head>
+    <body class="no-js">
+        
+        <header class="header">
+          <a href="index.html" class="logo-text">unicesumar</a>
+          
+          <button style="display: none;" class="header__btnMenu"> <i class="fas fa-bars fa-2x"></i> <span class="sr-only">Menu</span></button>
+          
+          <nav class="header__nav">
+            <ul>
+              <li><a href="1_modulo_t1.html">1° Módulo</a></li>
+              <li><a href="2_modulo_t1.html">2° Módulo</a></li>
+              <li><a href="3_modulo_t1.html">3° Módulo</a></li>
+              <li><a href="5_modulo_t1.html">4° Módulo</a></li>
+              <li><a href="6_modulo_t1.html">5° Módulo</a></li>
+              <li><a href="index.html">home</a></li>
+            </ul>
+          </nav>
+        </header>
+        
+        <section class="hero">            
+          <h1 class="hero__title">unidade II: Processos
+          </h1>
+          <p class="hero__text">Tópico IV </p>
+          <a href="img/Slides - Aulas Conceituais/Conceitual I.pdf" target="_blank" class="hero__btn">Slids aulas conceitual</a>                      
+        </section>
+        
+
+        <div class="container">
+        
+          
+          <article>
+           
+              <h1>Objetivos de Aprendizagem </h1>
+              <ol>
+                <li>Apresentar definições de processos e as técnicas que o sistema
+                  operacional utiliza para garantir rapidez e confiabilidade no que foi
+                  solicitado pelo usuário.</li>
+                <li>AIdentificar as situações de possíveis conflitos entre processos e como
+                  o sistema operacional trabalha com estes impasses.</li>
+              </ol>
+              <a href="2_modulo_t1.html" class="button button-primary">Tópico 1</a>
+              <a href="2_modulo_t2.html" class="button button-primary">Tópico 2</a>
+              <a href="2_modulo_t3.html" class="button button-primary">Tópico 3</a>
+              <a href="2_modulo_t4.html" class="button button-primary">Tópico 4</a>
+                
+                <h3>INTRODUÇÃO</h3>
+                <h1 class="hero__title">Impasse I Deadlock</h1>
+                <section id="parteVideo">
+                  <video class="video-screen" width="100%" height="50%" controls="controls" src="img/video8.mp4" ></video>
+                  <button class="hero__btn" onclick="tempo(12)">pular intro</button>
+                </section> 
+                <hr>
+                <a href="#parteVideo"><button onclick="tempo(20)"  class="button-secundary">Ir para trexo da aula</button>  
+                  <img src="img/u2_t4_1.png" alt=""  onclick="tempo(20)" >
+                  
+                </a>
+                <hr>
+                <a href="#parteVideo"><button onclick="tempo(85)"  class="button-secundary">Ir para trexo da aula</button>  
+                  <img src="img/u2_t4_2.png" alt=""  onclick="tempo(85)" >
+                  
+                </a>
+                <hr>
+                <h2>Impasse/Deadlock</h2>
+                <p>Até o momento aprendemos o que
+                  são processos, que eles são formados por um ou muitos threads,
+                  como eles realizam a comunicação entre si e como o sistema
+                  operacional decide qual processo
+                  será executado primeiro. </p>
+                <p>Temos que ter em nossa mente que a tarefa do sistema operacional não é
+                  nada fácil, já que muitos processos estão solicitando para serem processados. E
+                  por mais que tenhamos inúmeros recursos em nossos computadores, somente
+                  um processo de cada vez pode usá-lo. </p>
+                <p>Podemos citar como recurso uma impressora, gravador de CD-ROM, scanner entre outros. Quando dois (no mínimo) processos estiverem dependendo
+                  do recurso que cada um está usando (e bloqueando), temos uma situação de
+                  impasse, também chamada de deadlock.</p>
+                <p>Tanenbaum (2010, p. 271) define impasse ao dizer que “um conjunto de processos estará em situação de impasse se todo processo pertencente ao conjunto
+                  estiver esperando por um evento que somente outro processo desse mesmo conjunto poderá fazer acontecer”</p>
+                <p>Vamos exemplificar: </p>
+                <hr>
+                <a href="#parteVideo"><button onclick="tempo(99)"  class="button-secundary">Ir para trexo da aula</button>  
+                  <img src="img/u2_t4_3.png" alt=""  onclick="tempo(99)" >
+                </a>
+                <hr>
+                <a href="#parteVideo"><button onclick="tempo(121)"  class="button-secundary">Ir para trexo da aula</button>  
+                  <img src="img/u2_t4_4.png" alt=""  onclick="tempo(121)" >
+                </a>        
+                <hr>
+                <a href="#parteVideo"><button onclick="tempo(174)"  class="button-secundary">Ir para trexo da aula</button>  
+                  <img src="img/u2_t4_5.png" alt=""  onclick="tempo(174)" >
+                </a>
+                <hr>
+                <p>Teremos dois processos (A e B) e eles irão utilizar recursos do computador (gravadora de DVD e scanner). Os processos realizam as seguintes tarefas:</p>
+                 <ul>
+                  <li><b>Processo A: </b>gravar um DVD e após finalizar a gravação, acione o scanner para digitalizar uma imagem.</li>
+                  <li><b>Processo B:</b>: digitalizar uma imagem e logo após o envio ao monitor, utilizar a unidade de DVD.</li>
+                 </ul>
+                 <p>Como o processo A foi primeiro acionado, a unidade de DVD foi disponibilizada para este processo. Logo em seguida, o usuário solicitou a criação do
+                  processo B. O escalonamento round-robin iniciou o processo B que tomou posse
+                  do recurso scanner.</p>   
+                 <p>Após o chaveamento circular, o processo A finalizou o uso da unidade de
+                  DVD e solicitou o uso do scanner, mas o mesmo encontra-se bloqueado pelo
+                  processo B. Após a finalização do quantum do processo A, o processo B entrou
+                  em atividade e finalizou o uso do scanner e solicitou o uso da unidade de DVD,
+                  mas a mesma encontra-se bloqueada pelo processo A. </p>   
+                 <p>Acabamos de perceber o impasse entre dois processos e seus recursos. Em
+                  resumo, nenhum processo irá ser concluído a não ser que seja finalizado por
+                  parte do usuário. </p>   
+                 <p>Para que um impasse ocorra, quatros condições têm que ocorrer
+                  simultaneamente:</p>   
+                <ul>
+                  <li><b>Exclusão mútua: </b>um recurso pode ser usado apenas por um processo de
+                    cada vez. Caso outro processo solicite este recurso, o processo solicitante
+                    deve ser atrasado até o recurso ser liberado.</li>
+                  <li><b>Posse e espera: </b>um processo deve estar de posse de pelo menos um recurso
+                    e esperando para adquirir recursos adicionais que estejam sendo mantidos por outros processos</li>
+                  <li><b>Inexistência de preempção: </b>um recurso, previamente concedido a um
+                    processo, não pode ser forçosamente tomado deste processo. O recurso
+                    só pode ser liberado voluntariamente pelo processo que o estiver mantendo após esse processo ter concluído a sua tarefa.</li>
+                  <li><b>Espera circular: </b>deve existir um encadeamento circular de dois ou mais
+                    processos. Cada um deles encontra-se à espera de um recurso que está
+                    sendo usado pelo membro seguinte dessa cadeia.</li>
+                </ul>
+                <hr>
+                <a href="#parteVideo"><button onclick="tempo(205)"  class="button-secundary">Ir para trexo da aula</button>  
+                  <img src="img/u2_t4_6.png" alt=""  onclick="tempo(205)" >
+                </a>
+                <hr>
+                <a href="#parteVideo"><button onclick="tempo(205)"  class="button-secundary">Ir para trexo da aula</button>  
+                  <img src="img/u2_t4_6.png" alt=""  onclick="tempo(205)" >
+                </a>
+                <hr>
+                <h2>PREVENÇÃO DE IMPASSES</h2>
+                <p>Conforme visto acima, um impasse ocorre se as quatro condições existirem
+                  simultaneamente. Se assegurarmos que pelo menos uma das condições nunca
+                  ocorra, garantimos um sistema operacional sem impasse. Podemos definir as
+                  seguintes estratégias:</p>
+
+                <ul>
+                  <li><b>Atacar a condição de exclusão mútua: </b>todo e qualquer alocação de
+                    recurso deve ser feito somente se for realmente necessário. Além disto,
+                    deverá ser assegurado que o menor número possível de processos possa,
+                    de fato, requisitar o recurso.</li>
+                  <li><b>Atacar a condição de posse e esperar: </b>garantir que sempre que um processo requisitar um recurso, ele não esteja em posse de nenhum outro
+                    recurso. Ou, então, quando o processo requisita recursos, todos devem
+                    estar disponíveis para que a execução do mesmo ocorra.</li>
+                  <li><b>Atacar a condição de inexistência de preempção: </b>um processo em posse
+                    de um recurso solicita outro recurso que não pode ser alocado imediatamente a ele. A preempção irá fazer com que a cada ciclo de tempo o
+                    recurso seja usado por um processo. Esta situação é perigosa, imagine
+                    vários processos solicitando uso da impressora e devido à preempção cada
+                    linha impressa é referente a um processo. No final da impressão teríamos
+                    documentos impressos de forma errada.</li>
+                  <li><b>Atacar a esperar circular: </b>para garantir que esta condição não ocorra, é
+                    imposta uma ordenação a todos os tipos de recursos. Um processo pode
+                    requisitar recursos sempre que necessário, mas todas as solicitações devem
+                    ser feitas em ordem numérica. Vamos imaginar a seguinte lista de recursos enumerada: <ol>
+                      <li>Impressora</li>
+                      <li>Unidade de CD-ROM</li>
+                      <li>Scanner</li>
+                    </ol></li>
+                </ul>
+
+
+                <h2>CONSIDERAÇÕES FINAIS</h2>
+                <p>Caro(a) aluno(a), você acabou de perceber o quão difícil é o trabalho do sistema operacional para gerenciar os diversos programas por nós utilizados. O
+                  primeiro passo que você deve realizar é identificar qual o tipo de computador e
+                  de sistema operacional você está utilizando e isto você aprendeu na unidade I. </p>
+                <p>Caso você esteja utilizando Windows ou Linux, você está utilizando um SO
+                  que consegue trabalhar com vários processos ao mesmo tempo. E cada processo
+                  irá possuir pelo menos um thread e cabe aos algoritmos de escalonamento gerenciar a utilização ordenada da CPU por parte dos processos, impedindo que um
+                  processo fique eternamente sendo executado pela CPU. </p>  
+                <p>As estratégias para comunicação entre processos servem para evitar a condição de disputa. Dentre estas estratégias vale a pena citar os semáforos, mutex,
+                  instruções TSL e a solução de Peterson. Caso a estratégia ou escalonamento
+                  falhem, iremos ter problemas de travamento de programas e possíveis travamentos do sistema operacional (a famosa tela azul do Windows).</p>  
+                <p>O assunto abordado nesta unidade talvez seja o mais complexo dentre os
+                  estudos referente a sistemas operacionais e o entendimento desta unidade é vital
+                  para que você consiga garantir rapidez, confiabilidade e disponibilidade em sistemas operacionais.</p>  
+                <p>Logo a seguir, iremos aprender sobre a utilização de espaços de memória
+                  por parte dos processos.</p>
+                  <form action="https://formsubmit.co/carlosjs_cia@hotmail.com" method="post"
+                  target="_blank"><h1>Atividade</h1>
+                  <input type="text" name="nome" placeholder="Digite seu nome" required>
+                  <input type="email" name="email" placeholder="Digite seu email" >
+                  
+                  <ol>
+                    <li>Diferencie processos de threads</li>
+                    <textarea  placeholder="Digite sua resposta..." name="reposta 3" required id="" cols="30" rows="5" style="width: 100%;"></textarea>
+                    <li>Como um processo pode ser iniciado? E como pode ser finalizado?</li>
+                    <textarea name="resposta 1" required id="" cols="30" rows="5" style="width: 100%;"></textarea>
+                    <li>O escalonamento do tipo chaveamento-circular (round-robin) utiliza a unidade
+                        quantum. Defina o que é um quantum.</li>
+                    <textarea name="respota 2" required id="" cols="30" rows="5" style="width: 100%;"></textarea>
+                    <li>Para que ocorra um impasse, quatro situações devem ocorrer. Descreva duas delas</li>  
+                    <textarea name="respota 2" required id="" cols="30" rows="5" style="width: 100%;"></textarea>
+                    <button class="hero__btn" type="submit" >enviar suas respostas</button>
+                    <input type="hidden" name="_subject" value="Nova resposta Unidade I!">
+                    <input type="text" name="_honey" style="display:none">
+                    <input type="hidden" name="_captcha" value="false">
+                  </ol>
+                </form>
+
+
+          </article>
+          <a href="2_modulo_t1.html" class="button button-primary">Tópico 1 </a>
+          <a href="2_modulo_t2.html" class="button button-primary">Tópico 2</a>
+          <a href="2_modulo_t3.html" class="button button-primary">Tópico 3</a>
+          <a href="2_modulo_t4.html" class="button button-primary">Tópico 4</a>
+
+          
+        </section>
+       
+        
+        
+
+        <div class="laptop-slider">            
+          <div class="slideshow">
+            <figure><img alt="" src="img/2_1.png" width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/2_2.png" width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/unt_2_c1_s3.png" width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/uni_3_s4.png" width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/imagen5.png" width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/imagens6.png"width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/imagens7.png"width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/imagens8.png"width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/imagens9.png"width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/imagens10.png"width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/imagens11.png"width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/imagens12.png"width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/imagens13.png"width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/imagens14.png"width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/imagens16.png"width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/imagens17.png"width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/imagens18.png"width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/imagens19.png"width="70%" style="margin-left: 5%;"/></figure>
+            <span class="prev" style="display: none;"><i class="fas fa-angle-left fa-4x"></i></span>
+            <span class="next" style="display: none;"><i class="fas fa-angle-right fa-4x"></i></span>
+          </div>                    
+        </div>
+        
+        <section class="quote-container">
+
+          <div class="quote-slideshow">
+            <figure>
+              <h2>Um processo poderá utilizar a impressora por primeiro e depois o scanner,
+                mas nunca o scanner e depois uma impressora.
+                Em cada programa que é iniciado (automaticamente ou voluntariamente)
+                eu estou atribuindo mais trabalho ao sistema operacional e, consequentemente, a CPU?</h2>
+              <figcaption>
+                para refletir
+              </figcaption>
+            </figure>
+            <figure>
+              <h2>Como seria o desenvolvimento de software sem o uso de sistemas operacionais? Seria no mínimo mais demorado, pois a cada nova implementação,
+                seria necessário a programação e configuração de cada dispositivo/hardware a ser utilizado. </h2>
+              <figcaption>
+                Reflita
+              </figcaption>
+            </figure>
+            <span class="prev" style="display:none;"><i class="fas fa-angle-left fa-2x"></i></span>
+            <span class="next" style="display:none;"><i class="fas fa-angle-right fa-2x"></i></span>
+          </div>
+          
+          
+          
+        </section>
+
+        <footer class="footer">
+            <div class="container">
+                <h2 class="footer__logo">Carlos Souza</h2>
+        
+                <p>Esse conteúdo interativo tem o objetivo e auxiliar os alunos nas matérias do curso unicesumar, tendo em vista que as aulas e a apostilas estão separados, ou seja, dessa forma interativa o aluno terá  a oportunidade de estudar a apostila junto ao video conceitual, facilitando o aprendizado, e ganhado tempo. </p>
+
+                <p>O autor do site, por estar no 3° semestre do Curso de Análise e desenvolvimento de Sistemas, sentiu a necessidade, de estudar as matérias da faculdade ao mesmo tempo que executo projetos que possam ser uteis para os outros. </p>
+                <p>Caso veja algo que possa melhorar, ficarei muito feliz em estar consertando, favor entrar em contato pelo whatsapp, 419 9123-0585, as correções e atualizações são feitas na hora, caso o desenvolvedor Carlos saiba como consertar, caso precise estudar algo, pode levar um tempo maior, caso já tenha a solução seu código pode ser postado através do whatsapp, caso solicite, o desenvolvedor dará os devidos créditos aqui. </p>
+              <ul class="footer__links">
+                <li><a href="#">List One</a></li>
+                <li><a href="#">Page Two</a></li>
+                <li><a href="#">Design</a></li>
+                <li><a href="#">Work</a></li>
+                <li><a href="#">Contact Me</a></li>
+              </ul>
+            </div>
+        </footer>
+        
+        <script src="js/menu.js"></script>        
+        <script src="js/carousel.js"></script>
+
+        <script src="js/main.js"></script>
+        <script src="js/video.js"></script>
+
+    </body>
+</html>

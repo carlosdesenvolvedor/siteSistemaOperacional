@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <title> Sistemas Operacionais </title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">  
+        <meta name="author" content="Daniel">
+        <meta name="description" content="descrição bacanuda">
+        <meta name="keywords" content="html5, tecnologia">
+
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+        <!-- Fonts -->
+        <link href='http://fonts.googleapis.com/css?family=Sintony:400,700' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+        
+      <link rel="stylesheet" href="style/normalize.css">
+        <link rel="stylesheet" href="style/main.css">
+      
+    </head>
+    <body class="no-js">
+        
+        <header class="header">
+          <a href="index.html" class="logo-text">unicesumar</a>
+          
+          <button style="display: none;" class="header__btnMenu"> <i class="fas fa-bars fa-2x"></i> <span class="sr-only">Menu</span></button>
+          
+          <nav class="header__nav">
+            <ul>
+              <li><a href="1_modulo_t1.html">1° Módulo</a></li>
+              <li><a href="2_modulo_t1.html">2° Módulo</a></li>
+              <li><a href="3_modulo_t1.html">3° Módulo</a></li>
+              <li><a href="5_modulo_t1.html">4° Módulo</a></li>
+              <li><a href="6_modulo_t1.html">5° Módulo</a></li>
+              <li><a href="index.html">home</a></li>
+            </ul>
+          </nav>
+        </header>
+        
+        <section class="hero">            
+          <h1 class="hero__title">unidade II: Processos
+          </h1>
+          <p class="hero__text">Tópico II </p>
+          <a href="img/Slides - Aulas Conceituais/Conceitual I.pdf" target="_blank" class="hero__btn">Slids aulas conceitual</a>                      
+        </section>
+        
+
+        <div class="container">
+        
+          
+          <article>
+           
+              <h1>Objetivos de Aprendizagem </h1>
+              <ol>
+                <li>Apresentar definições de processos e as técnicas que o sistema
+                  operacional utiliza para garantir rapidez e confiabilidade no que foi
+                  solicitado pelo usuário.</li>
+                <li>AIdentificar as situações de possíveis conflitos entre processos e como
+                  o sistema operacional trabalha com estes impasses.</li>
+              </ol>
+              <a href="2_modulo_t1.html" class="button button-primary">Tópico 1</a>
+              <a href="2_modulo_t2.html" class="button button-primary">Tópico 2</a>
+              <a href="2_modulo_t3.html" class="button button-primary">Tópico 3</a>
+              <a href="2_modulo_t4.html" class="button button-primary">Tópico 4</a>
+                
+                <h3>INTRODUÇÃO</h3>
+                <h1 class="hero__title">COMUNICAÇÃO ENTRE PROCESSOS</h1>
+                <section id="parteVideo">
+                  <video class="video-screen" width="100%" height="50%" controls="controls" src="img/video6.mp4" ></video>
+                  <button class="hero__btn" onclick="tempo(12)">pular intro</button>
+                </section> 
+               
+              <p>Você já deve ter percebido que os processos de alguma maneira têm que se
+                comunicar com outros processos (Word e gerenciador de impressão no exemplo acima). Cabe ao sistema operacional garantir esta comunicação de forma
+                bem estruturada e sem interrupções. </p>
+              <p>Caso haja alguma falha na comunicação, existe a possibilidade de concorrência entre os processos ou threads. Se isto ocorrer temos a situação denominada
+                condição de corrida. Nesta situação, diferentes processos ou threads em execução
+                dependem de um estado compartilhado e o resultado desta execução depende
+                do escalonamento de processo (assunto que será abordado logo em seguida). </p>
+              <p>Imaginemos que dois processos distintos estão solicitando o uso de um
+                determinado arquivo ao mesmo tempo. O resultado desta disputa (condição de
+                corrida) será uma catastrófica corrupção dos dados do arquivo. </p>
+              <p>Mas como evitar estas condições de disputa entre os processos e threads?
+                Todo processo precisa de um espaço em memória durante a sua execução e
+                um pedaço desta memória é compartilhado entre outros processos. Este compartilhamento é chamado de região crítica. A melhor maneira para que não ocorra
+                condição de corrida é realizando a exclusão mútua. Nesta técnica os processos
+                são impedidos de acessar uma variável ou arquivo compartilhado na região crítica e que já esteja em uso por outro processo.</p>
+                            <hr>
+            <a href="#parteVideo"><button onclick="tempo(17)"  class="button-secundary">Ir para trexo da aula</button>  
+              <img src="img/u2_t2_1.png" alt=""  onclick="tempo(17)" >
+            </a>
+            <p>Tanenbaum (2010, p. 71) define que uma boa solução de exclusão mútua
+              deve atender os seguintes critérios:</p>
+            <ul>
+              <li>Dois processos nunca podem estar simultaneamente em suas regiões
+                críticas</li>
+              <li>Nada pode ser afirmado sobre a velocidade ou sobre o número de CPUs.</li>
+              <li>Nenhum processo executando fora de sua região crítica pode bloquear
+                outros processos.</li>
+              <li>Nenhum processo deve esperar eternamente para entrar em sua região
+                crítica.</li>
+
+            </ul>
+            <p>Iremos estudar uma série de técnicas que foram desenvolvidas para que o sistema
+              operacional pudesse gerenciar corretamente a comunicação entre os processos.
+              Iremos começar das mais simples para as mais complexas.</p>
+                        
+            <hr>
+            <a href="#parteVideo"><button onclick="tempo(108)"  class="button-secundary">Ir para trexo da aula</button>  
+              <img src="img/u2_t2_2.png" alt=""  onclick="tempo(108)" >
+            </a>
+            <hr>
+            <a href="#parteVideo"><button onclick="tempo(194)"  class="button-secundary">Ir para trexo da aula</button>  
+              <img src="img/u2_t2_4.png" alt=""  onclick="tempo(194)" >
+            </a>
+            <hr>
+            <a href="#parteVideo"><button onclick="tempo(263)"  class="button-secundary">Ir para trexo da aula</button>  
+              <img src="img/u2_t2_5.png" alt=""  onclick="tempo(263)" >
+            </a>
+            <hr>
+            <h2>Desabilitar interrupções</h2>
+            <p>Para que um processo seja executado na CPU, o sistema operacional emite um
+              sinal de interrupção. O objetivo desta abordagem é impedir o uso de CPU por
+              outro processo até que o processamento fosse concluído. Quando o processo estivesse utilizando a região crítica, eram desabilitadas as chamadas de interrupções
+              e ao fim do processamento, as interrupções eram habilitadas. </p>
+            <p>Esta abordagem não é interessante, pois um processo do usuário poderia ter
+              mais prioridade que um processo que o sistema operacional criou. Além disto,
+              esta abordagem só funciona quando o computador possui uma única CPU</p>   
+                          <hr>
+            <a href="#parteVideo"><button onclick="tempo(263)"  class="button-secundary">Ir para trexo da aula</button>  
+              <img src="img/u2_tx_6.png" alt=""  onclick="tempo(263)" >
+            </a>
+            <hr>
+          </article>
+          <a href="2_modulo_t1.html" class="button button-primary">Tópico 1 </a>
+          <a href="2_modulo_t2.html" class="button button-primary">Tópico 2</a>
+          <a href="2_modulo_t3.html" class="button button-primary">Tópico 3</a>
+          <a href="2_modulo_t4.html" class="button button-primary">Tópico 4</a>
+
+          
+        </section>
+       
+        
+        
+
+        <div class="laptop-slider">            
+          <div class="slideshow">
+            <figure><img alt="" src="img/2_1.png" width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/2_2.png" width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/unt_2_c1_s3.png" width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/uni_3_s4.png" width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/imagen5.png" width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/imagens6.png"width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/imagens7.png"width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/imagens8.png"width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/imagens9.png"width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/imagens10.png"width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/imagens11.png"width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/imagens12.png"width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/imagens13.png"width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/imagens14.png"width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/imagens16.png"width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/imagens17.png"width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/imagens18.png"width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/imagens19.png"width="70%" style="margin-left: 5%;"/></figure>
+            <span class="prev" style="display: none;"><i class="fas fa-angle-left fa-4x"></i></span>
+            <span class="next" style="display: none;"><i class="fas fa-angle-right fa-4x"></i></span>
+          </div>                    
+        </div>
+        
+        <section class="quote-container">
+
+          <div class="quote-slideshow">
+            <figure>
+              <h2>Conheça os integrantes do consórcio de empresas que colaboram com o
+                desenvolvimento do SO Android. Este grupo é chamado OHA.</h2>
+              <figcaption>
+                <a href="http://www.openhandsetalliance.com/oha_members.html">clique aqui</a>
+              </figcaption>
+            </figure>
+            <figure>
+              <h2>Como seria o desenvolvimento de software sem o uso de sistemas operacionais? Seria no mínimo mais demorado, pois a cada nova implementação,
+                seria necessário a programação e configuração de cada dispositivo/hardware a ser utilizado. </h2>
+              <figcaption>
+                Reflita
+              </figcaption>
+            </figure>
+            <span class="prev" style="display:none;"><i class="fas fa-angle-left fa-2x"></i></span>
+            <span class="next" style="display:none;"><i class="fas fa-angle-right fa-2x"></i></span>
+          </div>
+          
+          
+          
+        </section>
+
+        <footer class="footer">
+            <div class="container">
+                <h2 class="footer__logo">Carlos Souza</h2>
+        
+                <p>Esse conteúdo interativo tem o objetivo e auxiliar os alunos nas matérias do curso unicesumar, tendo em vista que as aulas e a apostilas estão separados, ou seja, dessa forma interativa o aluno terá  a oportunidade de estudar a apostila junto ao video conceitual, facilitando o aprendizado, e ganhado tempo. </p>
+
+                <p>O autor do site, por estar no 3° semestre do Curso de Análise e desenvolvimento de Sistemas, sentiu a necessidade, de estudar as matérias da faculdade ao mesmo tempo que executo projetos que possam ser uteis para os outros. </p>
+                <p>Caso veja algo que possa melhorar, ficarei muito feliz em estar consertando, favor entrar em contato pelo whatsapp, 419 9123-0585, as correções e atualizações são feitas na hora, caso o desenvolvedor Carlos saiba como consertar, caso precise estudar algo, pode levar um tempo maior, caso já tenha a solução seu código pode ser postado através do whatsapp, caso solicite, o desenvolvedor dará os devidos créditos aqui. </p>
+              <ul class="footer__links">
+                <li><a href="#">List One</a></li>
+                <li><a href="#">Page Two</a></li>
+                <li><a href="#">Design</a></li>
+                <li><a href="#">Work</a></li>
+                <li><a href="#">Contact Me</a></li>
+              </ul>
+            </div>
+        </footer>
+        
+        <script src="js/menu.js"></script>        
+        <script src="js/carousel.js"></script>
+
+        <script src="js/main.js"></script>
+        <script src="js/video.js"></script>
+
+    </body>
+</html>

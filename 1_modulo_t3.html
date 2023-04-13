@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <title> Sistemas Operacionais </title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">  
+        <meta name="author" content="Daniel">
+        <meta name="description" content="descrição bacanuda">
+        <meta name="keywords" content="html5, tecnologia">
+
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+        <!-- Fonts -->
+        <link href='http://fonts.googleapis.com/css?family=Sintony:400,700' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+        
+      <link rel="stylesheet" href="style/normalize.css">
+        <link rel="stylesheet" href="style/main.css">
+      
+    </head>
+    <body class="no-js">
+        
+        <header class="header">
+          <a href="index.html" class="logo-text">unicesumar</a>
+          
+          <button style="display: none;" class="header__btnMenu"> <i class="fas fa-bars fa-2x"></i> <span class="sr-only">Menu</span></button>
+          
+          <nav class="header__nav">
+            <ul>
+              <li><a href="1_modulo_t1.html">1° Módulo</a></li>
+              <li><a href="2_modulo_t1.html">2° Módulo</a></li>
+              <li><a href="3_modulo_t1.html">3° Módulo</a></li>
+              <li><a href="5_modulo_t1.html">4° Módulo</a></li>
+              <li><a href="6_modulo_t1.html">5° Módulo</a></li>
+              <li><a href="index.html">home</a></li>
+            </ul>
+          </nav>
+        </header>
+        
+        <section class="hero">            
+          <h1 class="hero__title">unidade I:Principais Sistemas Operacionais
+          </h1>
+          <p class="hero__text">Tópico III </p>
+          <a href="img/Slides - Aulas Conceituais/Conceitual I.pdf" target="_blank" class="hero__btn">Slids aulas conceitual</a>                      
+        </section>
+        
+
+        <div class="container">
+        
+          
+          <article>
+           
+              <h1>Objetivos de Aprendizagem </h1>
+              <ol>
+                <li>Apresentar conceitos e tipos de sistemas operacionais.</li>
+                <li>Apresentar os sistemas operacionais de maior uso e influência.</li>
+              </ol>
+              <a href="1_modulo_t1.html" class="button button-primary">Tópico 1</a>
+              <a href="1_modulo_t2.html" class="button button-primary">Tópico 2</a>
+              <a href="1_modulo_t3.html" class="button button-primary">Tópico 3</a>
+              <a href="1_modulo_t4.html" class="button button-primary">Tópico 4</a>
+                
+                <h3>INTRODUÇÃO</h3>
+                <h1 class="hero__title">TIPOS DE SISTEMAS OPERACIONAIS</h1>
+                <section id="parteVideo">
+                  <video class="video-screen" width="100%" height="50%" controls="controls" src="img/videoAula3.mp4" ></video>
+                  <button class="hero__btn" onclick="tempo(12)">pular intro</button>
+                </section>   
+            
+                
+              <a href="#parteVideo"><button onclick="tempo(30)"  class="button-secundary">Ir para trexo da aula</button>  
+              <img src="img/topico3_1.png" alt=""  onclick="tempo(30)" >
+            </a>
+            <h2>Sistemas operacionais de computadores de grande porte</h2>
+            <p>
+              São computadores que ocupam uma sala inteira. Os sistemas operacionais são orientados a muitas tarefas com grande quantidade de troca de
+              dados (entrada/saída). Como exemplo de sistema operacional, podemos
+              citar o OS/390 da IBM, que é o descendente do OS/360 da terceira geração. Este sistema operacional tende a ter unicamente o modo shell, ou seja,
+              sem partição gráfica e somente desempenha tarefas do tipo lote (batch).</p>      
+              <a href="#parteVideo"><button onclick="tempo(53)"  class="button-secundary">Ir para trexo da aula</button>  
+              <img src="img/topico3_2.png" alt=""  onclick="tempo(120)" >
+            </a>
+            <h2>Sistemas operacionais de servidores</h2>
+            <p>
+              Servidores são computadores de grande porte cuja função é prover determinados recursos computacionais (hardware e/ou software) e permitir que
+              múltiplos usuários tenham acesso aos recursos. Como exemplo, podemos
+              citar os servidores de impressão, de servidores de arquivos ou de web. </p>
+            <p>Os sistemas operacionais que melhor operam neste tipo de computadores
+              são o Solaris, FreeBSD, Linux e o Windows Server. Cabe a estes sistemas
+              operacionais prover a informação correta para o usuário que solicitou
+              e gerenciar as múltiplas requisições de recursos. Não necessariamente
+              estes sistemas operacionais operam em modo shell. Em alguns há a possibilidade do uso de interface gráfica, como no caso do Windows Server.</p>
+             
+            <a href="#parteVideo"><button onclick="tempo(120)"  class="button-secundary">Ir para trexo da aula</button>  
+              <img src="img/topico3_3.png" alt=""  onclick="tempo(120)" >
+            </a> 
+           <h2>Sistemas operacionais de computadores pessoais</h2>
+           <p>
+            Um computador pessoal consiste no uso intenso da multiprogramação,
+            para não permitir a ociosidade do processador (CPU), e no uso de interface gráfica (GUI). Popularizaram-se a partir do IBM-PC (utilizando
+            Microsoft Windows) e do Apple Macintosh (utilizando Apple OS). São
+            utilizados em computadores do tipo desktop e notebooks, tanto em residências como em escritórios. Além do Windows e do Apple OS, temos
+            o Linux em suas diversas distribuições (Ubuntu, Slackware, Debian).</p>
+            <a href="#parteVideo"><button onclick="tempo(208)"  class="button-secundary">Ir para trexo da aula</button>  
+              <img src="img/topico3_4.png" alt=""  onclick="tempo(208)" >
+            </a>   
+            <h2>Sistemas operacionais de multiprocessadores</h2>
+            <p>
+              Um sistema com multiprocessadores consiste na interligação de um conjunto de CPU’s (processadores), a fim de multiplicar ao máximo o poder
+              de processamento. Imagine dois computadores desktop com seus processadores e memórias trabalhando em conjunto. Com certeza o poder de
+              processamento irá ser dobrado. Este tipo de SO se assemelha aos sistemas
+              operacionais de computadores pessoais e os mais utilizados são o Linux
+              e o Windows. Cabe a estes sistemas operacionais coordenar o processamento entre todas as CPU’s e memórias para garantir o maior poder de
+              processamento. Atuam, em sua grande maioria, com interface gráfica.</p>
+           
+            <a href="#parteVideo"><button onclick="tempo(290)"  class="button-secundary">Ir para trexo da aula</button>  
+              <img src="img/topico3_5.png" alt=""  onclick="tempo(290)" >
+            </a>  
+            <h2>Sistemas operacionais de computadores portáteis</h2>
+            <p>
+              Com o desenvolvimento da nanotecnologia, os computadores estão cada vez
+              menores. Podemos citar como precursor desta tecnologia portátil o computador do tipo PDA (Personal Digital Assistant) que era um pequeno computador
+              com um número limitado de funções. Ele era um computador de bolso e a
+              empresa referência neste tipo de produto é a PALM, utilizando o PALM OS.
+              Atualmente os PDA perderam espaço para os smatphones e tablets. O primeiro consiste em um aparelho celular com diversas funções e o segundo
+              consiste em um computador em formato de prancheta. As diversas funcionalidades destes dois aparelhos são ofertadas a partir do uso de um
+              sistema operacional. Os mais utilizados são o IO’s e Android. </p> 
+            <p>O sistema operacional IO’s somente é utilizado em aparelhos fabricados
+              pela Apple. Dentre estes aparelhos podemos citar o smartphone Iphone
+              e o tablet Ipad.
+              Todos estes sistemas operacionais possuem interface gráfica e são sensíveis ao toque (touchscreen), ou seja, não é necessário o uso de mouse, ou
+              teclado. Todas estas funcionalidades podem ser utilizadas com o toque
+              do dedo na tela do aparelho.</p>
+              
+            <a href="#parteVideo"><button onclick="tempo(354)"  class="button-secundary">Ir para trexo da aula</button>  
+              <img src="img/topico3_6.png" alt=""  onclick="tempo(354)" >
+            </a>
+            <h2>Sistemas operacionais embarcados</h2>
+            <p>
+              Você já se perguntou como funcionam as smarts tvs? Ou então como funcionam os computadores de bordo de um carro? Ou então como funciona
+              um aparelho que reproduz músicas no formato MP3?
+              Boa parte destes produtos utiliza um software para funcionar e este
+              software necessita de um sistema operacional para ser executado.
+              Os sistemas operacionais do tipo embarcado são utilizados em aparelhos
+              que não são computadores e eles executam somente os softwares confiáveis para os produtos que foram produzidos. Tanto o sistema operacional
+              como o software a ser executado, está salvo em uma memória ROM.
+              Como exemplo de sistemas operacionais embarcados podemos citar o
+              QNX e o VxWorks.</p>
+            <a href="#parteVideo"><button onclick="tempo(424)"  class="button-secundary">Ir para trexo da aula</button>  
+              <img src="img/topico3_7.png" alt=""  onclick="tempo(424)" >
+            </a>
+            <h2>Sistemas operacionais de nós sensores (sensor node)</h2>
+            <p>
+              Imagine que você possui uma fazenda com valiosas cabeças de gado e de
+              alguma maneira você precisa proteger o perímetro da sua fazenda. Você
+              pode adotar a estratégia de utilizar cercas elétricas e/ou contratar pessoas
+              para vigiarem o seu patrimônio. Ou então você utiliza sensores nesta tarefa.
+              Cada nó de sensor é um computador (com CPU, memória RAM e memória
+              ROM) e neles são utilizados sistemas operacionais que realizam a comunicação entre os nós garantindo a monitoria do perímetro. Caso algum
+              nó não esteja se comunicando ou foi violado, o sistema operacional emite
+              uma informação a central de monitoramento informando a infração ou
+              violação no perímetro. O sistema operacional mais conhecido é o TinyOS.</p>
+            <a href="#parteVideo"><button onclick="tempo(492)"  class="button-secundary">Ir para trexo da aula</button>  
+              <img src="img/topico3_8.png" alt=""  onclick="tempo(492)" >
+            </a>
+            <h2>Sistemas operacionais de tempo real</h2>
+            <p>
+              Um sistema operacional de tempo real não necessariamente deve ser
+              ultrarrápido. Mas o seu comportamento perante o tempo é de fato o que
+              o diferencia das demais categorias. Este sistema operacional é utilizado
+              no controle de processos industriais, aviões e exército. Além disto, podemos encontrar sistemas operacionais de tempo real em sistemas de áudio
+              digital ou multimídia. Como exemplo, podemos citar o sistema operacional e-Cos.</p>
+            <a href="#parteVideo"><button onclick="tempo(562)"  class="button-secundary">Ir para trexo da aula</button>  
+              <img src="img/topico3_9.png" alt=""  onclick="tempo(562)" >
+            </a>
+            <h2>Sistemas operacionais de cartões inteligentes (smart cards)</h2>
+            <p>
+              Você já parou para pensar como funcionam os cartões bancários que possuem chip? Estes cartões com chip são chamados de smart cards e cada
+              chip é considerado como uma CPU. A linguagem de programação Java
+              oferece um grande suporte a esta tecnologia permitindo a criação de programas para os smart cards.
+              Para que as aplicações Java funcionem, existe um interpretador para esta
+              linguagem. Chamamos este interpretador de JVM (Java Virtual Machine).
+              A JVM está instalada na memória ROM do chip e cabe a um sistema operacional bem primitivo do smart card ou a JVM coordenar os recursos
+              presentes na memória ROM e o uso da CPU. </p>
+            <a href="#parteVideo"><button onclick="tempo(646)"  class="button-secundary">Ir para trexo da aula</button>  
+              <img src="img/topico3_10.png" alt=""  onclick="tempo(646)">
+              <img src="img/topico3_11.png" alt="" onclick="tempo(646)">
+            </a>     
+
+           
+          </article>
+          <a href="1_modulo_t1.html" class="button button-primary">Tópico 1 </a>
+          <a href="1_modulo_t2.html" class="button button-primary">Tópico 2</a>
+          <a href="1_modulo_t3.html" class="button button-primary">Tópico 3</a>
+          <a href="1_modulo_t4.html" class="button button-primary">Tópico 4</a>
+          
+          </div>
+        </section>
+        
+        
+        
+
+        <div class="laptop-slider">            
+          <div class="slideshow">
+            <figure><img alt="" src="img/q5.png" width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/q6.png" width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/q7.png" width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/q8.png" width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/q9.png" width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/q10.png"width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/q11.png"width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/q12.png"width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/q13.png"width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/q14.png"width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/q15.png"width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/q16.png"width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/q17.png"width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/q18.png"width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/q19.png"width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/q20.png"width="70%" style="margin-left: 5%;"/></figure>
+            <span class="prev" style="display: none;"><i class="fas fa-angle-left fa-4x"></i></span>
+            <span class="next" style="display: none;"><i class="fas fa-angle-right fa-4x"></i></span>
+          </div>                    
+        </div>
+        
+        <section class="quote-container">
+
+          <div class="quote-slideshow">
+            <figure>
+              <h2>A Apple é uma empresa
+                fundada por Steve Jobs e
+                nos últimos anos boa partes dos lançamentos e de
+                inovação que surgiram no
+                mundo foram apresentadas
+                nas conferências da Apple.
+                O sistema operacional IOs
+                concentra operações para
+                tablet (Ipad) e smartphone (Iphone). Sua principal característica é a facilidade
+                de uso revelada após testes com crianças de três anos. O IOs é um sistema operacional proprietário e só pode ser utilizado em aparelhos fabricados pela Apple. </h2>
+              <figcaption>
+                APPLE IOS
+              </figcaption>
+            </figure>
+            <figure>
+              <h2>O Android é uma resposta
+                ao grande mercado de tecnologia e dispositivos mobiles.
+                Ele é baseado na versão 2.6
+                do kernel do Linux e tem disputado a liderança entre os
+                sistemas operacionais para
+                dispositivos portáteis junto
+                com o IOs.
+                Muitos pensam que o
+                Google é o dono do Android.
+                Na verdade, um grupo de empresas do mercado de telefonia é quem cuida do
+                Android. Este grupo é chamado de Open Handset Alliance (OHA). Este grupo
+                é liderado pelo Google, mas não torna esta empresa como única proprietária
+                deste sistema operacional.</h2>
+              <figcaption>
+                ANDROID
+              </figcaption>
+            </figure>
+            <span class="prev" style="display:none;"><i class="fas fa-angle-left fa-2x"></i></span>
+            <span class="next" style="display:none;"><i class="fas fa-angle-right fa-2x"></i></span>
+          </div>
+          
+          
+          
+        </section>
+
+        <footer class="footer">
+            <div class="container">
+                <h2 class="footer__logo">Carlos Souza</h2>
+        
+                <p>Esse conteúdo interativo tem o objetivo e auxiliar os alunos nas matérias do curso unicesumar, tendo em vista que as aulas e a apostilas estão separados, ou seja, dessa forma interativa o aluno terá  a oportunidade de estudar a apostila junto ao video conceitual, facilitando o aprendizado, e ganhado tempo. </p>
+
+                <p>O autor do site, por estar no 3° semestre do Curso de Análise e desenvolvimento de Sistemas, sentiu a necessidade, de estudar as matérias da faculdade ao mesmo tempo que executo projetos que possam ser uteis para os outros. </p>
+                <p>Caso veja algo que possa melhorar, ficarei muito feliz em estar consertando, favor entrar em contato pelo whatsapp, 419 9123-0585, as correções e atualizações são feitas na hora, caso o desenvolvedor Carlos saiba como concertar, caso precise estudar algo, pode levar um tempo maior, caso já tenha a solução seu código pode ser postado através do whatsapp, caso solicite, o desenvolvedor dará os devidos créditos aqui. </p>
+              <ul class="footer__links">
+                <li><a href="#">List One</a></li>
+                <li><a href="#">Page Two</a></li>
+                <li><a href="#">Design</a></li>
+                <li><a href="#">Work</a></li>
+                <li><a href="#">Contact Me</a></li>
+              </ul>
+            </div>
+        </footer>
+        
+        <script src="js/menu.js"></script>        
+        <script src="js/carousel.js"></script>
+
+        <script src="js/main.js"></script>
+        <script src="js/video.js"></script>
+
+    </body>
+</html>
