@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <title> Sistemas Operacionais </title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">  
+        <meta name="author" content="Daniel">
+        <meta name="description" content="descrição bacanuda">
+        <meta name="keywords" content="html5, tecnologia">
+
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+        <!-- Fonts -->
+        <link href='http://fonts.googleapis.com/css?family=Sintony:400,700' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+        
+      <link rel="stylesheet" href="style/normalize.css">
+        <link rel="stylesheet" href="style/main.css">
+      
+    </head>
+    <body class="no-js">
+        
+        <header class="header">
+          <a href="index.html" class="logo-text">unicesumar</a>
+          
+          <button style="display: none;" class="header__btnMenu"> <i class="fas fa-bars fa-2x"></i> <span class="sr-only">Menu</span></button>
+          
+          <nav class="header__nav">
+            <ul>
+              <li><a href="1_modulo_t1.html">1° Módulo</a></li>
+              <li><a href="2_modulo_t1.html">2° Módulo</a></li>
+              <li><a href="3_modulo_t1.html">3° Módulo</a></li>
+              <li><a href="4_modulo_t1.html">4° Módulo</a></li>
+              <li><a href="5_modulo_t1.html">5° Módulo</a></li>
+              <li><a href="index.html">home</a></li>
+            </ul>
+          </nav>
+        </header>
+        
+        <section class="hero">            
+          <h1 class="hero__title">unidade IV: GERENCIAMENTO DE
+            ENTRADA/SAÍDA E
+            PROTEÇÃO E SEGURANÇA
+          </h1>
+          <p class="hero__text">Tópico I </p>
+          <a href="img/Slides - Aulas Conceituais/Conceitual I.pdf" target="_blank" class="hero__btn">Slids aulas conceitual</a>                      
+        </section>
+        
+
+        <div class="container">
+        
+          
+          <article>
+
+              <h1>Objetivos de Aprendizagem </h1>
+              <p>■ Diferenciar hardware de entrada/saída do software de entrada/saída. <br>
+                ■ Apresentar como o sistema operacional se comunica com os
+                dispositivos de entrada/saída. <br>
+                ■ Descrever a importância do relógio para o bom funcionamento do
+                sistema operacional. <br>
+                ■ Definir os clientes magros (thin clients) e as técnicas utilizadas para
+                este tipo de computador. <br>
+                ■ Relacionar o consumo de energia dos computadores e como o
+                sistema operacional oportuniza configurações para ações de controle
+                de energia. <br>
+                ■ Diferenciar proteção e segurança. <br>
+                ■ Aprender sobre as principais formas de ataque a sistemas
+                operacionais. <br>
+                ■ Aprender a distinguir qual praga (malware) está sendo utilizada em
+                ataques a sistemas operacionais.</p> <br>
+              <a href="4_modulo_t1.html" class="button button-primary">Tópico 1</a>
+              <a href="4_modulo_t2.html" class="button button-primary">Tópico 2</a>
+              <a href="4_modulo_t3.html" class="button button-primary">Tópico 3</a>
+             
+                
+                <h3>INTRODUÇÃO</h3>
+                <h1 class="hero__title">SOFTWARE DE ENTRADA/SAÍDA</h1>
+                <section id="parteVideo">
+                  <video class="video-screen" width="100%" height="50%" controls="controls" src="img/aula12.mp4" ></video>
+                  <button class="hero__btn" onclick="tempo(12)">pular intro</button>
+                </section> 
+                                <hr> <p>Testo em fase de edição</p>
+                                
+                <p>Nas unidades anteriores aprendemos sobre os processos e como o sistema operacional gerencia memórias e os arquivos. Nesta unidade iremos entender qual
+                  o papel do sistema operacional quanto à entrada/saída. Para isto, precisamos
+                  distinguir hardware e software de entrada/saída.
+                  Tudo aquilo que utilizamos para realizar alguma interação com o computador pode ser considerado hardware de entrada/saída. Podemos citar o mouse,
+                  teclado e monitor como exemplos. Em alguns casos a interação consiste de
+                  forma diferenciada, como no caso do disco rígido ou o relógio do sistema, já
+                  que não estamos tocando fisicamente estas peças, mas estamos enviando dados
+                  e extraindo informações delas em todo o momento.
+                  Tanenbaum (2010, p. 203) define duas categorias para dispositivos de
+                  entrada/saída:
+                  ■ De blocos: referente a armazenamento de blocos de tamanho fixo, por
+                  exemplo, o disco rígido e o Pen Drive.
+                  ■ De caractere: envia ou recebe um fluxo de caracteres, sem considerar
+                  qualquer estrutura de blocos.
+                  Mas esta classificação não engloba todos os hardwares de entrada/saída.
+                  Novamente citamos o relógio como um hardware de entrada/saída, mas ele não
+                  é um dispositivo de bloco e nem de caractere, já que sua função é gerar interrupção programada.</p>
+                
+                  <p>Estes dispositivos estão conectados a placa-mãe por meio de barramentos.
+                    Os barramentos são formados por um conjunto de linhas de comunicação e
+                    fazem a interligação do dispositivo com o processador, memória e demais itens
+                    do hardware que forem necessários a serem utilizados.
+                    Para coordenar o fluxo destas informações na placa-mãe, dois controladores fazem o papel de gerenciamento. São a ponte norte (northbridge) e a ponte
+                    sul (southbrigde).
+                    Fonte: <www.sabereletronica.com.br/files/image/Nova-geracao_01_1_.jpg>
+                    Estes controladores, também chamados de chipsets, trabalham em conjunto, mas
+                    com características distintas. A ponte norte trabalha com dispositivos de alta
+                    velocidade e com acesso a memória RAM e processador, tanto que ela está localizada próxima a estes dois itens. Já a ponte sul trabalha com dispositivos de média
+                    ou baixa velocidade. Então na ponte norte temos os barramentos dedicados a
+                    vídeo e a PCI-Express. Na ponte sul temos a USB e a PCI padrão, por exemplo.
+                    A maneira como os dispositivos se comunicam com o processador é mediante
+                    um controlador de interrupção. Uma requisição de interrupção (IRQ – Interrupt
+                    Request) serve para notificar algo ao processador. Cada interrupção está associada a um número e a partir deste número é possível identificar qual dispositivo
+                    solicitou a interrupção. </p>
+
+          </article>
+          <a href="4_modulo_t1.html" class="button button-primary">Tópico 1 </a>
+          <a href="4_modulo_t2.html" class="button button-primary">Tópico 2</a>
+          <a href="4_modulo_t3.html" class="button button-primary">Tópico 3</a>
+         
+
+          
+        </section>
+       
+        
+        
+
+        <div class="laptop-slider">            
+          <div class="slideshow">
+            <figure><img alt="" src="img/2_1.png" width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/2_2.png" width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/unt_2_c1_s3.png" width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/uni_3_s4.png" width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/imagen5.png" width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/imagens6.png"width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/imagens7.png"width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/imagens8.png"width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/imagens9.png"width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/imagens10.png"width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/imagens11.png"width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/imagens12.png"width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/imagens13.png"width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/imagens14.png"width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/imagens16.png"width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/imagens17.png"width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/imagens18.png"width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/imagens19.png"width="70%" style="margin-left: 5%;"/></figure>
+            <span class="prev" style="display: none;"><i class="fas fa-angle-left fa-4x"></i></span>
+            <span class="next" style="display: none;"><i class="fas fa-angle-right fa-4x"></i></span>
+          </div>                    
+        </div>
+        
+        <section class="quote-container">
+
+          <div class="quote-slideshow">
+            <figure>
+              <h2>Um processo poderá utilizar a impressora por primeiro e depois o scanner,
+                mas nunca o scanner e depois uma impressora.
+                Em cada programa que é iniciado (automaticamente ou voluntariamente)
+                eu estou atribuindo mais trabalho ao sistema operacional e, consequentemente, a CPU?</h2>
+              <figcaption>
+                para refletir
+              </figcaption>
+            </figure>
+            <figure>
+              <h2>Como seria o desenvolvimento de software sem o uso de sistemas operacionais? Seria no mínimo mais demorado, pois a cada nova implementação,
+                seria necessário a programação e configuração de cada dispositivo/hardware a ser utilizado. </h2>
+              <figcaption>
+                Reflita
+              </figcaption>
+            </figure>
+            <span class="prev" style="display:none;"><i class="fas fa-angle-left fa-2x"></i></span>
+            <span class="next" style="display:none;"><i class="fas fa-angle-right fa-2x"></i></span>
+          </div>
+          
+          
+          
+        </section>
+
+        <footer class="footer">
+            <div class="container">
+                <h2 class="footer__logo">Carlos Souza</h2>
+        
+                <p>Esse conteúdo interativo tem o objetivo e auxiliar os alunos nas matérias do curso unicesumar, tendo em vista que as aulas e a apostilas estão separados, ou seja, dessa forma interativa o aluno terá  a oportunidade de estudar a apostila junto ao video conceitual, facilitando o aprendizado, e ganhado tempo. </p>
+
+                <p>O autor do site, por estar no 3° semestre do Curso de Análise e desenvolvimento de Sistemas, sentiu a necessidade, de estudar as matérias da faculdade ao mesmo tempo que executo projetos que possam ser uteis para os outros. </p>
+                <p>Caso veja algo que possa melhorar, ficarei muito feliz em estar consertando, favor entrar em contato pelo whatsapp, 419 9123-0585, as correções e atualizações são feitas na hora, caso o desenvolvedor Carlos saiba como consertar, caso precise estudar algo, pode levar um tempo maior, caso já tenha a solução seu código pode ser postado através do whatsapp, caso solicite, o desenvolvedor dará os devidos créditos aqui. </p>
+              <ul class="footer__links">
+                <li><a href="#">List One</a></li>
+                <li><a href="#">Page Two</a></li>
+                <li><a href="#">Design</a></li>
+                <li><a href="#">Work</a></li>
+                <li><a href="#">Contact Me</a></li>
+              </ul>
+            </div>
+        </footer>
+        
+        <script src="js/menu.js"></script>        
+        <script src="js/carousel.js"></script>
+
+        <script src="js/main.js"></script>
+        <script src="js/video.js"></script>
+
+    </body>
+</html>
