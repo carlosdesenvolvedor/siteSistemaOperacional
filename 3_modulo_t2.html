@@ -97,106 +97,37 @@
                   está sujeita a fragmentação externa.</p>
                   <hr>
                   <a href="#parteVideo"><button onclick="tempo(62)"  class="button-secundary">Ir para trexo da aula</button>  
-                    <img src="img/u3_t2_img2.png" alt=""  onclick="tempo(62)" >
+                    <img src="img/u3_t2_img3.png" alt=""  onclick="tempo(62)" >
                   </a>  
                   <hr>  
-                  <hr>
-
-
-
-
-
-
-
-
-
-              <p>Na figura abaixo, temos a definição da hierarquia de memória em um
-                computador:</p>
-              <a href="#parteVideo"><button onclick="tempo(297)"  class="button-secundary">Ir para trexo da aula</button>  
-                <img src="img/u3_t1_img2.png" alt=""  onclick="tempo(297)" >
+                  
+              <h2>Alocação por segmentos</h2>
+              <p>Esta estratégia fraciona o espaço de memória em áreas chamadas de segmentos.
+                Estes podem ser alocados separadamente na memória física, diferente da alocação contígua que toda a memória utilizada em um processo estava em uma
+                determinada partição. Cada partição da memória torna-se uma coleção de segmentos de tamanhos variados e com políticas de acessos distintas. Esta estratégia
+                também está sujeita a fragmentação externa.</p>
+                <p>Como demostrado no slide abaixo:</p>
+              <a href="#parteVideo"><button onclick="tempo(169)"  class="button-secundary">Ir para trexo da aula</button>  
+                <img src="img/u3_t2_img4.png" alt=""  onclick="tempo(169)" >
               </a>  
               <hr>
-              <h3>Algumas classificações precisam ser destacadas:</h3>
-              <ul>
-                <li>Memória principal: são mais rápidas, menores (capacidade de armazenamento), mais caras, consomem mais energia e são voláteis. Os registradores,
-                  cache L1 e L2 e a memória RAM estão nesta categoria.</li>
-                <li>Memória secundária ou de massa: não voláteis, lentas e baratas se comparadas às memórias principais. Disco rígido, CD-ROM são alguns exemplos
-                  desta categoria.</li>
-              </ul>
-              <h2>Endereço lógico e físico</h2>
-              <p>Quando um programa está em execução, uma série de endereços de memórias
-                são criados pelo processador e são classificados como ENDEREÇOS LÓGICOS,
-                por conter a lógica do programa. Quando estes endereços estão fisicamente
-                armazenados na memória RAM, chamamos estes de ENDEREÇOS FÍSICOS.
-                Na grande maioria das vezes, um endereço lógico não vai ser igual ao endereço
-                físico da memória RAM. Os Programas dos usuários, não enxergam os endereços físicos, trabalham somente com os endereços lógicos.</p>
-              <p>O processo de transformação do endereço lógico em físico é realizado pelo
-                hardware que pode estar ou não junto ao processador. Damos o nome deste
-                hardware de MMU (memory-management unit). A MMU sabe exatamente
-                onde determinado endereço lógico foi armazenado fisicamente na memória</p>
-              <p>RAM. Para este armazenamento, existem diversos métodos que a MMU pode
-                utilizar, estes serão descritos no item estratégias de alocação. </p>
-                <hr>
-              <a href="#parteVideo"><button onclick="tempo(492)"  class="button-secundary">Ir para trexo da aula</button>  
-                <img src="img/u3_t1_img3.png" alt=""  onclick="tempo(492)" >
+              <h2>Alocação paginada</h2>
+              <p>Visando evitar a fragmentação externa e a necessidade de compactação, foi
+                desenvolvida a estratégia de alocação denominada paginada. Ela permite que o
+                endereçamento físico de um processo não seja contíguo. Esta estratégia é usada
+                pela maioria dos sistemas operacionais atuais.</p>
+              <p>Nesta estratégia, o espaço de endereço lógico é dividido em blocos chamados
+                de páginas, onde para o processo, esta divisão é transparente. Além do endereço
+                lógico, o espaço de endereço físico também é dividido em blocos chamados de quadros. Cada página (espaço lógico) será alocada em um determinado quadro (espaço físico), independente da posição disponível na memória RAM. Esta
+                associação é chamada de tabela de páginas.</p>
+              <a href="#parteVideo"><button onclick="tempo(258)"  class="button-secundary">Ir para trexo da aula</button>  
+                <img src="img/u3_t2_img5.png" alt=""  onclick="tempo(258)" >
               </a>  
-            
-                  <hr>
-                  <a href="#parteVideo"><button onclick="tempo(666)"  class="button-secundary">Ir para trexo da aula</button>  
-                    <img src="img/u3_t1_img4.png" alt=""  onclick="tempo(666)" >
-                  </a> 
-            <hr>
-            <h2>Fragmentação de memória</h2>
-            <p>Conforme visto anteriormente, a memória armazena, temporariamente, um conjunto de dados utilizados pelos processos. Estes dados são adicionados e retirados
-              da memória RAM pela MMU, mediante as solicitações do processador (CPU). </p>
-            <p>Imagine que uma memória pode guardar 10 posições de dados. Para você
-              entender melhor, desenhe uma linha e crie 10
-              posições, algo semelhante a uma régua. Um processo (A) solicita o uso de 3 posições. A MMU
-              irá alocar os 3 primeiros espaços (posição 1, 2
-              e 3 ocupadas). Logo em seguida, um segundo
-              processo (B) solicita o uso de 2 posições de
-              memória. A MMU prontamente disponibiliza
-              o espaço solicitado (posição 4 e 5, pois a posição 1, 2 e 3 estão ocupadas). Neste momento,
-              a memória possui 5 espaços livres e 5 espaços
-              ocupados por dois processos (A e B).</p>
-            <p>Imagine que um usuário fechou o processo
-              A, com isto o espaço 1, 2 e 3 deve ser liberado.
-              A MMU irá fazer este trabalho. Agora temos
-              somente as posições 4 e 5 ocupadas, pois a
-              MMU retirou os dados do processo A, mas ela
-              não desloca a informação do bloco 4 e 5 para
-              as posições 1 e 2. </p>
-            <p>Imagine que um usuário solicitou a abertura de um processo diferente de
-              A e diferente de B e que este necessita de 5 posições na memória. A MMU irá
-              alocar nas posições 6, 7, 8, 9 e 10, pois as posições 4 e 5 estão ocupadas e nas
-              posições 1, 2 e 3 não comporta o tamanho solicitado. </p>
-            <p>Nesta pequena simulação entre 3 processos, percebemos que as três primeiras posições da memória ficaram vazias, gerando um “buraco”. Esta situação
-              pode piorar ainda com o passar do tempo e das inserções e retiradas de processos da memória.</p>
-            
-            <p>A estes “buracos” ou vazios na memória damos o nome de fragmentação.
-              A fragmentação pode ser dividida em:</p>
-              <ul>
-                <li>Fragmentação externa: ocorre quando existem espaços disponíveis na
-                  memória em pequenos intervalos não contíguos. O exemplo acima é uma
-                  fragmentação externa.</li>
-                  <hr>
-                  <a href="#parteVideo"><button onclick="tempo(897)"  class="button-secundary">Ir para trexo da aula</button>  
-                    <img src="img/u3_t1_img6.png" alt=""  onclick="tempo(897)" >
-                  </a> 
-                <li>Fragmentação interna: ocorre quando o espaço total de um bloco de alocação de memória não é usado por completo. </li>
-                <a href="#parteVideo"><button onclick="tempo(1040)"  class="button-secundary">Ir para trexo da aula</button>  
-                  <img src="img/u3_t1_img7.png" alt=""  onclick="tempo(1040)" >
-                </a> 
-                </ul>
-            <p>A seeguir, você irá conhecer algumas estratégias de alocação de dados na memória principal.</p>
-            
-            <hr>
-            <a href="#parteVideo"><button onclick="tempo(705)"  class="button-secundary">Ir para trexo da aula</button>  
-              <img src="img/u3_t1_img5.png" alt=""  onclick="tempo(705)" >
-            </a> 
-
-      <hr>
-          
+              <hr>
+              <a href="#parteVideo"><button onclick="tempo(169)"  class="button-secundary">Ir para trexo da aula</button>  
+                <img src="img/u3_t2_img6.png" alt=""  onclick="tempo(169)" >
+              </a>  
+              <hr>
           
           
           </article>
