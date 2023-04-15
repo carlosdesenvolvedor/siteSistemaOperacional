@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <title> Sistemas Operacionais </title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">  
+        <meta name="author" content="Daniel">
+        <meta name="description" content="descrição bacanuda">
+        <meta name="keywords" content="html5, tecnologia">
+
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+        <!-- Fonts -->
+        <link href='http://fonts.googleapis.com/css?family=Sintony:400,700' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+        
+      <link rel="stylesheet" href="style/normalize.css">
+        <link rel="stylesheet" href="style/main.css">
+      
+    </head>
+    <body class="no-js">
+        
+        <header class="header">
+          <a href="index.html" class="logo-text">unicesumar</a>
+          
+          <button style="display: none;" class="header__btnMenu"> <i class="fas fa-bars fa-2x"></i> <span class="sr-only">Menu</span></button>
+          
+          <nav class="header__nav">
+            <ul>
+              <li><a href="1_modulo_t1.html">1° Módulo</a></li>
+              <li><a href="2_modulo_t1.html">2° Módulo</a></li>
+              <li><a href="3_modulo_t1.html">3° Módulo</a></li>
+              <li><a href="4_modulo_t1.html">4° Módulo</a></li>
+              <li><a href="5_modulo_t1.html">5° Módulo</a></li>
+              <li><a href="index.html">home</a></li>
+            </ul>
+          </nav>
+        </header>
+        
+        <section class="hero">            
+          <h1 class="hero__title">Trabalho
+          </h1>
+          <p class="hero__text">Atv 1</p>
+          <a href="img/Slides - Aulas Conceituais/Conceitual I.pdf" target="_blank" class="hero__btn">Slids aulas conceitual</a>                      
+        </section>
+        
+
+        <div class="container">
+        
+          
+          <article>
+           
+
+
+              <a href="#" class="button button-primary">mapa</a>
+              <a href="#" class="button button-primary">atv 2</a>
+              <a href="#" class="button button-primary">atv 3</a>
+           
+                <p>Nessa aula o professor fala sobre Alocação paginada, Visando evitar a fragmentação externa e a necessidade de compactação, foi desenvolvida a estratégia de alocação denominada paginada. Ela permite que o endereçamento físico de um processo não seja contíguo. Esta estratégia é usada pela maioria dos sistemas operacionais atuais.</p>
+                <p>Nesta estratégia, o espaço de endereço lógico é dividido em blocos chamados de páginas, onde para o processo, esta divisão é transparente. Além do endereço lógico, o espaço de endereço físico também é dividido em blocos chamados de quadros. Cada página (espaço lógico) será alocada em um determinado quadro (espaço físico), independente da posição disponível na memória RAM. Esta associação é chamada de tabela de páginas.</p>
+                <a href="#parteVideo"><button onclick="tempo(258)"  class="button-secundary">Ir para trexo da aula</button>  
+                <img src="img/u3_t2_img5.png" alt=""  onclick="tempo(258)" >
+              </a>  
+              <hr>
+                
+                <section id="parteVideo">
+                  <video class="video-screen" width="100%" height="50%" controls="controls" src="img/aula10.mp4" ></video>
+                  <button class="hero__btn" onclick="tempo(12)">pular intro</button>
+                </section> 
+                <hr> 
+                <h2>Segue um modelo de resposta:</h2>
+           <p>A memória RAM tem 35 quadros ocupados e nenhum quadro livre. A memória virtual não tem quadros ocupados e tem 10 quadros livres</p>
+
+                <p> <b>Agora, com o entendimento do trabalho, vamos ao exercício.</b>  Antes de tudo saiba que, para esse exercício, a memória RAM tem um total de 42 quadros, sendo que 8 deles já estão ocupados. A memória virtual tem um total de 28 quadros e todos estão disponíveis. Agora, vamos às sequências de passos:</p>
+                <p> <br> <b>Passo 1:</b>  um processo de 25 páginas precisar ir para a memória RAM.  <br>
+                   <b> Passo 2:</b>  um processo de 8 páginas precisar ir para a memória RAM. <br>
+                   <b> Passo 3:</b>  um processo de 4 páginas precisar ir para a memória RAM. <br>
+                   <b> Passo 4:</b>  um processo de 5 páginas precisar ir para a memória RAM. <br>
+                   <b> Passo 5:</b>  um processo de 25 páginas foi removido da memória RAM. <br>
+                   <b> Passo 6:</b>  um processo de 5 páginas precisar ir para a memória RAM. <br>
+                   <b> Passo 7:</b>  um processo de 5 páginas precisar ir para a memória RAM. <br>
+                   <b> Passo 8:</b>  um processo de 8 páginas foi removido da memória RAM. <br> <br>
+ 
+                Ao final do Passo 8, qual é o resultado de quadros disponíveis para a memória RAM e quantos quadros estão sendo utilizados na memória virtual?</p>
+                <img src="img/img_atv1_final.jpg">
+                <h2>Minha explicação sobre a atividade: </h2>
+
+                <p>Vimos na aula que uma página pode se encaixar em um quadro.  </p>
+                <p>Importante observar, que quando a memória RAM atinge seu máximo de quadros, ela empresta da memória virtual (Swap). Ou seja, sabemos que a memória RAM tem 42 quadros, ou seja, se receber mais paginas que isso, o sistema irá alocar na memória virtual (Swapping), perceba que a RAM já inicia com 8 ocupados, ou seja 42 que e o total menos 8 fica livre 34, e assim por diante conforme tabela demonstrada acima. </p>
+                <p>Na linha 7, que está em vermelho, é para liberar essa quantidade de espaço, ou seja, algum processo terminou, nesse momento, a memória que tinha emprestado do Swapping retorna para a RAM. O mesmo acontece na linha 10, no passo 8. </p>
+                <p>Seguindo o modelo de resposta proposto ficaria assim: </p>
+                <p><b>A memoria Ram tem 27 quadros ocupados e 15 quadros livres. A memória virtual não tem quadros ocupados e tem 10 quadros livres</b></p>
+
+
+
+          </article>
+          <a href="#" class="button button-primary">atv1 </a>
+          <a href="#" class="button button-primary">atv 2</a>
+          <a href="#" class="button button-primary">atv 3</a>
+          <a href="#" class="button button-primary">Mapa</a>
+         
+
+          
+        </section>
+       
+        
+        
+
+        <div class="laptop-slider">            
+          <div class="slideshow">
+            <figure><img alt="" src="img/2_1.png" width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/2_2.png" width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/unt_2_c1_s3.png" width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/uni_3_s4.png" width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/imagen5.png" width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/imagens6.png"width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/imagens7.png"width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/imagens8.png"width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/imagens9.png"width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/imagens10.png"width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/imagens11.png"width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/imagens12.png"width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/imagens13.png"width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/imagens14.png"width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/imagens16.png"width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/imagens17.png"width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/imagens18.png"width="70%" style="margin-left: 5%;"/></figure>
+            <figure><img alt="" src="img/imagens19.png"width="70%" style="margin-left: 5%;"/></figure>
+            <span class="prev" style="display: none;"><i class="fas fa-angle-left fa-4x"></i></span>
+            <span class="next" style="display: none;"><i class="fas fa-angle-right fa-4x"></i></span>
+          </div>                    
+        </div>
+        
+        <section class="quote-container">
+
+          <div class="quote-slideshow">
+            <figure>
+              <h2>Um processo poderá utilizar a impressora por primeiro e depois o scanner,
+                mas nunca o scanner e depois uma impressora.
+                Em cada programa que é iniciado (automaticamente ou voluntariamente)
+                eu estou atribuindo mais trabalho ao sistema operacional e, consequentemente, a CPU?</h2>
+              <figcaption>
+                para refletir
+              </figcaption>
+            </figure>
+            <figure>
+              <h2>Como seria o desenvolvimento de software sem o uso de sistemas operacionais? Seria no mínimo mais demorado, pois a cada nova implementação,
+                seria necessário a programação e configuração de cada dispositivo/hardware a ser utilizado. </h2>
+              <figcaption>
+                Reflita
+              </figcaption>
+            </figure>
+            <span class="prev" style="display:none;"><i class="fas fa-angle-left fa-2x"></i></span>
+            <span class="next" style="display:none;"><i class="fas fa-angle-right fa-2x"></i></span>
+          </div>
+          
+          
+          
+        </section>
+
+        <footer class="footer">
+            <div class="container">
+                <h2 class="footer__logo">Carlos Souza</h2>
+        
+                <p>Esse conteúdo interativo tem o objetivo e auxiliar os alunos nas matérias do curso unicesumar, tendo em vista que as aulas e a apostilas estão separados, ou seja, dessa forma interativa o aluno terá  a oportunidade de estudar a apostila junto ao video conceitual, facilitando o aprendizado, e ganhado tempo. </p>
+
+                <p>O autor do site, por estar no 3° semestre do Curso de Análise e desenvolvimento de Sistemas, sentiu a necessidade, de estudar as matérias da faculdade ao mesmo tempo que executo projetos que possam ser uteis para os outros. </p>
+                <p>Caso veja algo que possa melhorar, ficarei muito feliz em estar consertando, favor entrar em contato pelo whatsapp, 419 9123-0585, as correções e atualizações são feitas na hora, caso o desenvolvedor Carlos saiba como consertar, caso precise estudar algo, pode levar um tempo maior, caso já tenha a solução seu código pode ser postado através do whatsapp, caso solicite, o desenvolvedor dará os devidos créditos aqui. </p>
+              <ul class="footer__links">
+                <li><a href="#">List One</a></li>
+                <li><a href="#">Page Two</a></li>
+                <li><a href="#">Design</a></li>
+                <li><a href="#">Work</a></li>
+                <li><a href="#">Contact Me</a></li>
+              </ul>
+            </div>
+        </footer>
+        
+        <script src="js/menu.js"></script>        
+        <script src="js/carousel.js"></script>
+
+        <script src="js/main.js"></script>
+        <script src="js/video.js"></script>
+
+    </body>
+</html>
