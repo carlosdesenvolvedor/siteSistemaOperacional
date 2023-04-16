@@ -430,6 +430,7 @@ li:hover ul{
 }
 
 @media screen and (min-width: 1024px){
+   
     .header{
         position: fixed;
     }
@@ -500,6 +501,9 @@ li:hover ul{
     
         text-align: center;
         
+    }
+     .button-pc{
+        margin-left: 361px;
     }
 }
 
