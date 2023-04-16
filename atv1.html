@@ -53,7 +53,7 @@
 
 
               <a href="mapa1.html" class="button button-primary">mapa</a>
-              <a href="atv1.html" class="button button-primary">atv 1</a>
+              <a href="atv1.html" class="button button-primary">atv 2</a>
               <a href="#" class="button button-primary">atv 3</a>
            
                 <p>Nessa aula o professor fala sobre Alocação paginada, Visando evitar a fragmentação externa e a necessidade de compactação, foi desenvolvida a estratégia de alocação denominada paginada. Ela permite que o endereçamento físico de um processo não seja contíguo. Esta estratégia é usada pela maioria dos sistemas operacionais atuais.</p>
@@ -66,15 +66,32 @@
                 <section id="parteVideo">
                   <video class="video-screen" width="100%" height="50%" controls="controls" src="img/aula10.mp4" ></video>
                   <button class="hero__btn" onclick="tempo(12)">pular intro</button>
-                </section>
-                <br><br><hr>
-                <iframe width="100%" height="450px" src="https://www.youtube.com/embed/asynUAW3IjY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </section> 
+                <iframe width="50%" height="450" src="https://www.youtube.com/embed/asynUAW3IjY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 <h2>Segue um modelo de resposta:</h2>
-           
+           <p>A memória RAM tem 35 quadros ocupados e nenhum quadro livre. A memória virtual não tem quadros ocupados e tem 10 quadros livres</p>
+
+                <p> <b>Agora, com o entendimento do trabalho, vamos ao exercício.</b>  Antes de tudo saiba que, para esse exercício, a memória RAM tem um total de 42 quadros, sendo que 8 deles já estão ocupados. A memória virtual tem um total de 28 quadros e todos estão disponíveis. Agora, vamos às sequências de passos:</p>
+                <p> <br> <b>Passo 1:</b>  um processo de 25 páginas precisar ir para a memória RAM.  <br>
+                   <b> Passo 2:</b>  um processo de 8 páginas precisar ir para a memória RAM. <br>
+                   <b> Passo 3:</b>  um processo de 4 páginas precisar ir para a memória RAM. <br>
+                   <b> Passo 4:</b>  um processo de 5 páginas precisar ir para a memória RAM. <br>
+                   <b> Passo 5:</b>  um processo de 25 páginas foi removido da memória RAM. <br>
+                   <b> Passo 6:</b>  um processo de 5 páginas precisar ir para a memória RAM. <br>
+                   <b> Passo 7:</b>  um processo de 5 páginas precisar ir para a memória RAM. <br>
+                   <b> Passo 8:</b>  um processo de 8 páginas foi removido da memória RAM. <br> <br>
+ 
                 Ao final do Passo 8, qual é o resultado de quadros disponíveis para a memória RAM e quantos quadros estão sendo utilizados na memória virtual?</p>
                 <img src="img/img_atv1_final.jpg">
                 <h2>Minha explicação sobre a atividade: </h2>
-                
+
+                <p>Vimos na aula que uma página pode se encaixar em um quadro.  </p>
+                <p>Importante observar, que quando a memória RAM atinge seu máximo de quadros, ela empresta da memória virtual (Swap). Ou seja, sabemos que a memória RAM tem 42 quadros, ou seja, se receber mais paginas que isso, o sistema irá alocar na memória virtual (Swapping), perceba que a RAM já inicia com 8 ocupados, ou seja 42 que e o total menos 8 fica livre 34, e assim por diante conforme tabela demonstrada acima. </p>
+                <p>Na linha 7, que está em vermelho, é para liberar essa quantidade de espaço, ou seja, algum processo terminou, nesse momento, a memória que tinha emprestado do Swapping retorna para a RAM. O mesmo acontece na linha 10, no passo 8. </p>
+                <p>Seguindo o modelo de resposta proposto ficaria assim: </p>
+                <p><b>A memoria Ram tem 27 quadros ocupados e 15 quadros livres. A memória virtual não tem quadros ocupados e tem 28 quadros livres</b></p>
+
+
 
           </article>
           <a href="atv1.html" class="button button-primary">atv1 </a>
