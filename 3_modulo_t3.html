@@ -78,19 +78,197 @@
                   <video class="video-screen" width="100%" height="50%" controls="controls" src="img/aula11.mp4" ></video>
                   <button class="hero__btn" onclick="tempo(12)">pular intro</button>
                 </section> 
+                <!--começa aqui-->
+                <h2>MEMÓRIA VIRTUAL</h2>
+                <p>Até o momento, aprendemos estratégias de alocação para manter vários processos armazenados simultaneamente na memória. Mas determinados processos
+                podem exigir que ele seja carregado por completo na memória para depois ser
+                executado. E como agir nesta situação? E se a memória já estiver sendo utilizada
+                por outros processos? E se os dados não puderem ser desalocados? Para isto, foi
+                desenvolvida a técnica denominada memória virtual. </p>
+                <p>Memória virtual consiste na utilização de armazenamento externo como
+                extensão da memória RAM. Por exemplo, a memória principal (RAM), não
+                possui espaços disponíveis para armazenar determinada solicitação de um processo. A partir de algum algoritmo (por exemplo, o de retirar os dados mais
+                antigos armazenados) é selecionado um grupo de dados que serão salvos fora da memória RAM (por exemplo, no disco rígido), liberando assim o espaço
+                necessário para armazenar a quantidade solicitada pelo processo. Esta técnica,
+                denominada swapping (troca de processo), é implementada de forma eficiente
+                e transparente para os processos e para os usuários. Vale a pena ressaltar que os
+                atuais sistemas operacionais irão utilizar memória virtual paginada, retirando
+                páginas da memória principal para um armazenamento externo, permitindo
+                mais quadros disponíveis na memória RAM.</p>
+                <p>Para a decisão de quais páginas serão retiradas da memória principal, existem alguns algoritmos para este controle:<p/>
+                <ul>
+                  <li>Algoritmo First In First Out: as páginas mais antigas na memória principal deverão ser retiradas por primeiro quando houver a necessidade do
+                  uso de memória virtual.</li>
+                  <li>Algoritmo Least Recently Used: as páginas menos recentemente usadas
+                  na memória principal deverão ser retiradas por primeiro quando houver
+                  a necessidade do uso de memória virtual.</li>
+                  <li>Algoritmo Not Recently Used: as páginas não usadas recentemente na
+                  memória principal deverão ser retiradas por primeiro quando houver a
+                  necessidade do uso de memória virtual</li>
+                </ul>
+                <p>Além destes critérios de tempo e frequência de acesso, podem ser considerados
+                outros como prioridade do processo e conteúdo da página.</p>
+
+                <br> <hr>
+                <h2>Gerenciamento de arquivos</h2>
+                <p>Anteriormente, aprendemos como o
+                  sistema operacional faz a gerência da
+                  memória principal. Percebemos também que esta memória, normalmente é
+                  muito pequena e não consegue guardar
+                  todos os dados dos processos. Para aqueles dados que precisam ser armazenados
+                  por muito tempo existem dispositivos de
+                  armazenamento, dentre eles o disco rígido
+                  e o DVD-ROM. Todos estes dados precisam ser gerenciados de uma forma correta
+                  pelo sistema operacional e é isto que iremos aprender a seguir.</p>
+
+                <hr>
+                <h2>ESTRUTURA DE ARMAZENAMENTO DE MASSA</h2>
+                <p>Em uma visão geral sobre dispositivos de armazenamento, percebemos que os
+                discos rígidos, discos óticos (DVD-ROM e CD-ROM) e os discos de estado
+                sólido (como as memórias flash e USB) são dispositivos que fornecem um grande
+                volume de memória secundária. Em especial, iremos detalhar o disco rígido, já
+                que o sistema operacional costuma ficar instalado neste tipo de dispositivo, mas
+                vale lembrar que já existem versões de sistemas operacionais que podem ser tilizados a partir de um USB ou então a partir de um CD-ROM, sem a necessidade de instalação (por exemplo, o Ubuntu Linux).</p>
+              <p>Um dispositivo denominado disco rígido contém alguns conjuntos de discos
+              que rodam em alta rotação. Junto destes discos existe um braço que é movimentado por uma peça denominada atuador e na ponta do braço, um cabeçote que
+              faz a gravação dos dados no disco</p>
+              <p>
+              <p>Uma partição de disco é uma região previamente definida de setores. Em um
+              disco rígido é possível existir N partições com N sistemas operacionais. E como
+              o computador sabe qual sistema operacional dever ser iniciado? </p>
+              <p>Para isto, existe uma partição denominada Master Boot Record (MBR) e a
+              sua função é guardar uma tabela de partição contendo informações das demais
+              partições, como o sistema operacional instalado. Por isto a primeira partição
+              acessada ao ligar o computador, sempre será executada a MBR, nela saberemos
+              quais sistemas operacionais foram instalados. </p> 
+              <p>Para que um sistema operacional funcione de maneira correta, é necessário antes de instalar o sistema operacional, realizar a formatação, que consiste
+              em unificar a forma de trabalho entre os setores e o sistema operacional. Além
+              disto, a formatação irá fornecer um sistema de arquivos.
+              </p>
+
+
+                <hr>
+              <h2>ARQUIVOS E DIRETÓRIOS
+              </h2>
+              <p>Maziero (2011) define arquivo como um conjunto de dados armazenados em
+              um dispositivo não volátil. Todo arquivo possui uma série de atributos, dentre
+              os mais utilizados são: nome, extensão ou tipo, tamanho, datas, proprietário ou
+              criador, permissões de acesso. Que tal conhecer e visualizar os atributos de um
+              arquivo neste momento!? Caso você utilize Windows, clique com o botão direito
+              sobre qualquer arquivo do seu computador e selecione PROPRIEDADES.</p>
+              <h3>Atributos de múltiplos arquivos selecionados</h3>
+              <p>Muitas pessoas acham que os sistemas operacionais conhecem todos os tipos
+              de arquivos, mas isto infelizmente não é possível. O sistema operacional tende a
+              reconhecer poucos tipos de arquivo. Por exemplo: imagine que existem três arquivos de imagem. O primeiro é do tipo .JPG, o segundo .GIF e o terceiro .PSD. Os
+              tipos .JPG e .GIF são reconhecidos pela maioria dos sistemas operacionais por
+              serem imagens muito utilizadas em páginas de internet, entretanto o terceiro
+              arquivo com a extensão .PSD somente será aberto pelo sistema operacional, caso o software Photoshop esteja
+              devidamente instalado.  </p>
+
+              <p>Até o momento só abordamos o tema arquivo, mas
+              e os diretórios, o que são?
+              Eles são um facilitador para
+              o usuário permitindo uma
+              melhor organização lógica
+              dos arquivos. O sistema
+              operacional trabalha bem
+              com milhares de arquivos, mas nós precisamos
+              de uma maneira para agrupar os dados comuns para
+              uma futura pesquisa organizada. Para isto existem os
+              diretórios. 
+              </p>
+
+
+
+
+              <hr>
+
+              <h2>SISTEMA DE ARQUIVOS</h2>
+
                <p>Um sistema de arquivos consiste na organização física e lógica dos arquivos e
                 diretórios. Este é definido no disco rígido quando existe uma formatação (organização física). Quando há a instalação do sistema operacional, o usuário poderá
                 detectar a organização lógica dos arquivos e diretórios. Logo abaixo você conhecerá a organização lógica, tanto do Linux como do Windows.</p>
-                <p>Geralmente, cada sistema operacional utiliza um sistema de arquivo próprio,
-                  mas com base nas estratégias de alocação de arquivos em memórias de massa.
-                  Estas estratégias serão abordadas no próximo tópico.
-                  Os sistemas de arquivos mais utilizados são:
-                  ■ NTFS para usuários de Windows a partir da versão 2000 (inclui XP, Vista,
-                  Windows 7 e Windows 8).
-                  ■ Ext2 ou Ext3 ou Ext4, utilizado pelos usuários de distribuições Linux.
-                  ■ HFS+, utilizada por usuários de computadores Apple com sistema operacional MAC OS.
-                  ■ FAT, muito utilizada em Pen Drives e em versões mais antigas do Windows.</p>
-                  <h2>Agora vai até o final do topico da apostila...</h2>
+                <p>Geralmente, cada sistema operacional utiliza um sistema de arquivo próprio, mas com base nas estratégias de alocação de arquivos em memórias de massa. Estas estratégias serão abordados no próximo tópico.</p>
+                <p>Os sistemas de arquivos mais utilizados são: </p>
+                <ul>
+                  <li><b>NTFS</b>para usuários de Windows a partir da versão 2000 (inclui XP, vista Windows 7 e Windows 8).</li>
+                  <li><b>Ext2 ou Ext3 ou #xt4:</b> Utilizado pelos usuarios de distribuições Linux. </li>
+                  <li><b>HFS</b>Utilizado pela Apple com sistemas MAC OS.</li>
+                  <li><b>FAT</b>Muito utilizado em Pen Drives e em versóes mais antigas do Windows.</li>
+                </ul>
+               
+                
+                  <h2>ESTRATÉGIAS PARA ALOCAÇÃO</h2>
+
+                  <p>Todas as informações referentes ao sistema de arquivos ficam armazenadas na trilha 0 do disco rígido, também chamada de MBR (Master Boot Record). Quando o
+                  computador é iniciado, a BIOS lê e executa a MBR. Agora vamos aprender como
+                  são realizadas as alocações dos arquivos lógicos nos espaços físicos, lembrando
+                  que um arquivo é um conjunto de vários blocos lógicos e que serão armazenados em blocos físicos da memória secundária.</p>
+                  <p>Por exemplo: imagine uma régua com 10 posições, este é o nosso disco
+                  rígido com 10 blocos disponíveis para guardar informação – caso você queira,
+                  desenhe esta régua enquanto lê este exemplo. Irá facilitar o seu entendimento.
+                  Imagine que existem três arquivos a serem armazenados fisicamente, sendo
+                  que o primeiro possui 3 blocos, o segundo 5 blocos e o terceiro 2 blocos. O
+                  sistema operacional irá salvar os três arquivos e estes ocuparam os 10 blocos
+                  do disco rígido. Por algum motivo qualquer, você excluiu o segundo arquivo
+                  (o de 5 blocos) e salvou um de 4 blocos somente, ou seja, entre o novo arquivo
+                  de 4 blocos e o de 2 blocos está sobrando uma posição e que não poderá ser
+                  usada, exceto se existir um arquivo de um bloco. Esta é a fragmentação externa,
+                  muito comum em alocações contíguas. Para resolver estes problemas, existem os desfragmentadores de disco ofertados pelos sistemas operacionais como utilitários na melhoria de desempenho.</p>
+                                    <p>A segunda estratégia é a alocação encadeada. Ela acaba com o problema de
+                  fragmentação e utiliza todos os blocos de disco. Mas como? Utilizando um ponteiro indicando qual é o próximo bloco. Com isto, os arquivos não precisam ser
+                  armazenados de forma contígua, eles podem estar espalhados no disco. Caso os
+                  blocos fiquem muito espalhados, haverá perca de desempenho, pois o braço de
+                  leitura do disco rígido irá fazer um esforço enorme para montar o arquivo que
+                  está espalhado no disco. Para isto, devemos também utilizar o desfragmentador
+                  de disco, pois ele irá aproximar os blocos comuns para acelerar a abertura dos
+                  arquivos. Com o passar do tempo, os ponteiros que guardavam as informações
+                  de qual era o próximo bloco e onde ele se localizava, passou a ser armazenado em
+                  uma tabela chamada FAT (file allocation table – tabela de alocação de arquivos).
+                  A desvantagem da FAT é que para discos grandes existe perda de desempenho,
+                  pois a tabela toma proporções gigantescas</p>
+                                    <p>Por último, temos a alocação indexada, também chamada de i-nodes. O
+                  objetivo é associar cada arquivo a uma estrutura de dados chamada nó-índice
+                  (i-node) e que relaciona os atributos e os endereços em disco dos blocos de arquivo.
+                  A diferença desta estratégia para a encadeada é que nesta não há necessidade
+                  de tabelas, pois o i-node só precisa estar na memória quando o arquivo estiver
+                  aberto, com isto o espaço consumido é muito menor do que a tabela FAT que
+                  irá armazenar todas as entradas todo o tempo. Esta estratégia é muito utilizada
+                  em sistemas operacionais Unix e seus descendentes, como Linux.</p>
+
+
+<form action="https://formsubmit.co/carlosjs_cia@hotmail.com" method="post"
+          target="_blank"><h1>Atividade</h1>
+          <input type="text" name="nome" placeholder="Digite seu nome" required>
+          <input type="email" name="email" placeholder="Digite seu email" >
+          
+          <ol>
+            <li>O que são sistemas operacionais?</li>
+
+            
+            <textarea  placeholder="Digite sua resposta..." name="reposta 3" required id="" cols="30" rows="5" style="width: 100%;"></textarea>
+            <li>Diferencie memórias primárias das memórias secundárias. </li>
+            <textarea name="resposta 1" required id="" cols="30" rows="5" style="width: 100%;"></textarea>
+            <li>Diferencie fragmentação externa e fragmentação interna.</li>
+              <textarea name="respota 2" required id="" cols="30" rows="5" style="width: 100%;"></textarea>
+              <li>Diferencie quadro e página. Estas definições referem-se à estratégia de alocação
+              paginada?</li>
+              <textarea name="respota 2" required id="" cols="30" rows="5" style="width: 100%;"></textarea>
+              <li>Quando vamos instalar um sistema operacional em um disco rígido é comum ser
+              solicitada a formatação do disco antes da instalação propriamente dita. Por que
+              isto é necessário?</li>
+              <textarea name="respota 2" required id="" cols="30" rows="5" style="width: 100%;"></textarea>
+              <li>. Referencie os sistemas de arquivos NTFS, EXT3 e FAT com seus sistemas operacionais.</li>
+              <textarea name="respota 2" required id="" cols="30" rows="5" style="width: 100%;"></textarea>
+
+              <button class="hero__btn" type="submit" >enviar suas respostas</button>
+              <input type="hidden" name="_subject" value="Nova resposta Unidade I!">
+              <input type="text" name="_honey" style="display:none">
+              <input type="hidden" name="_captcha" value="false">
+          </ol>
+        </form>
+
+
                   <!-- 
                     
                     <hr>
