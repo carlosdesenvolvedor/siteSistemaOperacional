@@ -26,8 +26,10 @@ li ul{
     transition: height 1.5s;
 }
 li:hover ul{
-    height: 200px;
+    height: 280px;
+    background-color: blue;
 }
+
 
 .header{
     background: #fff;
@@ -435,7 +437,21 @@ li:hover ul{
         position: fixed;
     }
     li:hover ul{
-        height: 80px;
+        height: 450px;
+    
+    }
+  
+       
+    .sub-menu-1{
+        display: flex;
+
+        
+    }
+    .enderecos{
+        display: flex;
+                
+        
+        
     }    
     .logo-text{
         width: 25%;
