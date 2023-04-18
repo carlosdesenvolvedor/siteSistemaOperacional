@@ -435,8 +435,9 @@ li:hover ul{
    
     .header{
         position: relative;
-        width: 75%;
+        
         background-color: transparent;
+        
         
     }
 
@@ -474,17 +475,20 @@ li:hover ul{
     .logo-text{
         width: 25%;
         box-sizing: border-box;
+        height: 71px;
+        
     }
     
     .header__btnMenu{
         display: none;
     }
     
+    
     .header__nav{
         float: left;
         width: 75%;
         clear: none;
-        max-width: 800px;
+       
         
     }
     
