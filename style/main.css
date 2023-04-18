@@ -27,7 +27,7 @@ li ul{
 }
 li:hover ul{
     height: 280px;
-    background-color: blue;
+    
 }
 
 
@@ -434,25 +434,43 @@ li:hover ul{
 @media screen and (min-width: 1024px){
    
     .header{
-        position: fixed;
+        position: relative;
+        width: 75%;
+        background-color: transparent;
+        
     }
+
+
     li:hover ul{
-        height: 450px;
+        height: 160px;
+        
     
     }
-  
-       
-    .sub-menu-1{
-        display: flex;
-
+    
+    .header__nav li {
+        list-style-type: none;
+        background-color: transparent;
+        
+        text-align: center;
+        border-bottom: 1px dotted rgba(255,255,255, 0.2);
         
     }
+   
+    
     .enderecos{
-        display: flex;
-                
-        
+        display: flex; 
+        flex-direction: column;
+        letter-spacing: 0.05em;        
         
     }    
+   
+    .enderecos a{
+        padding: 10px;
+    }
+    .sub_linha:hover{
+        background-color: rgba(10, 9, 10, 0.705);
+    }
+ 
     .logo-text{
         width: 25%;
         box-sizing: border-box;
@@ -467,6 +485,7 @@ li:hover ul{
         width: 75%;
         clear: none;
         max-width: 800px;
+        
     }
     
     .header__nav ul{
