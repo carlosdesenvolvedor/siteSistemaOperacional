@@ -451,9 +451,12 @@ li:hover ul{
 
 
     li:hover ul{
-        height: 160px;
+        height: 165px;
         
     
+    }
+    .enderecos li a{
+        padding: 13px;
     }
     
     .header__nav li {
