@@ -26,7 +26,7 @@ li ul{
     transition: height 1.5s;
 }
 li:hover ul{
-    height: 280px;
+    height: 128px;
     
 }
 
@@ -93,6 +93,11 @@ li:hover ul{
     font-size: 14px;
     
 }
+.enderecos li a{
+    padding: 5px;
+}
+
+
 /*Aqui começa Javascript*/
 .js .header__nav{
     transition: max-height 1s;
