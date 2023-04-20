@@ -20,13 +20,13 @@ export default [
     ],
   },
   {
-    question: "Com o desenvolvimento da nanotecnologia, os computadores estão cada vez menores. Podemos citar como precursor desta tecnologia portátil o computa- dor do tipo PDA (Personal Digital Assistant) que era um pequeno computador com um número limitado de funções. Ele era um computador de bolso e a empresa referência neste tipo de produto é a PALM, utilizando o PALM OS.  Atualmente os PDA perderam espaço para os smatphones e tablets. O primeiro consiste em um aparelho celular com diversas funções e o segundo consiste em um computador em formato de prancheta. As diversas funcionalidades destes dois aparelhos são ofertadas a partir do uso de um sistema operacional. Os mais utilizados são o iOS e Android. ​Com base no texto acima e considerando o Sistema Operacional Android é correto afirmar:",
+    question: "O primeiro consiste em um aparelho celular com diversas funções e o segundo consiste em um computador em formato de prancheta. As diversas funcionalidades destes dois aparelhos são ofertadas a partir do uso de um sistema operacional. Os mais utilizados são o iOS e Android. ​Com base no texto acima e considerando o Sistema Operacional Android é correto afirmar:",
     answers: [
-      { option: "É um sistema operacional servidor que é baseado em Linux e foi desenvolvido pelo Google", correct: false },
-      { option: "É um sistema operacional embarcado que é focado em dispositivos de Internet das Coisas e sua interface gráfica é baseada no Linux", correct: false },
-      { option: "É um sistema operacional para dispositivos móveis que teve seu desenvolvimento a partir do kernel do Linux", correct: true },
-      { option: "É um sistema operacional embarcado que é focado em dispositivos móveis e sua interface gráfica é baseada no Linux ", correct: false },
-      { option: "É um sistema operacional para dispositivos móveis que teve seu desenvolvimento a partir do kernel do Windows", correct: false },
+      { option: "É um SO servidor que é baseado em Linux e foi desenvolvido pelo Google", correct: false },
+      { option: "É um SO embarcado que é focado em dispositivos de Internet das Coisas e sua interface gráfica é baseada no Linux", correct: false },
+      { option: "É um SO para dispositivos móveis que teve seu desenvolvimento a partir do kernel do Linux", correct: true },
+      { option: "É um SO embarcado que é focado em dispositivos móveis e sua interface gráfica é baseada no Linux ", correct: false },
+      { option: "É um SO para dispositivos móveis que teve seu desenvolvimento a partir do kernel do Windows", correct: false },
     ],
   },
   {
@@ -100,9 +100,11 @@ export default [
     +"III – Memória cache se refere a um tipo de memória de pequena capacidade para dados de uso mais imediato pelo processador."
     , answers: [
     
-      { option: "70", correct: false },
-      { option: "56", correct: false },
-      { option: "49", correct: true },
+      { option: "I,apenas", correct: false },
+      { option: "II,apenas", correct: false },
+      { option: "III,apenas", correct: false },
+      { option: "I e II,apenas", correct: false },
+      { option: "II e III,apenas", correct: false },
     ],
   },
  
