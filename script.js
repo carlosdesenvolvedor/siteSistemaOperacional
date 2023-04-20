@@ -37,6 +37,7 @@ function finish() {
   textFinish.innerHTML = `você acertou ${questionsCorrect} de ${questions.length}`;
   content.style.display = "none";
   contentFinish.style.display = "flex";
+  
 }
 
 function loadQuestion() {
