@@ -41,13 +41,20 @@ main {
   width: 100%;
   gap: 10px;
 }
+.question{
+  font-size: 12px;
+}
 
 .spnQtd {
   text-align: end;
+  font-size: 15px;
+  
+
 }
 
 .answers {
   display: flex;
+  font-size: 15px;
   flex-direction: column;
   gap: 5px;
 }
