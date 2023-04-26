@@ -107,13 +107,52 @@
           
           <article>
            
-
-
-              <a href="mapa1.html" class="button button-primary">mapa</a>
-              <a href="atv1.html" class="button button-primary">atv 1</a>
-              <a href="#" class="button button-primary">atv 3</a>
-              <h1 class="hero__title">o video abaixo explica como preparar para fazer o mapa "diretórios"</h1>
-              
+            
+            
+            <a href="mapa1.html" class="button button-primary">mapa</a>
+            <a href="atv1.html" class="button button-primary">atv 1</a>
+            <a href="#" class="button button-primary">atv 3</a>
+            <p><b>Segue um passa a passa para montar o mapa</b><br> 
+              1 - criar a pasta raiz: <br>
+              <b>usr#: mkdir raiz</b> <br>
+              2 - entrar na pasta raiz: <br>
+              <b>usr#: cd raiz</b> <br>
+              3 - criar as pastas bin, dev, etc e home, lembrando que precisa estar na pasta raiz: <br>
+              <b>usr#: mkdir bin dev etc home</b>  <br>
+              4 - entrar na pasta etc para criar as pastas jvm: <br>
+              <b>usr#: cd etc</b> <br>  
+              <b>usr#: mkdir jvm</b> <br>
+              5  - Entrar na pasta jvm e criar as pastas jre e jdk: <br>
+              <b>usr#: cd jvm</b> <br> 
+              <b>usr#: mkdir jre jdk</b> <br>
+              6 - Aproveitar que ja estamos na pasta jvm vamos criar o primeiro arquivo: <br>
+              <b>usr#: touch java.sh</b> <br> 
+              7 - agora precisamos voltar para pasta raiz: <br>
+              <b>usr#: cd ..</b> aqui estamo na etc <br>
+              <b>usr#: cd ..</b> agora chegamos na raiz <br> 
+              8 - entrar na pasta home: <br>
+              <b>usr#: cd home</b> <br>
+              9 - Agora que estamos na pasta home vamos criar as pastas aluno e professor: <br>
+              <b>usr#: mkdir aluno professor</b> <br>
+              10 - entrar na pasta aluno: <br>
+              <b>usr#: cd aluno</b> <br> 
+              11 - Criar os arquivos livro.pdf e tcc.docx na pasta aluno: <br>
+              <b>usr#: touch livro.pdf tcc.docx</b> <br>
+              12 - voltar para pasta home: <br>
+              <b>usr#: cd ..</b> <br>
+              13 - entrar na pasta professor: <br>
+              <b>usr#: cd professor</b> <br>
+              14 - criar os arquivos notas.xlsx, livro.pdf, presenca.xlsx, aula01.pptx: <br>
+              <b>usr#: touch notas.xlsx livro.pdf presenca.xlsx aula01.pptx</b></p>
+            <h2>Uma possível resposta: </h2>
+            <ol>
+              <li>ls home/professor</li>
+              <li>ls -all</li>
+              <li>ps m ou ps -lh</li>
+              <li>pwd </li>
+              <li>rmdir etc/jvm/jdk </li>
+              <li>cp -rf home/professor/aula01.pptx home/aluno</li>
+            </ol>
               <h2>link para terminal linux: <a href="https://www.webminal.org/register/" target="_blank" class="hero__btn">webminal</a> </h2>  
               <ul>
                 <li><b>Nome do usuario só pode ter o primeiro nome.</b> </li>
@@ -121,6 +160,8 @@
                   se aparecer alguma coisa no lado direito da tela, precisa corrigir, qualquer coisa
                   pode me chamar no whatsapp. 4199123-0585</li>
               </ul>
+              <h1 class="hero__title">o video abaixo explica como preparar para fazer o mapa "diretórios"</h1>
+
 
               <iframe width="100%" height="430" src="https://www.youtube.com/embed/Wa96gE1YLNc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
               <p>Abaixo eu testando os comandos:</p>
