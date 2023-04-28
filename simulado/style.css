@@ -190,15 +190,15 @@ body{
 }
 .quiz-box .answers-indicator div.correct{
     background-color: rgba(0, 128, 0, 0.74);
-     background-image: url("/img/correct.png");
+     background-image: url("img/correct.png");
      background-size: 50%;
      background-repeat: no-repeat;
      background-position:  center;
      
 }
 .quiz-box .answers-indicator div.wrong{
-    background-color: rgba(255, 0, 0, 0.507);
-    background-image: url("/img/wrong.png");
+    background-color: rgba(255, 0, 0, 0.829);
+    background-image: url("img/wrong.png");
     background-size: 50%;
      background-repeat: no-repeat;
      background-position:  center;
