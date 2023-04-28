@@ -26,3 +26,4 @@ Na terceira geração temos a Multiprogramação são múltiplos programas compa
 tecnica da terceira geração: 
 
 na quarta geração surge os Pcs, microcomputação. */ 
+//vou digitar um comentario teste aqui para ver se esta lincando com o github
