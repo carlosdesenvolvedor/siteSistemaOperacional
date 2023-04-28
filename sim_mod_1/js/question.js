@@ -112,7 +112,7 @@ const quiz = [
             'Sistema operacional',
             'browser',
             ],
-    answer: 2
+    answer: 3
 
 }
 
