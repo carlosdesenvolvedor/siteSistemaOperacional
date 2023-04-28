@@ -103,6 +103,17 @@ const quiz = [
             ],
     answer: 3
 
+},
+{
+    q:'Fornecer uma interface de acesso para dispositivos com tecnologias distintas como USB e IDE. é uma função do:',
+    options:['linux',
+             'windows',
+             'Computador',
+            'Sistema operacional',
+            'browser',
+            ],
+    answer: 2
+
 }
 
 
