@@ -57,7 +57,7 @@ const quiz = [
             'modo núcleo e modo central',
             'modo usuário e modo núcleo',
             ],
-    answer: 2
+    answer: 4
 
 }, 
 {
