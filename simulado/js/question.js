@@ -96,7 +96,7 @@ const quiz = [
             'Seção de memória, seção de dados, fila e pilha',
             'Seção de texto, seção de dados, heap e pilha',
             ],
-    answer: 0
+    answer: 4
 
 },
 {
