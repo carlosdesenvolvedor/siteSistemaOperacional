@@ -691,7 +691,7 @@ const quiz = [
 
 },
 {
-    q:'Comando para remover arquivo',
+    q:'Comando para remover um diretório',
     options:['rmdir',
              'remover',
              'delete',
