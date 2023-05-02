@@ -29,6 +29,11 @@ body{
         opacity: 1;
     }
 }
+.footer a{
+    color: #454e51;
+    padding-left: 80opx;
+    text-decoration: none;
+}
 
 .custom-box::before,
 .custom-box::after{
