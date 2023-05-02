@@ -191,11 +191,17 @@ function tryAgainQuiz(){
     startQuiz();
 
 }
+const url = 'https://silly-brigadeiros-a18f43.netlify.app/index.html';
+function voltarHome(){
+    const win = window.open(url, '_black')
+
+}
 function goToHome(){
     resultBox.classList.add("hide");
     homeBox.classList.remove("hide");
     resetQuiz();
 }
+
 
 function startQuiz(){
   homeBox.classList.add("hide");  

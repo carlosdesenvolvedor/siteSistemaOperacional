@@ -364,10 +364,10 @@ const quiz = [
 
 },
 {
-    q:'A partir da ideia de memória virtual, observe as afirmativas a seguir:'
-    +'I – O controle do uso de memória para a troca de processos armazenados temporariamente realiza trocas de processos na memória (swapping).'
-    +'II – Um dos algoritmos para controle do swapping retira conteúdos de páginas de memória principal menos utilizados e os coloca em memória virtual para que um novo conteúdo seja colocado.'
-    +'III – Conteúdos de páginas de memória em uso são prioridade para serem alocados em memória virtual nos algoritmos de controle de swapping.',
+    q:'A partir da ideia de memória virtual, observe as afirmativas a seguir: \n'
+    +'I – O controle do uso de memória para a troca de processos armazenados temporariamente realiza trocas de processos na memória (swapping). \n'
+    +'II – Um dos algoritmos para controle do swapping retira conteúdos de páginas de memória principal menos utilizados e os coloca em memória virtual para que um novo conteúdo seja colocado. \n'
+    +'III – Conteúdos de páginas de memória em uso são prioridade para serem alocados em memória virtual nos algoritmos de controle de swapping. \n',
     options:['I, apenas. ',
              'II, apenas.',
              'III, apenas.',
@@ -551,14 +551,14 @@ const quiz = [
 
 },
 {
-    q:'A partir da ideia de códigos maliciosos, observe as afirmativas a seguir:'
-    +'I – Vírus são os agentes mais tradicionais de infecção e se baseiam na ideia de infiltração, mas não se'
-    +'preocupam com a infecção de outros arquivos além do que foi originalmente contaminado.'
-    +'II – Existem softwares dedicados a buscar pontos desprotegidos não detectados ou não corrigidos, e que'
-    +'permitam uma possível invasão.'
-    +'III – Existem softwares que são capazes de capturar o que é digitado por usuários para uso, assim como'
-    +'existem softwares que se prestam a ocultar acessos indevidos e o conjunto destas duas alternativas se'
-    +'mostra um grande risco.' 
+    q:'A partir da ideia de códigos maliciosos, observe as afirmativas a seguir: \n'
+    +'I – Vírus são os agentes mais tradicionais de infecção e se baseiam na ideia de infiltração, mas não se '
+    +'preocupam com a infecção de outros arquivos além do que foi originalmente contaminado. \n'
+    +'II – Existem softwares dedicados a buscar pontos desprotegidos não detectados ou não corrigidos, e que '
+    +'permitam uma possível invasão. \n'
+    +'III – Existem softwares que são capazes de capturar o que é digitado por usuários para uso, assim como '
+    +'existem softwares que se prestam a ocultar acessos indevidos e o conjunto destas duas alternativas se '
+    +'mostra um grande risco. \n' 
     +'Assinale a alternativa que contenha apenas afirmativas corretas.',
     options:['I, apenas ',
              'II, apenas',
