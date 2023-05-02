@@ -518,16 +518,16 @@ const quiz = [
 
 },
 {
-    q:'Mecanismos de entrada e saída em hardware são controlados e se comunicam através dos recursos que'
-   +'um sistema operacional oferece. Esses recursos vão desde o que um usuário pode fazer durante a'
-    +'interação com um dispositivo desse tipo, até o que o dispositivo pode oferecer ao usuário.'
-    +'A partir da ideia de dispositivos de entrada e saída controlados pelo sistema operacional, observe as'
-    +'afirmativas a seguir:'
-    +'I – A exibição de uma interface gráfica em um dispositivo de saída como o monitor depende do sistema'
-    +'operacional e não da resolução do monitor.'
-    +'II – Dentro da comunicação entre sistema operacional e dispositivos de entrada e saída, um componente'
-    +'essencial para essa comunicação se chama driver.'
-    +'III – Os barramentos são responsáveis pela comunicação física entre dispositivos de entrada e saída e a'
+    q:'Mecanismos de entrada e saída em hardware são controlados e se comunicam através dos recursos que ' 
+   +'um sistema operacional oferece. Esses recursos vão desde o que um usuário pode fazer durante a '
+    +'interação com um dispositivo desse tipo, até o que o dispositivo pode oferecer ao usuário.'+'<br>'
+    +'A partir da ideia de dispositivos de entrada e saída controlados pelo sistema operacional, observe as '
+    +'afirmativas a seguir:'+'<br>'
+    +'I – A exibição de uma interface gráfica em um dispositivo de saída como o monitor depende do sistema '
+    +'operacional e não da resolução do monitor.'+'<br>' 
+    +'II – Dentro da comunicação entre sistema operacional e dispositivos de entrada e saída, um componente '
+    +'essencial para essa comunicação se chama driver. <br>'
+    +'III – Os barramentos são responsáveis pela comunicação física entre dispositivos de entrada e saída e a '
     +'placa mãe que os gerencia em conjunto com o sistema operacional.'
     +'Assinale a alternativa que contenha apenas afirmativas corretas.',
     options:['I, apenas.',
@@ -621,7 +621,7 @@ const quiz = [
             'mostrar',
             'touch',
             ],
-    answer: 1
+    answer: 0
 
 },
 {
