@@ -439,11 +439,11 @@ const quiz = [
 
 },
 {
-    q:'Tudo aquilo que utilizamos para realizar alguma interação com o computador pode ser considerado'
-    +'hardware de entrada/saída. Podemos citar o mouse, teclado e monitor como exemplos. Em alguns casos a'
-    +'interação consiste em forma diferenciada, como no caso do disco rígido ou o relógio do sistema, já que não'
-    +'estamos tocando fisicamente estas peças, mas estamos enviando dados e extraindo informações delas em'
-    +'todo o momento.',
+    q:'Tudo aquilo que utilizamos para realizar alguma interação com o computador pode ser considerado '
+    +'hardware de entrada/saída. Podemos citar o mouse, teclado e monitor como exemplos. Em alguns casos a '
+    +'interação consiste em forma diferenciada, como no caso do disco rígido ou o relógio do sistema, já que não '
+    +'estamos tocando fisicamente estas peças, mas estamos enviando dados e extraindo informações delas em '
+    +'todo o momento. ',
     options:['As duas categorias são: de memória e de processamento',
              'Categoria de barramento e de bloco',
              'As duas categorias são: de bloco e de caractere',
