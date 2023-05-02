@@ -256,7 +256,7 @@ const quiz = [
             'Recursos computacionais reduzidos ',
             ,
             ],
-    answer: 1
+    answer: 3
 
 },
 {
