@@ -414,10 +414,10 @@ const quiz = [
 
 },
 {
-    q:'Os recursos de hardware representam uma série de tecnologia que trabalha em conjunto para que soluções de software possam ser executadas. Um dos recursos de hardware mais conhecidos é a memória de armazenamento. As afirmativas a seguir se referem a características de alguns tipos de memórias.'
-    +'I – Memória ROM ou de massa é usada para armazenamento de quantidades maiores de dados de forma permanente.'
-    +'II – Memória RAM se refere à memória temporária básica de trabalho onde os softwares abertos são inicialmente alocados.'
-    +'III – Memória cache se refere a um tipo de memória de pequena capacidade para dados de uso mais imediato pelo processador.',
+    q:'Os recursos de hardware representam uma série de tecnologia que trabalha em conjunto para que soluções de software possam ser executadas. Um dos recursos de hardware mais conhecidos é a memória de armazenamento. As afirmativas a seguir se referem a características de alguns tipos de memórias. <br>'
+    +'I – Memória ROM ou de massa é usada para armazenamento de quantidades maiores de dados de forma permanente. <br>'
+    +'II – Memória RAM se refere à memória temporária básica de trabalho onde os softwares abertos são inicialmente alocados. <br>'
+    +'III – Memória cache se refere a um tipo de memória de pequena capacidade para dados de uso mais imediato pelo processador. <br>',
     options:['I, apenas. ',
              'II, apenas.',
              'III, apenas.',
@@ -506,7 +506,7 @@ const quiz = [
 
 },
 {
-    q:'selecione a alternativa'
+    q:'selecione a alternativa '
     +'que apresente uma definição correta para deadlock:',
     options:[' Se dá quando dois (ou mais) processos estão acessando um recurso e bloqueando-o se tem um deadlock',
              'Deadlock é quando se tem vários processos em paralelo rodando, cada um acessando um recurso diferente',
