@@ -326,11 +326,11 @@ const quiz = [
 
 },
 {
-    q:'Um processo pode ser considerado um programa em execução. Por exemplo: imagine que desejamos ler um livro em nosso computador (os chamados e-books). O livro somente poderá ser lido quando ele estiver em execução e para isto é necessário clicar duas vezes sob ele para a sua abertura. Com isto, um processador de texto será aberto. A partir deste momento temos um processo em execução (no caso o processador de texto com o e-book sendo exibido).'
+    q:'Um processo pode ser considerado um programa em execução. Por exemplo: imagine que desejamos ler um livro em nosso computador (os chamados e-books). O livro somente poderá ser lido quando ele estiver em execução e para isto é necessário clicar duas vezes sob ele para a sua abertura. Com isto, um processador de texto será aberto. A partir deste momento temos um processo em execução (no caso o processador de texto com o e-book sendo exibido). <br>'
  
-    +'VOLTZ, Wagner Mendes. Sistemas Operacionais. Reimpressão - Maringá - PR. Unicesumar, 2019 (adaptado).'
+    +'VOLTZ, Wagner Mendes. Sistemas Operacionais. Reimpressão - Maringá - PR. Unicesumar, 2019 (adaptado). <br>'
     
-    +'Considerando o texto acima e no que diz respeito aos processos de um sistema operacional é correto afirmar que:0',
+    +'Considerando o texto acima e no que diz respeito aos processos de um sistema operacional é correto afirmar que:',
     options:['Para a execução de um processo se faz necessário recursos como: tempo de CPU, dispositivos de entrada e saída, alocação de memória e arquivos',
              'Os processos são estruturas físicas que os operadores devem reproduzir com os computadores,',
              ' São estruturas abstratas que são executados apenas em ambientes na nuvem',
@@ -352,7 +352,7 @@ const quiz = [
 
 },
 {
-    q:'Você já deve ter percebido que os processos de alguma maneira têm que se comunicar com outros. Cabe ao sistema operacional garantir esta comunicação de forma bem estruturada e sem interrupções.'
+    q:'Você já deve ter percebido que os processos de alguma maneira têm que se comunicar com outros. Cabe ao sistema operacional garantir esta comunicação de forma bem estruturada e sem interrupções. <br>'
     + 'Considerando o texto acima e pensando sobre a solução de Peterson é correto afirmar',
     options:[' É uma solução para facilitar o processo de instalação de múltiplos sistemas operacionais em um computador',
              'É responsável pela melhor utilização da memória em sistemas operacionais de 64 bits',
@@ -490,11 +490,11 @@ const quiz = [
 
 },
 {
-    q:'A partir da ideia de armazenamento de dados em disco, observe as afirmativas a seguir:'
-   +' I – Os dados são gravados em arquivos que devem obrigatoriamente possuir nome e extensão sempre.'  
-    +'II – Pastas são estruturas em disco para que uma grande quantidade de arquivos possa ser gravada, mas'
-    +'limitada ao espaço em disco.'
-    +'III – Arquivos possuem tamanhos variados e isso é influenciado pelo tipo de conteúdo armazenado.' 
+    q:'A partir da ideia de armazenamento de dados em disco, observe as afirmativas a seguir: <br>'
+   +' I – Os dados são gravados em arquivos que devem obrigatoriamente possuir nome e extensão sempre. <br>'  
+    +'II – Pastas são estruturas em disco para que uma grande quantidade de arquivos possa ser gravada, mas '
+    +'limitada ao espaço em disco. <br>'
+    +'III – Arquivos possuem tamanhos variados e isso é influenciado pelo tipo de conteúdo armazenado. <br>' 
     +'Assinale a alternativa que contenha apenas afirmativas corretas.',
     options:['I, apenas.',
              'II, apenas.',
