@@ -364,10 +364,10 @@ const quiz = [
 
 },
 {
-    q:'A partir da ideia de memória virtual, observe as afirmativas a seguir: \n'
-    +'I – O controle do uso de memória para a troca de processos armazenados temporariamente realiza trocas de processos na memória (swapping). \n'
-    +'II – Um dos algoritmos para controle do swapping retira conteúdos de páginas de memória principal menos utilizados e os coloca em memória virtual para que um novo conteúdo seja colocado. \n'
-    +'III – Conteúdos de páginas de memória em uso são prioridade para serem alocados em memória virtual nos algoritmos de controle de swapping. \n',
+    q:'A partir da ideia de memória virtual, observe as afirmativas a seguir: <br>'
+    +'I – O controle do uso de memória para a troca de processos armazenados temporariamente realiza trocas de processos na memória (swapping). <br>'
+    +'II – Um dos algoritmos para controle do swapping retira conteúdos de páginas de memória principal menos utilizados e os coloca em memória virtual para que um novo conteúdo seja colocado. <br'
+    +'III – Conteúdos de páginas de memória em uso são prioridade para serem alocados em memória virtual nos algoritmos de controle de swapping. <br>',
     options:['I, apenas. ',
              'II, apenas.',
              'III, apenas.',
