@@ -551,14 +551,14 @@ const quiz = [
 
 },
 {
-    q:'A partir da ideia de códigos maliciosos, observe as afirmativas a seguir: \n'
+    q:'A partir da ideia de códigos maliciosos, observe as afirmativas a seguir: <br>'
     +'I – Vírus são os agentes mais tradicionais de infecção e se baseiam na ideia de infiltração, mas não se '
-    +'preocupam com a infecção de outros arquivos além do que foi originalmente contaminado. \n'
+    +'preocupam com a infecção de outros arquivos além do que foi originalmente contaminado. <br>'
     +'II – Existem softwares dedicados a buscar pontos desprotegidos não detectados ou não corrigidos, e que '
-    +'permitam uma possível invasão. \n'
+    +'permitam uma possível invasão. <br>'
     +'III – Existem softwares que são capazes de capturar o que é digitado por usuários para uso, assim como '
     +'existem softwares que se prestam a ocultar acessos indevidos e o conjunto destas duas alternativas se '
-    +'mostra um grande risco. \n' 
+    +'mostra um grande risco. <br>' 
     +'Assinale a alternativa que contenha apenas afirmativas corretas.',
     options:['I, apenas ',
              'II, apenas',
