@@ -703,13 +703,13 @@ const quiz = [
 },
 {
     q:'Criar um arquivo?',
-    options:['criar <nome do arquivo>',
-             'cd <nome do arquivo>',
-             'touch <nome do arquivo>',
-            'rm <nome do arquivo>',
-            'creator <nome do arquivo>',
+    options:['criar  (nome do arquivo)',
+             'cd (nome do arquivo)',
+             'touch (nome do arquivo)',
+            'rm (nome do arquivo)',
+            'creator (nome do arquivo)',
             ],
-    answer: 0
+    answer: 2
 
 }
 
