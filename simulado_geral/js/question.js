@@ -466,7 +466,7 @@ const quiz = [
 
 },
 {
-    q:'selecione a alterntiva correta sobre a diferença entre alocação contígua e'
+    q:'selecione a alterntiva correta sobre a diferença entre alocação contígua e '
     +'alocação encadeada para a implementação de memórias secundárias.',
     options:[' a) A alocação contigua apresenta a mesma performance e aproveitamento de memória que a alocação encadeada',
              'b) A alocação encadeada consiste no armazenamento de cada arquivos em blocos contíguos',
