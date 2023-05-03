@@ -139,7 +139,7 @@ function unclickableOptions(){
 //resultados equando faz o simulado, cria as div
 function answersIndicator(){
     answersIndicatorContainer.innerHTML = '';
-    const totalQuestion = quiz.length;
+    const totalQuestion = userEscolhe;
     for(let i=0;i<totalQuestion;i++){
         const indicator = document.createElement("div");
         answersIndicatorContainer.appendChild(indicator);
