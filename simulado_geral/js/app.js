@@ -66,7 +66,7 @@ function getNewQuestion(){
     //setar opções com html
     for(let i=0; i<optionLen;i++){
         // opções aleatórias
-        const optionIndex = availableOptions[Math.floor(Math.random() * userEscolhe)];
+        const optionIndex = availableOptions[Math.floor(Math.random() * availableOptions.length)];
         ////Obter as perguntas aleatoriamente:
         const index2 = availableOptions.indexOf(optionIndex);
         //remove a opção que já apareceu
