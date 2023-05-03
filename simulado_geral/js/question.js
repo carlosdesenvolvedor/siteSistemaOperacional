@@ -711,6 +711,173 @@ const quiz = [
             ],
     answer: 2
 
+},
+{
+    q:'Qual a técnica que consiste em permitir que o processamnto de um job fosse iniciado automaticamente quado outro job fosse finalizado. Cabe ao sistema operacional gerenciar o início da execução deste jobs.',
+    options:['Timesharing',
+             'Spool',
+             'falso paralelismo',
+            'Paralelismo',
+            'Mainframes',
+            ],
+    answer: 1
+
+},
+{
+    q:'A técnica da multiprogramação consistem em uma ação de entrada/saída era realizada, o processodar poderia ser usado por outro job e quem deveria gerenciar este uso seria o sistema operacional: ',
+    options:['verdadeira',
+             'falsa',
+            ],
+    answer: 0
+
+},
+{
+    q:'Qual a desvantagem de se usar thin clients?',
+    options:['Dependendo do momento, os thin clients podem tornar-se rapidos devido a carga de processomento de um determinado thin client.',
+             'A desvanatagem é que não existe uma perca de desempenho, já que todos os thin client compartilham a memória e o processador.',
+             'A desvantagem é que existe uma perca de desempenho, já que todos os thin clients compartilham a memória e o processador.',
+            'Esta abordagem apresenta desvantagem pois melhora o gerenciamento do que está instalado, já que tudo fica em um único disco rígido.',
+            'Existe uma desvatagem pois não existe controle de licenças. Também podemos resaltar a economia tanto no consumo eétrico como na aquisição de processadores e memórias.',
+            ],
+    answer: 2
+
+},
+{
+    q:'Além da diferença estrutural dos arquivos multimídias, temos que ressaltar '
+    +'que eles têm um ritmo de acesso específico. Enquanto um arquivo de texto costuma ser carregado por completo no momento de sua inicialização, um arquivo '
+    +'multimídia tende a ser carregado à medida que é executado. Com isto, o trabalho '
+    +'do escalonador passa a ser de vital importância para garantir a boa reprodução de '
+    +'filmes e músicas sem deixar que os demais processos tenham menos prioridade.',
+    options:['verdadeiro',
+             'falso',
+             
+            
+            
+            ],
+    answer: 0
+
+},
+{
+    q:'Para a garantia de performace destes arquivos alguns parâmetros foram definidos para que os sistemas operacionais ofereçam o melhor suporte a esta tecnologia, são eles:',
+    options:['Vazão, demora, tremulação e confiabilidade.',
+             'taxa de dados, tremulação, desconfiabilidade, maximização.',
+             'Duração, vazamento, dados, textos.',
+            'Confiabilidade, prazo de entrega, garantia, qualidade',
+            'play, video, png e jpg.',
+            ],
+    answer: 0
+
+}
+,
+{
+    q:'Qual técnica da terceira geração que permitia que cada usuário pudesse se conectar por meio de um terminal on-line. <br>Caso um usuário conectado não tivesse utilizando recursos do hardware, o mesmo era alocado para os usuários que estavam utilizando este recursos, com isto permitia melhor tempo de resposta para processamento.',
+    options:['Spool',
+             'multiprogramação',
+             'temibal on-line',
+            'multiprocessador',
+            'TIMESHARING',
+            ],
+    answer: 4
+
+},
+{
+    q:'Se tratando de performace de midia, o que é o suporte de confiabilidade?',
+    options:['a taxa de dados ou o volume total de trabalho durante um período de tempo seja maximizada.',
+             'O tempo decorrido momento da solicitação do usuário até a reprodução do mesmo.',
+             'Este item está relacionado à demora na repordução do fluxo.',
+            'deve ser maximizada oa ponto que se erros ocorrerem durante a transmissão ou execução, o processamento da mídia continue.',
+            'Velocidade na demora decorrida do momento da solicitação do usúario até a reprodução da mídia.',
+            ],
+    answer: 3
+
+},
+{
+    q:'O que é um processo?',
+    options:['Um processo pode ser considerado um programa em execução.',
+             'Gerenciamento de arquivos',
+             'Sequencia de dados.',
+            'Código fonte.',
+            'linguagem de programação',
+            ],
+    answer: 0
+
+},
+{
+    q:'Qual parte do processo possui alocação dinamica de memória, durante a execução do programa?',
+    options:['Seção de texto',
+             'Seção de dados',
+             'Heap',
+            'pilha',
+            'fila',
+            ],
+    answer: 2
+
+},
+{
+    q:'Qual parte do processo permite aumentar de tamanho à medida que ele é executado?',
+    options:['Heap e pilha',
+             'Pilha e Seção de texto',
+             'Seção de dados e Heap',
+            'Heap e fila',
+            'Pilha e fila',
+            ],
+    answer: 0
+
+},
+{
+    q:'O Que são as threads?',
+    options:['Um programa em execução.',
+             'todo código fonte.',
+             'é o processo total',
+            'são como mini processos dentro de um processo.',
+            'todo threads contém varios processos.',
+            ],
+    answer: 3
+
+},
+{
+    q:'Referente a alucação contígua:',
+    options:['Nesta estratégia, a memória é dividida em duas partições, sendo uma para o sistema operacional e a outra de tamanhos ajustáveis que irão se adequar à demanda escpecífica de cada processo do usúario.',
+             'Visando evitar a fragmentação externa e a necessidade de compactação, foi '
+             +'desenvolvida a estratégia de alocação denominada contígua.',
+             'o espaço de endereço lógico é dividido em blocos chamados '
+             +'de páginas, onde para o processo, esta divisão é transparente.',
+       
+            ],
+    answer: 0
+
+},
+{
+    q:'Referente a alocação paginada: ',
+    options:['Nesta estratégia, a memória é dividida em duas partições, sendo uma para o sistema operacional e a outra de tamanhos ajustáveis que irão se adequar à demanda escpecífica de cada processo do usúario.',
+    'Visando evitar a fragmentação externa e a necessidade de compactação, foi '
+    +'desenvolvida a estratégia de alocação paginada.',
+    'o espaço de endereço lógico é dividido em blocos chamados '
+    +'de páginas, onde para o processo, esta divisão é transparente.',
+            ],
+    answer: 1
+
+},
+{
+    q:'Para a decisão de quais páginas serão retiradas da memória principal, existem alguns algoritmos para este controle: ',
+    options:['First in First Out',
+             'pool',
+             'least first in',
+            'Recently out',
+            'Not Recently first in',
+            ],
+    answer: 0
+
+},
+{
+    q:'Memória Ram consiste na utilização de armazenamento externo como '
+    +'extensão da memória RAM. Por exemplo, a memória principal (RAM), não '
+    +'possui espaços disponíveis para armazenar determinada solicitação de um processo. ',
+    options:['verdadeiro',
+             'falso',
+            ],
+    answer: 1
+
 }
 
 ]
