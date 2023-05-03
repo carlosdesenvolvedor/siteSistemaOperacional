@@ -836,7 +836,7 @@ const quiz = [
 
 },
 {
-    q:'Referente a alucação contígua:',
+    q:'Referente a alocação contígua:',
     options:['Nesta estratégia, a memória é dividida em duas partições, sendo uma para o sistema operacional e a outra de tamanhos ajustáveis que irão se adequar à demanda escpecífica de cada processo do usúario.',
              'Visando evitar a fragmentação externa e a necessidade de compactação, foi '
              +'desenvolvida a estratégia de alocação denominada contígua.',

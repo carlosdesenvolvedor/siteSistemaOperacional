@@ -16,6 +16,7 @@ let availableQuestions = [];
 let availableOptions = [];
 let correctAnswers = 0;
 let attempt = 0;
+
 let userEscolheStr = prompt("Quantidade de questões:");
 let userEscolhe = parseInt(userEscolheStr); 
 
