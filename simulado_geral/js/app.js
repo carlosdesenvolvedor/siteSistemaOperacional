@@ -16,6 +16,8 @@ let availableQuestions = [];
 let availableOptions = [];
 let correctAnswers = 0;
 let attempt = 0;
+let userEscolheStr = prompt("Quantidade de questões:");
+let userEscolhe = parseInt(userEscolheStr); 
 
 
 
@@ -30,7 +32,7 @@ function setAvailableQuestion(){
 //definir o número da perguta e a pergunta das opções:
 function getNewQuestion(){
     //Definir 'setar' numero da perguta:
-    questionNumber.innerHTML = "Questão " + (questionCounter + 1) + " de " +quiz.length;
+    questionNumber.innerHTML = "Questão " + (questionCounter + 1) + " de " +userEscolhe;
     //Setar o texto das perguntas:
     //Obter as perguntas aleatoriamente:
     const questionIndex = availableQuestions[Math.floor(Math.random() * availableQuestions.length)]
@@ -64,7 +66,7 @@ function getNewQuestion(){
     //setar opções com html
     for(let i=0; i<optionLen;i++){
         // opções aleatórias
-        const optionIndex = availableOptions[Math.floor(Math.random() * availableOptions.length)];
+        const optionIndex = availableOptions[Math.floor(Math.random() * userEscolhe)];
         ////Obter as perguntas aleatoriamente:
         const index2 = availableOptions.indexOf(optionIndex);
         //remove a opção que já apareceu
@@ -151,8 +153,10 @@ function updateAnswerIndicator(markType){
 
 
 function next(){
-    if(questionCounter === quiz.length){
+    
+    if(questionCounter === userEscolhe){
        // console.log("terminou o quiz"); 
+
         quizOver();
     } 
     else{
@@ -160,6 +164,7 @@ function next(){
     }
 }
 function quizOver(){
+    
     //Abrir resultado quiz
     quizBox.classList.add("hide");
    //mostrar a caixa de resultaredos
@@ -169,13 +174,13 @@ function quizOver(){
  }
  //pegar o resultado do simulado:
  function quizResult(){
-    resultBox.querySelector(".total-questions").innerHTML = quiz.length;
+    resultBox.querySelector(".total-questions").innerHTML = userEscolhe;
     resultBox.querySelector(".total-attempt").innerHTML = attempt;
     resultBox.querySelector(".total-correct").innerHTML = correctAnswers;
     resultBox.querySelector(".total-wrong").innerHTML = attempt - correctAnswers;
-    const percentage = (correctAnswers/quiz.length)*100;
+    const percentage = (correctAnswers/ userEscolhe)*100;
     resultBox.querySelector(".percentage").innerHTML = percentage.toFixed() + "%";
-    resultBox.querySelector(".total-score").innerHTML = correctAnswers + " / " + quiz.length;
+    resultBox.querySelector(".total-score").innerHTML = correctAnswers + " / " + userEscolhe;
  }
 
 function resetQuiz(){
@@ -196,23 +201,30 @@ function voltarHome(){
     const win = window.open(url, '_black')
 
 }
+
+
 function goToHome(){
     resultBox.classList.add("hide");
     homeBox.classList.remove("hide");
+    location.reload();
     resetQuiz();
+    
 }
 
 
 function startQuiz(){
+   
   homeBox.classList.add("hide");  
   quizBox.classList.remove("hide");
     //primeiro vamos definir todas as questões na matriz availablreQuestions
   setAvailableQuestion(); 
-  //Depois vamos chamar a finção abaixo..
+  //Depois vamos chamar a função abaixo..
   getNewQuestion(); 
 
   answersIndicator();
+ 
 }
 window.onload = function (){
-    homeBox.querySelector(".total-questions").innerHTML = quiz.length;
+    
+    homeBox.querySelector(".total-questions").innerHTML = userEscolhe;
 }
