@@ -17,10 +17,18 @@ let availableOptions = [];
 let correctAnswers = 0;
 let attempt = 0;
 
-
+function voltar(){
+    console.log("teste");
+    const totalQuestion = quiz.length;
+    for(let i = 0; i<totalQuestion; i++){
+        availableQuestions.push(quiz[i]);
+        console.log(availableOptions.push(quiz[i]));
+    }
+}
 
 //enviar as perguntas para dentro da matriz availableQuestion
 function setAvailableQuestion(){
+    
     const totalQuestion = quiz.length;
     for(let i = 0; i<totalQuestion; i++){
         availableQuestions.push(quiz[i]);
@@ -135,7 +143,7 @@ function unclickableOptions(){
 }
 //resultados equando faz o simulado, cria as div
 function answersIndicator(){
-    answersIndicatorContainer.innerHTML = '';
+    answersIndicatorContainer.innerHTML = '' ;
     const totalQuestion = quiz.length;
     for(let i=0;i<totalQuestion;i++){
         const indicator = document.createElement("div");

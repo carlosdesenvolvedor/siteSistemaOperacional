@@ -54,7 +54,7 @@ function getNewQuestion(){
     const optionLen = currentQuestion.options.length;
     //console.log(currentQuestion.options);//mostra as perguntas de forma alternadas.
     
-    //Enviar as opções para a matriz de opções dispoiveis
+    //Enviar as opções para a matriz de opções disponiveis
     for(let i = 0;i<optionLen; i++){
         availableOptions.push(i);
     }

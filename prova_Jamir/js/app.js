@@ -197,7 +197,7 @@ function tryAgainQuiz(){
     startQuiz();
 
 }
-const url = 'https://silly-brigadeiros-a18f43.netlify.app/index.html';
+const url = 'https://silly-brigadeiros-a18f43.netlify.app/simulado_geral/index.html';
 function voltarHome(){
     const win = window.open(url, '_black')
 
