@@ -919,7 +919,7 @@ const quiz = [
              'III, apenas',
              'I, apenas',
              'II, apenas.',
-             'II e II apenas',
+             'II e III, apenas',
             ],
     answer: 4
 
