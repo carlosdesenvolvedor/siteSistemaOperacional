@@ -1,0 +1,11 @@
+Sobre a primeira geração de computadores é correto afirmar:
+Ela surgiu basicamente por causa da segunda guerra mundial, os computadores funcionavam com base em válvulas e eletromecânicos. A programação era feita por painéis de conectores. ',
+Não dependia mais de painéis.
+Um grande marco foi o surgimento dos transistores.
+Os programas eram programados em C#
+A linguagem mais famosa era Java
+
+    answer: 0
+
+
+ 
