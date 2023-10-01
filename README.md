@@ -1,8 +1,10 @@
 # Meu Site Responsivo com Frameworks Personalizadas
+## Tela para Descktop
 ![Imagem de Tela Inicial](https://github.com/carlosdesenvolvedor/siteSistemaOperacional/blob/main/fotosREADME/telaGrande.png)
 *Tela principal para descktop*
 -
-
+-
+## Tela para mobi
 ![Imagem de Tela Inicial](https://github.com/carlosdesenvolvedor/siteSistemaOperacional/blob/main/fotosREADME/telaCelular.png)
 *Tela principal para celular*
 
