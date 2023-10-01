@@ -55,13 +55,15 @@ Nossa abordagem flexível permite que você aprenda no seu próprio ritmo. Escol
 
 Aqui estão algumas capturas de tela do nosso simulado:
 
-![Simulado - Questão 1]([caminho/para/simulado_questao1.png](https://github.com/carlosdesenvolvedor/siteSistemaOperacional/blob/main/fotosREADME/TelaSimulado.png))
+Aqui estão algumas capturas de tela do nosso simulado:
+
+![Simulado - Questão 1](https://github.com/carlosdesenvolvedor/siteSistemaOperacional/blob/main/fotosREADME/TelaSimulado.png)
 *Questão do Simulado*
 
-![Simulado - Feedback]([caminho/para/simulado_feedback.png)](https://github.com/carlosdesenvolvedor/siteSistemaOperacional/blob/main/fotosREADME/comecarSimulado.png)
-*começar simulado*
+![Simulado - Feedback](https://github.com/carlosdesenvolvedor/siteSistemaOperacional/blob/main/fotosREADME/comecarSimulado.png)
+*Iniciar Simulado*
 
-![Simulado tela inicial](https://github.com/carlosdesenvolvedor/siteSistemaOperacional/blob/main/fotosREADME/qtdQuestoes.png)
+![Escolher quantidade de questões](https://github.com/carlosdesenvolvedor/siteSistemaOperacional/blob/main/fotosREADME/qtdQuestoes.png)
 *Escolher quantidade de questões*
 
 ![Simulado - Feedback](https://github.com/carlosdesenvolvedor/siteSistemaOperacional/blob/main/fotosREADME/TelaResultados.png)
