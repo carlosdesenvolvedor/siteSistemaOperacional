@@ -61,7 +61,7 @@ Aqui estão algumas capturas de tela do nosso simulado:
 ![Simulado - Feedback]([caminho/para/simulado_feedback.png)](https://github.com/carlosdesenvolvedor/siteSistemaOperacional/blob/main/fotosREADME/comecarSimulado.png)
 *começar simulado*
 
-![Simulado - Questão 1]([caminho/para/simulado_questao1.png](https://github.com/carlosdesenvolvedor/siteSistemaOperacional/blob/main/fotosREADME/qtdQuestoes.png))
+![Simulado tela inicial](https://github.com/carlosdesenvolvedor/siteSistemaOperacional/blob/main/fotosREADME/qtdQuestoes.png)
 *Escolher quantidade de questões*
 
 ![Simulado - Feedback](https://github.com/carlosdesenvolvedor/siteSistemaOperacional/blob/main/fotosREADME/TelaResultados.png)
