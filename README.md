@@ -1,6 +1,8 @@
 # Meu Site Responsivo com Frameworks Personalizadas
 ![Imagem de Tela Inicial](https://github.com/carlosdesenvolvedor/siteSistemaOperacional/blob/main/fotosREADME/telaGrande.png)
 *Tela principal para descktop*
+-
+
 ![Imagem de Tela Inicial](https://github.com/carlosdesenvolvedor/siteSistemaOperacional/blob/main/fotosREADME/telaCelular.png)
 *Tela principal para celular*
 
