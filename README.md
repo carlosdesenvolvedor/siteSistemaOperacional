@@ -31,7 +31,7 @@ Valorizamos as contribuições da comunidade. Se você tiver ideias para melhora
 
 Deseja entrar em contato conosco? Não hesite! Estamos disponíveis para responder às suas perguntas, discutir oportunidades de parceria ou simplesmente ter uma conversa. Você pode nos encontrar em:
 
-- [Visite nosso Site](https://silly-brigadeiros-a18f43.netlify.app/)
+- [Visite o site para ver as funcionalidades](https://silly-brigadeiros-a18f43.netlify.app/)
 - [Envie-nos um Email](carlosjs_cia@hotmail.com)
 - [Conecte-se no LinkedIn](https://www.linkedin.com/in/exemplo)
 
