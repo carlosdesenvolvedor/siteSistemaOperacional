@@ -1,9 +1,9 @@
 # Meu Site Responsivo com Frameworks Personalizadas
 
-## Tela para Desktop
+
 ![Tela Inicial - Desktop](https://github.com/carlosdesenvolvedor/siteSistemaOperacional/blob/main/fotosREADME/telaGrande.png)
 
-## Tela para Dispositivos Móveis
+
 ![Tela Inicial - Mobile](https://github.com/carlosdesenvolvedor/siteSistemaOperacional/blob/main/fotosREADME/telaCelular.png)
 *Tela principal para dispositivos móveis*
 
