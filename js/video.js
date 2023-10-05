@@ -56,3 +56,62 @@ function prog(temp,f){
     var obj = document.getElementById("video-screen");
     console.log(obj.currentTime, obj.duration, obj.ended);
 })(2000);
+
+/*
+// Variável global para armazenar o objeto do player do YouTube
+var player;
+
+// Função para inicializar o player do YouTube
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player('player', {
+    height: '360',
+    width: '100%',
+    videoId: 'KIxPinooy9M',
+    playerVars: {
+      start: 12, // Define o tempo de início em segundos (neste exemplo, 12 segundos)
+      controls: 1, // Mostra os controles do player
+    },
+    events: {
+      'onReady': onPlayerReady,
+    },
+  });
+}
+
+// Função chamada quando o player do YouTube estiver pronto
+function onPlayerReady(event) {
+  // Você pode adicionar ações adicionais aqui, se necessário
+}
+
+// Função para pular para um momento específico no vídeo
+function pularParaTrecho(tempo) {
+  if (player) {
+    player.seekTo(tempo);
+  }
+}*/
+
+// Variável global para armazenar o objeto do player do YouTube
+var player;
+
+// Função para inicializar o player do YouTube
+// Função para inicializar o player do YouTube
+function inicializarPlayer(idDoVideo, tempoDeInicio, elementoPlayer) {
+    player = new YT.Player(elementoPlayer, {
+      height: '360',
+      width: '100%',
+      videoId: idDoVideo, // ID do vídeo passado como parâmetro
+      playerVars: {
+        start: tempoDeInicio, // Tempo de início passado como parâmetro (em segundos)
+        controls: 1, // Mostra os controles do player
+      },
+      events: {
+        'onReady': onPlayerReady,
+      },
+    });
+  }
+  
+
+// Função chamada quando o player do YouTube estiver pronto
+function onPlayerReady(event) {
+  // Você pode adicionar ações adicionais aqui, se necessário
+}
+
