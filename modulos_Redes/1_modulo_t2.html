@@ -37,6 +37,13 @@
       line-height: 1.4;
       margin-bottom: 15px;
     }
+    .lis{
+      color: #535353;
+      font-size: 16px;
+      line-height: 1.4;
+      margin-bottom: 15px;
+
+    }
 
     strong {
       font-weight: bold;
@@ -197,11 +204,10 @@
       </a>
       <div id="player1"></div>
       <section id="parteVideo1">
-        <button class="hero__btn" onclick="inicializarPlayer('KIxPinooy9M', 1, 'player1')">Video sobre Padrão Ethernet</button>
+        <button style="width: 100%;" class="hero__btn" onclick="inicializarPlayer('KIxPinooy9M', 1, 'player1')">Video
+          sobre Padrão
+          Ethernet</button>
       </section>
-
-   
-
 
       <p>O padrão Ethernet foi desenvolvido pela Xerox na década de 1980 e posteriormente padronizado pelo IEEE como
         802.3. Seu objetivo era estabelecer um padrão de comunicação entre dispositivos em redes locais, especificando
@@ -243,7 +249,8 @@
         </a>
         <div id="player2"></div>
         <section id="parteVideo2">
-          <button class="hero__btn" onclick="inicializarPlayer('VAnNoXZ7yt8', 1, 'player2')">Video sobre Placa de Rede</button>
+          <button class="hero__btn" onclick="inicializarPlayer('VAnNoXZ7yt8', 1, 'player2')">Video sobre Placa de
+            Rede</button>
         </section>
         <p>Para que um computador se conecte a outro computador ou dispositivo de rede, é necessário que cada
           dispositivo possua uma placa de rede que atenda aos padrões Ethernet ou um NIC (Network Interface Card). Isso
@@ -266,6 +273,15 @@
         <a href="#parteVideo"><button onclick="tempo(366)" class="button-secundary">Ir para trexo da aula</button>
           <img src="slides_fotos/hub.png" alt="" onclick="tempo(366)">
         </a>
+        <br>
+        <div id="player7"></div>
+        <section id="parteVideo2">
+          <button style="width: 100%;" class="hero__btn" onclick="inicializarPlayer('afNzzBauPuc', 1, 'player7')">video
+            sobre:
+            HUB
+          </button>
+        </section>
+
         <p>O HUB é um dispositivo de rede que tem uma única função: interligar fisicamente os dispositivos de uma rede,
           e seu funcionamento se assemelha a uma régua de energia. No entanto, o HUB está caindo em desuso, pois envia
           apenas um pacote por vez, sem controle de fluxo, rota ou conhecimento do remetente e destinatário dos pacotes.
@@ -294,6 +310,14 @@
         </a>
         <br>
 
+        <div id="player6"></div>
+        <section id="parteVideo2">
+          <button style="width: 100%;" class="hero__btn" onclick="inicializarPlayer('SgXfI7UIwto', 1, 'player6')">video
+            sobre:
+            Switch
+          </button>
+        </section>
+
         <p>O SWITCH, diferentemente do hub e do hub-switch, é o dispositivo mais utilizado nas redes atuais, atuando na
           camada 2 e 3 do modelo OSI. Embora seja um pouco mais caro que o hub e o hub-switch, o switch consegue enviar
           e receber vários pacotes simultaneamente, operando no modo full-duplex, o que permite transmissão e recepção
@@ -310,6 +334,84 @@
           porta, exigindo configuração especializada para seu uso.</p>
 
 
+        <h2>ROTEADOR</h2>
+        <a href="#parteVideo"><button onclick="tempo(571)" class="button-secundary">Ir para trexo da aula</button>
+          <img src="slides_fotos/roteador.png" alt="" onclick="tempo(571)">
+        </a>
+        <br>
+        <div id="player5"></div>
+        <section id="parteVideo2">
+          <button style="width: 100%;" class="hero__btn" onclick="inicializarPlayer('FVkSR1wQb58', 1, 'player5')">video
+            sobre:
+            ROTEADOR
+          </button>
+        </section>
+
+        <p>O roteador é semelhante a um switch, mas possui funções adicionais e requer mais habilidade técnica para
+          configuração. Enquanto um switch lida com o tráfego interno em uma rede, o roteador conecta redes diferentes,
+          sejam locais, metropolitanas ou geográficas, permitindo a interconexão de várias redes.</p>
+
+        <p>Uma função fundamental do roteador é a atribuição de endereços IP aos dispositivos que se conectam à rede.
+          Além
+          disso, ele organiza o encaminhamento dos dados pela rede, determinando o melhor caminho para a transmissão.
+        </p>
+
+        <p>Atualmente, alguns roteadores também funcionam como modems, roteando o sinal Wi-Fi para redes domésticas e
+          empresariais, simplificando assim a conectividade sem fio.</p>
+        <br>
+        <div id="player3"></div>
+        <section id="parteVideo2">
+          <button style="width: 100%;" class="hero__btn"
+            onclick="inicializarPlayer('BmBPhA5b-Lc', 1, 'player3')">Diferença entre HUB, SWITCH
+            e ROTEADOR
+          </button>
+
+          <h2>MEIOS DE TRANSMISSÃO</h2>
+          <a href="#parteVideo"><button onclick="tempo(670)" class="button-secundary">Ir para trexo da aula</button>
+            <img src="slides_fotos/meioTransmisao.png" alt="" onclick="tempo(670)">
+          </a>
+          <br>
+          <div id="player9"></div>
+          <section id="parteVideo2">
+            <button style="width: 100%;" class="hero__btn"
+              onclick="inicializarPlayer('v2Gp7y5GCSM', 1, 'player9')">video sobre meios de transmissão
+            </button>
+          <br>
+          <p>Neste tópico, exploraremos os conceitos de meios de transmissão, abrangendo tanto os meios físicos, como
+            cabos (coaxial, par trançado e fibra), quanto as topologias de redes (Barramento, Anel e Estrela) que
+            influenciam a disposição dos dispositivos de rede.</p>
+
+          <p>Os meios de transmissão referem-se à capacidade de transmitir dados de um dispositivo para outro.
+            Atualmente, destacam-se várias mídias, incluindo:</p>
+          <ul>
+            <li class="lis">Par de cobre trançado: Para redes locais</li>
+            <li class="lis">Cabos coaxiais: Para links de comunicação</li>
+            <li class="lis">Fibra Ótica: Para equipamentos de longa distância</li>
+            <li class="lis">Radiofusão: Para transmissão de dados via ondas de rádio</li>
+            <li class="lis">Enlace de Micro-ondas: Para conectar localidades sem cabos de cobre ou par trançado</li>
+            <li class="lis">Infravermelho: Para conectar edifícios próximos e ambientes internos (com limite de 50 metros)</li>
+            <li class="lis">Transmissão de ondas via satélite: Para localidades remotas onde não há outra forma de transmissão</li>
+          </ul>
+          <a href="#parteVideo"><button onclick="tempo(670)" class="button-secundary">Ir para trexo da aula</button>
+            <img src="slides_fotos/cabo1.png" alt="" onclick="tempo(670)">
+          </a>
+          <br>
+          <a href="#parteVideo"><button onclick="tempo(670)" class="button-secundary">Ir para trexo da aula</button>
+            <img src="slides_fotos/cabo2.png" alt="" onclick="tempo(670)">
+          </a>
+          <br>
+
+          <p>De acordo com Tanenbaum e Wetherall (2011), os meios de transmissão podem ser classificados como guiados
+            (meios físicos, como cabos) e não guiados (sem fio, como rádio, infravermelho e satélite).</p>
+
+          <p>Iremos descrever com mais detalhes esses dois tipos de meios de transmissão.</p>
+
+
+
+
+
+        
+        </section>
 
 
 
@@ -325,31 +427,7 @@
 
 
 
-        <p>Computadores, impressoras, smartphones, tablets e outros dispositivos interconectados em uma rede Ethernet,
-          seja física ou sem fio, podem transmitir mensagens (pacotes de informações) a qualquer momento. Em caso de
-          colisão de pacotes, cada dispositivo espera e faz uma nova tentativa posteriormente (TANENBAUM; WETHERALL,
-          2011).</p>
-
-
-
-
-
-        <p><strong>Quadro 2 - Modos de transmissão</strong></p>
-        <p>Fonte: os autores</p>
-        <p>Hoje, existem vários padrões além da Ethernet e, dentre os principais, destacam-se Fast Ethernet e Gigabit
-          Ethernet. Inicialmente o padrão ethernet tinha a velocidade de 10 Mbps, posteriormente passou a ser o Fast
-          Ethernet com 100 Mbps, e depois chegando a 1000 Gbps, hoje já existem tecnologias que passam de 10 Gbps.</p>
-        <p>Os computadores e outros dispositivos, como impressoras, smartphones, tablets etc., interligados em uma rede
-          Ethernet (física ou sem fio), podem transmitir mensagens (pacotes = informações) sempre que desejam; se dois
-          ou
-          mais pacotes colidirem, cada computador ou dispositivo terá de aguardar e realizar uma nova tentativa mais
-          tarde
-          (TANENBAUM; WETHERALL, 2011).</p>
-
-
-
-
-        <a href="//sim_mod_1/index.html" class="button button-secundary">Fazer simulado referente ao tópico 1 </a>
+        <a href="//sim_mod_1/index.html" class="button button-secundary">Fazer simulado referente ao tópico 2 </a>
     </article>
     <a href="1_modulo_t1.html" class="button button-primary">Tópico 1 </a>
     <a href="1_modulo_t2.html" class="button button-primary">Tópico 2</a>
