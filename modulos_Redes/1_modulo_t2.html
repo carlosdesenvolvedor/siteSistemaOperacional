@@ -37,7 +37,8 @@
       line-height: 1.4;
       margin-bottom: 15px;
     }
-    .lis{
+
+    .lis {
       color: #535353;
       font-size: 16px;
       line-height: 1.4;
@@ -376,58 +377,207 @@
             <button style="width: 100%;" class="hero__btn"
               onclick="inicializarPlayer('v2Gp7y5GCSM', 1, 'player9')">video sobre meios de transmissão
             </button>
-          <br>
-          <p>Neste tópico, exploraremos os conceitos de meios de transmissão, abrangendo tanto os meios físicos, como
-            cabos (coaxial, par trançado e fibra), quanto as topologias de redes (Barramento, Anel e Estrela) que
-            influenciam a disposição dos dispositivos de rede.</p>
+            <br>
+            <p>Neste tópico, exploraremos os conceitos de meios de transmissão, abrangendo tanto os meios físicos, como
+              cabos (coaxial, par trançado e fibra), quanto as topologias de redes (Barramento, Anel e Estrela) que
+              influenciam a disposição dos dispositivos de rede.</p>
 
-          <p>Os meios de transmissão referem-se à capacidade de transmitir dados de um dispositivo para outro.
-            Atualmente, destacam-se várias mídias, incluindo:</p>
-          <ul>
-            <li class="lis">Par de cobre trançado: Para redes locais</li>
-            <li class="lis">Cabos coaxiais: Para links de comunicação</li>
-            <li class="lis">Fibra Ótica: Para equipamentos de longa distância</li>
-            <li class="lis">Radiofusão: Para transmissão de dados via ondas de rádio</li>
-            <li class="lis">Enlace de Micro-ondas: Para conectar localidades sem cabos de cobre ou par trançado</li>
-            <li class="lis">Infravermelho: Para conectar edifícios próximos e ambientes internos (com limite de 50 metros)</li>
-            <li class="lis">Transmissão de ondas via satélite: Para localidades remotas onde não há outra forma de transmissão</li>
-          </ul>
-          <a href="#parteVideo"><button onclick="tempo(670)" class="button-secundary">Ir para trexo da aula</button>
-            <img src="slides_fotos/cabo1.png" alt="" onclick="tempo(670)">
-          </a>
-          <br>
-          <a href="#parteVideo"><button onclick="tempo(670)" class="button-secundary">Ir para trexo da aula</button>
-            <img src="slides_fotos/cabo2.png" alt="" onclick="tempo(670)">
-          </a>
-          <br>
+            <p>Os meios de transmissão referem-se à capacidade de transmitir dados de um dispositivo para outro.
+              Atualmente, destacam-se várias mídias, incluindo:</p>
+            <ul>
+              <li class="lis">Par de cobre trançado: Para redes locais</li>
+              <li class="lis">Cabos coaxiais: Para links de comunicação</li>
+              <li class="lis">Fibra Ótica: Para equipamentos de longa distância</li>
+              <li class="lis">Radiofusão: Para transmissão de dados via ondas de rádio</li>
+              <li class="lis">Enlace de Micro-ondas: Para conectar localidades sem cabos de cobre ou par trançado</li>
+              <li class="lis">Infravermelho: Para conectar edifícios próximos e ambientes internos (com limite de 50
+                metros)</li>
+              <li class="lis">Transmissão de ondas via satélite: Para localidades remotas onde não há outra forma de
+                transmissão</li>
+            </ul>
+            <a href="#parteVideo"><button onclick="tempo(670)" class="button-secundary">Ir para trexo da aula</button>
+              <img src="slides_fotos/cabo1.png" alt="" onclick="tempo(670)">
+            </a>
+            <br>
+            <a href="#parteVideo"><button onclick="tempo(670)" class="button-secundary">Ir para trexo da aula</button>
+              <img src="slides_fotos/cabo2.png" alt="" onclick="tempo(670)">
+            </a>
+            <br>
 
-          <p>De acordo com Tanenbaum e Wetherall (2011), os meios de transmissão podem ser classificados como guiados
-            (meios físicos, como cabos) e não guiados (sem fio, como rádio, infravermelho e satélite).</p>
+            <p>De acordo com Tanenbaum e Wetherall (2011), os meios de transmissão podem ser classificados como guiados
+              (meios físicos, como cabos) e não guiados (sem fio, como rádio, infravermelho e satélite).</p>
 
-          <p>Iremos descrever com mais detalhes esses dois tipos de meios de transmissão.</p>
+            <p>Iremos descrever com mais detalhes esses dois tipos de meios de transmissão.</p>
 
-
-
-
-
-        
-        </section>
-
-
-
-
-
-
-
+            <h2>Cabo Coaxial</h2>
+            <a href="#parteVideo"><button onclick="tempo(778)" class="button-secundary">Ir para trexo da aula</button>
+              <img src="slides_fotos/caboCoa.png" alt="" onclick="tempo(778)">
+            </a>
+            <br>
+            <a href="#parteVideo"><button onclick="tempo(868)" class="button-secundary">Ir para trexo da aula</button>
+              <img src="slides_fotos/fotoCaboCoaxial.png" alt="" onclick="tempo(868)">
+            </a>
+            <br>
 
 
 
+            <p>O cabo coaxial foi um dos primeiros meios de transmissão de computadores, amplamente utilizado em
+              placas
+              ethernet de 10 Mbps. Era preferido em ambientes industriais sujeitos a interferências eletromagnéticas e
+              quando a distância entre computadores era de cerca de 200 metros.</p>
+
+            <p>Os conectores BNC ("Bayonet Neill Concelman" ou "Bristish Naval Connector") eram usados para conectar o
+              cabo às placas de rede dos computadores, e o conector em forma de "T" era usado para conectar os
+              transceptores no cabo. Os padrões mais comuns eram o 10base5 e o 10base2.</p>
+
+            <p>O cabo 10base5 permitia expansões de até 500 metros, conectando até 100 dispositivos, embora fosse
+              considerado grosso e pouco flexível. Era amplamente utilizado em redes de mainframes, mas tinha custos
+              elevados.</p>
+
+            <p>O cabo 10base2 era mais fino e flexível, com uma blindagem simples, alcançando 185 metros e conectando
+              até 30 computadores. Foi elogiado pela facilidade de expansão e pelo melhor custo-benefício.</p>
+
+            <p>Ambos os cabos eram usados na topologia de barramento, com um fio central e transceptores perfurando
+              todas as camadas do cabo até o fio de cobre para transmitir o sinal.</p>
+
+            <p>A velocidade de transmissão era de 10 Mbps, seguindo o padrão ethernet de 10 megabits. Um terminador
+              era
+              necessário no primeiro e último computador da rede para evitar pacotes sombras que poderiam prejudicar o
+              tráfego da rede.</p>
+
+            <p>O cabo coaxial tinha quatro camadas, incluindo uma jaqueta de proteção, uma malha de metal para evitar
+              distorções nos dados, isolamento interno para proteger a blindagem e um fio de cobre para transportar os
+              dados.</p>
+
+
+
+
+            <h2>Cabo Par Trançado</h2>
+            <a href="#parteVideo"><button onclick="tempo(965)" class="button-secundary">Ir para trexo da aula</button>
+              <img src="slides_fotos/caboParTrancado.png" alt="" onclick="tempo(965)">
+            </a>
+            <br>
+
+
+            <p>O cabo par trançado (twisted pair) foi o primeiro cabo a ser usado no padrão Ethernet 10base-T. Este
+              cabo possui quatro pares de cabos com cores diferentes, e cada cabo tem seu correspondente branco. Por
+              exemplo, para a cor azul, há um cabo na cor branca com listras azuis. A formatação dos pares pode variar
+              entre fabricantes.</p>
+
+            <p>Os cabos são trançados entre si para reduzir a suscetibilidade a ruídos. Isso é feito dentro de uma
+              capa plástica (geralmente de vinil) para diminuir o campo eletromagnético externo que pode ser causado
+              por equipamentos como motores, geradores elétricos, linhas de alta tensão e outros dispositivos que
+              produzem esse tipo de campo magnético.</p>
+
+            <p>Os cabos par trançados são categorizados em várias classes, incluindo Cabo UTP (Unshielded Twist Pair),
+              Cabo FTP (Foiled Twisted Pair), Cabo STP (Shielded Twisted Pair) e Cabo SSTP (Screened Shielded Twisted
+              Pair). Cada categoria possui suas próprias características e usos específicos.</p>
+
+
+
+
+            <h2>Cabo UTP (Unshielded Twist Pair)</h2>
+            <a href="#parteVideo"><button onclick="tempo(1036)" class="button-secundary">Ir para trexo da aula</button>
+              <img src="slides_fotos/caboFtp.png" alt="" onclick="tempo(1036)">
+            </a>
+
+            <p>O cabo UTP passou por várias evoluções, chegando até a categoria CAT5e, que é amplamente usada
+              atualmente. As categorias anteriores, como CAT1, CAT2, CAT3 e CAT4, foram descontinuadas. O CAT5e é
+              capaz de manter um sinal de qualidade em até 100 metros de distância, mas ultrapassar essa metragem pode
+              causar perda de sinal.</p>
+
+            <p>Para distâncias maiores, são necessários repetidores a cada 100 metros, hubs ou switches. A velocidade
+              do cabo UTP varia de acordo com a categoria, podendo chegar a 1 Gbps. Este cabo não possui blindagem, é
+              flexível, fácil de instalar e possui conectores RJ45 para Ethernet e RJ11 para voz, tornando-o de baixo
+              custo.</p>
+
+            <p>A Categoria 6 do cabo UTP oferece um custo-benefício superior ao CAT5 para redes de computadores. Ele
+              possui uma blindagem interna mais eficaz para reduzir interferências entre os pares de cabos, além de
+              usar espaçadores para distanciar os cabos e reduzir o crosstalk. Isso permite que a transmissão de dados
+              alcance até 1 Gbps com uma frequência de 500 MHz.</p>
+
+            <p>Os cabos par trançados usam conectores RJ45 macho em suas pontas e conectores Jack fêmea para tomadas,
+              hubs e switches que recebem o cabo com o conector RJ45. A cor externa dos cabos não afeta o desempenho
+              da rede, mas é útil para distinguir setores físicos em grandes instalações.</p>
+
+            <p>Para crimpagem de cabos par trançado, você precisará de conectores RJ45, alicate de bico e um alicate
+              de crimpagem de cabos RJ45. Esses cabos podem ser blindados ou não, com padrões como FTP (Foiled Twisted
+              Pair), STP (Shielded Twisted Pair) e SSTP (Screened Shielded Twisted Pair), cada um com diferentes
+              níveis de blindagem.</p>
+
+            <h2>Cabo de Fibra Ótica</h2>
+            <a href="#parteVideo"><button onclick="tempo(1105)" class="button-secundary">Ir para trexo da aula</button>
+              <img src="slides_fotos/caboFibraOtica.png" alt="" onclick="tempo(1105)">
+            </a>
+            <br>
+            <p>A fibra ótica é um meio de transmissão que utiliza sinais luminosos em vez de sinais elétricos para
+              transmitir informações. Isso ocorre por meio do fenômeno da refração interna total, que reflete feixes
+              de luz a longa distância.</p>
+
+            <p>Os cabos de fibra ótica estão substituindo os fios de cobre devido à sua capacidade de aumentar a
+              velocidade de transmissão de informações digitais. Eles consistem em um núcleo de vidro muito fino,
+              geralmente feito de sílica, coberto por uma camada de sílica que permite a reflexão de feixes de luz por
+              longas distâncias. Esses cabos possuem, no mínimo, duas camadas: o núcleo (filamento de vidro) e o
+              revestimento (material eletricamente isolante), tornando-os imunes a ruídos e, portanto, mais eficientes
+              na comunicação.</p>
+
+            <p>Os cabos de fibra ótica garantem alta confiabilidade na transmissão de sinais, dados, voz e vídeo. A
+              transmissão ocorre lançando um feixe de luz em uma extremidade da fibra, que viaja por meio de reflexões
+              sucessivas pela fibra.</p>
+
+            <p>Existem dois principais tipos de fibras óticas:</p>
+            <ul>
+              <li class="lis"><strong>Fibra Monomodo:</strong> Nessa fibra, um único sinal de luz é transportado
+                diretamente no
+                núcleo do cabo, permitindo alcançar distâncias maiores sem repetição. Isso possibilita o tráfego de
+                luz a distâncias de até 80 quilômetros no padrão 10 Gigabit.</li>
+              <li class="lis"><strong>Fibra Multimodo:</strong> Nessa fibra, um feixe de luz viaja ao longo do trajeto,
+                sofrendo
+                diferentes refrações nas paredes do núcleo do cabo.</li>
+            </ul>
+
+            <p>De acordo com uma notícia publicada pelo site "Investimentos e Notícias" em outubro de 2015, há
+              aproximadamente 160,4 milhões de assinantes conectados no mundo utilizando a fibra ótica.</p>
+
+
+            <br>
+            <div id="player10"></div>
+            <section id="parteVideo2">
+              <button style="width: 100%;" class="hero__btn"
+                onclick="inicializarPlayer('8Bc3ZfYSXGo', 1, 'player10')">video sobre: Cabo Coaxial, Par Trançado (STP e
+                UTP) e Fibra Óptica
+              </button>
+              <br>
 
 
 
 
 
-        <a href="//sim_mod_1/index.html" class="button button-secundary">Fazer simulado referente ao tópico 2 </a>
+
+
+
+
+
+
+
+
+            </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br>
+            <a href="//sim_mod_1/index.html" class="button button-secundary">Fazer simulado referente ao tópico 2 </a>
     </article>
     <a href="1_modulo_t1.html" class="button button-primary">Tópico 1 </a>
     <a href="1_modulo_t2.html" class="button button-primary">Tópico 2</a>
