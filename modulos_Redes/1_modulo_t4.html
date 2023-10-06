@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <title>Sistemas Operacionais</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Carlos">
+  <meta name="description" content="descrição bacanuda">
+  <meta name="keywords" content="html5, tecnologia">
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <!-- Corrija o caminho do ícone Font Awesome via CDN -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+    integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+  <!-- Fonts (pode manter as fontes do Google) -->
+  <link href='http://fonts.googleapis.com/css?family=Sintony:400,700' rel='stylesheet' type='/text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='/text/css'>
+
+  <!-- Corrija os caminhos dos arquivos CSS -->
+  <link rel="stylesheet" href="/style/normalize.css">
+  <link rel="stylesheet" href="/style/main.css">
+  <style>
+    h1 {
+      color: #333;
+      font-size: 24px;
+    }
+
+    h2 {
+      color: #555;
+      font-size: 20px;
+    }
+
+    p {
+      color: #777;
+      font-size: 16px;
+      line-height: 1.4;
+      margin-bottom: 15px;
+    }
+
+    .lis {
+      color: #535353;
+      font-size: 16px;
+      line-height: 1.4;
+      margin-bottom: 15px;
+
+    }
+
+    strong {
+      font-weight: bold;
+    }
+
+    /* Adicione mais estilos conforme necessário */
+  </style>
+
+</head>
+
+<body class="no-js">
+
+  <header class="header">
+    <a href="/index.html" class="logo-text">Unicesumar</a>
+
+    <button style="display: none;" class="header__btnMenu"> <i class="fas fa-bars fa-2x"></i> <span
+        class="sr-only">Menu</span></button>
+
+    <nav class="header__nav">
+      <ul class="partechata">
+        <li class="menu"><a>1° Módulo</a>
+
+          <ul class="enderecos">
+            <li style="background-color: rgba(19, 11, 11, 0.295);"><a class="sub_linha" href="1_modulo_t1.html">tópico
+                1</a></li>
+            <li style="background-color: rgba(19, 11, 11, 0.295);"><a class="sub_linha" href="1_modulo_t2.html">tópico
+                2</a></li>
+            <li style="background-color: rgba(19, 11, 11, 0.295);"><a class="sub_linha" href="1_modulo_t3.html">tópico
+                3</a></li>
+            <li style="background-color: rgba(19, 11, 11, 0.295);"><a class="sub_linha" href="1_modulo_t4.html">tópico
+                4</a></li>
+          </ul>
+        </li>
+
+        <li class="menu"><a>2° Módulo</a>
+
+          <ul class="enderecos">
+            <li style="background-color: rgba(19, 11, 11, 0.295);"><a class="sub_linha" href="2_modulo_t1.html">tópico
+                1</a></li>
+            <li style="background-color: rgba(19, 11, 11, 0.295);"><a class="sub_linha" href="2_modulo_t2.html">tópico
+                2</a></li>
+            <li style="background-color: rgba(19, 11, 11, 0.295);"><a class="sub_linha" href="2_modulo_t3.html">tópico
+                3</a></li>
+            <li style="background-color: rgba(19, 11, 11, 0.295);"><a class="sub_linha" href="2_modulo_t4.html">tópico
+                4</a></li>
+          </ul>
+        </li>
+        <li class="menu"><a>3° Módulo</a>
+
+          <ul class="enderecos">
+            <li style="background-color: rgba(19, 11, 11, 0.295);"><a class="sub_linha" href="3_modulo_t1.html">tópico
+                1</a></li>
+            <li style="background-color: rgba(19, 11, 11, 0.295);"><a class="sub_linha" href="3_modulo_t2.html">tópico
+                2</a></li>
+            <li style="background-color: rgba(19, 11, 11, 0.295);"><a class="sub_linha" href="3_modulo_t3.html">tópico
+                3</a></li>
+            <li style="background-color: rgba(19, 11, 11, 0.295);"><a class="sub_linha" href="">home</a></li>
+
+          </ul>
+        </li>
+        <li class="menu"><a>4° Módulo</a>
+
+          <ul class="enderecos">
+            <li style="background-color: rgba(19, 11, 11, 0.295);"><a class="sub_linha" href="4_modulo_t1.html">tópico
+                1</a></li>
+            <li style="background-color: rgba(19, 11, 11, 0.295);"><a class="sub_linha" href="4_modulo_t2.html">tópico
+                2</a></li>
+            <li style="background-color: rgba(19, 11, 11, 0.295);"><a class="sub_linha" href="4_modulo_t3.html">tópico
+                3</a></li>
+            <li style="background-color: rgba(19, 11, 11, 0.295);"><a class="sub_linha" href="">home</a></li>
+
+          </ul>
+        </li>
+        <li class="menu"><a>5° Módulo</a>
+
+          <ul class="enderecos">
+            <li style="background-color: rgba(19, 11, 11, 0.295);"><a class="sub_linha menuCor"
+                href="5_modulo_t1.html">tópico 1</a></li>
+            <li style="background-color: rgba(19, 11, 11, 0.295);"><a class="sub_linha" href="5_modulo_t2.html">tópico
+                2</a></li>
+            <li style="background-color: rgba(19, 11, 11, 0.295);"><a class="sub_linha" href="5_modulo_t3.html">tópico
+                3</a></li>
+            <li style="background-color: rgba(19, 11, 11, 0.295);"><a class="sub_linha" href="">home</a></li>
+
+          </ul>
+        </li>
+        <li class="menu"><a>Atividades</a>
+
+          <ul class="enderecos">
+            <li style="background-color: rgba(19, 11, 11, 0.295);"><a class="sub_linha" href="atv1.html">AE1</a></li>
+            <li style="background-color: rgba(19, 11, 11, 0.295);"><a class="sub_linha"
+                href="img/atv2revisado.pdf">AE2</a></li>
+            <li style="background-color: rgba(19, 11, 11, 0.295);"><a class="sub_linha" href="img/atv3.pdf">AE3</a></li>
+            <li style="background-color: rgba(19, 11, 11, 0.295);"><a class="sub_linha" href="mapa1.html">mapa</a></li>
+
+          </ul>
+        </li>
+        <li class="menu"><a style="color: red;">ao vivo</a>
+
+          <ul class="enderecos">
+            <li style="background-color: rgba(19, 11, 11, 0.295);"><a class="sub_linha "
+                href="ao_vivo.html">Maratonar</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1 class="hero__title">unidade I: ENTENDENDO REDES DE
+      COMPUTADORES
+      <p class="hero__text">Tópico IV: Topologias de Redes</p>
+      </p>
+      <a href="img/Slides - Aulas Conceituais/Conceitual I.pdf" target="_blank" class="hero__btn">Slids aulas
+        conceitual</a>
+  </section>
+
+
+  <div class="container">
+
+
+    <article>
+
+      <h1 class="hero__title">Plano de Estudo</h1>
+      <p>A seguir, apresentam-se os tópicos que você estudará nesta unidade:</p>
+      <ul>
+        <li>Aplicações das Redes de Computadores</li>
+        <li>Tipos de Redes de Computadores</li>
+        <li>Hardware e Software de Rede</li>
+        <li>Meios de Transmissão</li>
+        <li>Topologias de Redes</li>
+      </ul>
+      <a href="1_modulo_t1.html" class="button button-primary">Tópico 1 </a>
+      <a href="1_modulo_t2.html" class="button button-primary">Tópico 2 </a>
+      <a href="1_modulo_t3.html" class="button button-primary">Tópico 3</a>
+      <a href="1_modulo_t4.html" class="button button-primary">Tópico 4</a>
+
+
+
+      <section id="parteVideo">
+        <video class="video-screen" width="100%" height="50%" controls="controls"
+          src="video_aulas/redeAula3.mp4"></video>
+        <button class="hero__btn" onclick="tempo(12)">começar na parte do tópico</button>
+      </section>
+      <br>
+
+      <h2>Topologias de Redes</h2>
+      <a href="#parteVideo"><button onclick="tempo(82)" class="button-secundary">Ir para trexo da aula</button>
+        <img src="slides_fotos/topologiasDeRedes.png" alt="" onclick="tempo(82)">
+      </a>
+      <br>
+      <p>No tópico anterior, estudamos os meios de transmissão. Agora, abordaremos a estrutura física e lógica da rede,
+        ou seja, como a rede ficará disposta. A topologia de rede descreve fisicamente e logicamente como as redes são
+        desenhadas, mostrando como e onde cada ponto de rede estará disposto.</p>
+
+      <p>A topologia física é o desenho físico da rede, enquanto a lógica descreve o fluxo de dados através da rede.</p>
+
+      <p>Ao longo dos anos, várias topologias foram criadas, totalizando 7 no conjunto. Vamos focar nas quatro
+        principais e mais utilizadas:</p>
+      <ul>
+        <li class="lis"><strong>Ponto a Ponto:</strong> Esta topologia envolve uma conexão direta entre dois
+          dispositivos, como uma
+          ponte. É simples e eficiente para conexões diretas.</li>
+        <li class="lis"><strong>Barramento:</strong> Nesta topologia, todos os dispositivos compartilham o mesmo cabo de
+          comunicação. É mais simples de implementar, mas pode sofrer com colisões de dados.</li>
+        <li class="lis"><strong>Anel:</strong> Os dispositivos são conectados em um anel fechado, onde os dados circulam
+          em uma
+          única direção. É resiliente e eficiente, mas pode ser difícil de expandir.</li>
+        <li class="lis"><strong>Estrela:</strong> Cada dispositivo se conecta a um ponto central, como um hub ou switch.
+          É fácil de
+          gerenciar e expandir, mas depende da disponibilidade do ponto central.</li>
+      </ul>
+
+      <h2>Topologia de Rede Ponto a Ponto</h2>
+
+      <a href="#parteVideo"><button onclick="tempo(196)" class="button-secundary">Ir para trexo da aula</button>
+        <img src="slides_fotos/pontaPonta2.png" alt="" onclick="tempo(196)">
+      </a>
+      <br>
+
+      <p>Uma conexão ponto a ponto, também conhecida como Peer to Peer, interliga apenas dois computadores utilizando um
+        cabo especial chamado Cross-over. Essa é a forma mais econômica de conectar duas máquinas, exigindo apenas um
+        cabo par trançado de categoria 5 e dois conectores RJ45.</p>
+      <a href="#parteVideo"><button onclick="tempo(196)" class="button-secundary">Ir para trexo da aula</button>
+        <img src="slides_fotos/pontaPonta1.png" alt="" onclick="tempo(196)">
+      </a>
+      <br>
+      <p>O cabo crossover deve ter uma extremidade no padrão EIA/TIA 568A e a outra no padrão EIA/TIA 568B.</p>
+
+      <h2>Topologia Anel</h2>
+      <a href="#parteVideo"><button onclick="tempo(241)" class="button-secundary">Ir para trexo da aula</button>
+        <img src="slides_fotos/anel.png" alt="" onclick="tempo(241)">
+      </a>
+      <p>A Topologia Anel, introduzida pela IBM, envolve a conexão em série de dispositivos, formando um circuito
+        fechado em forma de anel. Os dados são transmitidos em uma única direção, percorrendo todos os nós da rede até
+        atingir seu destino. Em caso de problemas, a rede pode usar anéis múltiplos para aumentar a confiabilidade e o
+        desempenho, permitindo a retransmissão de pacotes por outro caminho.</p>
+
+      <h2>Topologia Estrela</h2>
+      <a href="#parteVideo"><button onclick="tempo(418)" class="button-secundary">Ir para trexo da aula</button>
+        <img src="slides_fotos/estrela.png" alt="" onclick="tempo(418)">
+      </a>
+      <p>A topologia em estrela é amplamente utilizada devido à sua facilidade de configuração, alta velocidade e custo
+        acessível. Para implementar uma topologia em estrela, é necessário um dispositivo concentrador, que pode ser um
+        hub, hub-switch, switch ou cabos de par trançado.</p>
+      <p>Nesta topologia, todos os dispositivos estão conectados ao concentrador central. Se um dispositivo falhar,
+        apenas esse dispositivo ficará desconectado da rede, enquanto o restante da rede continuará funcionando
+        normalmente. Além disso, é fácil adicionar novos terminais à rede, desde que haja portas disponíveis.</p>
+      <p>No entanto, uma desvantagem é que se o concentrador central apresentar problemas, toda a rede ficará
+        inoperante.</p>
+
+
+      <h2>Topologia Barramento</h2>
+      <a href="#parteVideo"><button onclick="tempo(511)" class="button-secundary">Ir para trexo da aula</button>
+        <img src="slides_fotos/barramento.png" alt="" onclick="tempo(511)">
+      </a>
+      <br>
+      <p>A topologia de barramento foi a primeira a ser utilizada em redes. Nessa topologia, todos os computadores se
+        conectam a um cabo central por meio de conectores do tipo T e conectores do tipo BNC, que são conectados às
+        placas de rede dos computadores.</p>
+      <p>Quando um pacote de dados é enviado, ele percorre todo o cabo e passa por todas as máquinas. No entanto, apenas
+        o destinatário do pacote aceita e processa os dados, enquanto as outras máquinas permanecem em escuta. Isso
+        significa que apenas um pacote pode ser transmitido pela rede de cada vez. Se houver mais de um pacote na rede,
+        a transmissão deve recomeçar do início.</p>
+
+      <div id="player9"></div>
+      <section id="parteVideo2">
+        <button style="width: 100%;" class="hero__btn" onclick="inicializarPlayer('VVy_AFWNEEA', 1, 'player9')">video
+          sobre topologia de redes youtube!!
+        </button>
+        <br>
+
+        <h2>Considerações Finais</h2>
+        <p>Nesta primeira unidade do livro, exploramos os principais fundamentos que constituem uma rede de
+          computadores, desde seu surgimento até os dias atuais. Aprendemos sobre a importância das redes de
+          computadores em nossas residências e empresas, bem como os benefícios do compartilhamento de recursos e
+          dispositivos em uma rede.</p>
+        <p>Discutimos os tipos de redes de computadores, incluindo a Internet, a intranet e a extranet, e como cada uma
+          delas desempenha um papel vital em diferentes cenários. Abordamos os serviços oferecidos por essas redes, sua
+          evolução ao longo do tempo e suas classificações, como LAN, MAN, WAN e redes sem fio.</p>
+        <p>No decorrer de nossa unidade, exploramos o padrão Ethernet, que padroniza a comunicação física e lógica em
+          redes. Analisamos os dispositivos de rede, como placas de rede, hubs, hub-switches e switches, entendendo suas
+          diferenças e aplicações.</p>
+        <p>Além disso, examinamos as mídias de transmissão, ou seja, os tipos de cabos utilizados em redes,
+          compreendendo sua evolução ao longo do tempo e suas aplicações adequadas.</p>
+        <p>Encerramos esta unidade explorando as topologias de redes, combinadas com as mídias de transmissão,
+          proporcionando uma compreensão abrangente das redes de computadores.</p>
+        <p>Na próxima unidade, continuaremos nossos estudos ao explorar os protocolos de comunicação, o Modelo OSI e o
+          modelo TCP/IP. Convidamos você a continuar conosco nesta jornada de aprendizado!</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          </section>
+
+
+
+
+          <br>
+          <a href="//sim_mod_1/index.html" class="button button-secundary">Fazer simulado referente ao tópico 2 </a>
+    </article>
+    <a href="1_modulo_t1.html" class="button button-primary">Tópico 1 </a>
+    <a href="1_modulo_t2.html" class="button button-primary">Tópico 2</a>
+    <a href="1_modulo_t3.html" class="button button-primary">Tópico 3</a>
+    <a href="1_modulo_t4.html" class="button button-primary">Tópico 4</a>
+
+
+  </div>
+  </section>
+
+
+
+  <div class="laptop-slider">
+    <div class="slideshow">
+      <figure><img alt="" src="img/para_aula1.png" width="70%" style="margin-left: 5%;" /></figure>
+      <figure><img alt="" src="img/articles/slid_1.png" width="70%" style="margin-left: 5%;" /></figure>
+      <figure><img alt="" src="img/articles/slid2.png" width="70%" style="margin-left: 5%;" /></figure>
+      <figure><img alt="" src="img/articles/slid3.png" width="70%" style="margin-left: 5%;" /></figure>
+      <figure><img alt="" src="img/articles/slid4.png" width="70%" style="margin-left: 5%;" /></figure>
+      <figure><img alt="" src="img/articles/slid5.png" width="70%" style="margin-left: 5%;" /></figure>
+      <span class="prev" style="display: none;"><i class="fas fa-angle-left fa-4x"></i></span>
+      <span class="next" style="display: none;"><i class="fas fa-angle-right fa-4x"></i></span>
+    </div>
+  </div>
+
+
+  <section class="quote-container">
+
+    <div class="quote-slideshow">
+      <figure>
+        <h2>Cada vez mais as redes de computadores estão adentrando em nossas residências e nas organizações. Nesse
+          sentido, será possível uma organização
+          ou uma residência ficar sem acesso à rede de comunicação? </h2>
+        <figcaption>
+          Reflita
+        </figcaption>
+      </figure>
+      <figure>
+        <h2>Com a popularização dos dispositivos móveis (celulares, notebooks, smartphones e tablets), e dos
+          dispositivos “vestíveis” que podem ser utilizados
+          por pessoas (tais como: relógios inteligentes, marca passo, entre outros) que
+          se comunicam via rede, de acordo com o site CisoAdviso, 72% do total de
+          dispositivos terão conexões móveis em 2020. Os dispositivos inteligentes
+          serão responsáveis por 98% do tráfego de dados móveis em 2020</h2>
+        <figcaption>
+          saima mais
+        </figcaption>
+      </figure>
+      <span class="prev" style="display:none;"><i class="fas fa-angle-left fa-2x"></i></span>
+      <span class="next" style="display:none;"><i class="fas fa-angle-right fa-2x"></i></span>
+    </div>
+
+
+
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <h2 class="footer__logo">Carlos Souza</h2>
+
+      <p>Esse conteúdo interativo tem o objetivo e auxiliar os alunos nas matérias do curso unicesumar, tendo em vista
+        que as aulas e a apostilas estão separados, ou seja, dessa forma interativa o aluno terá a oportunidade de
+        estudar a apostila junto ao video conceitual, facilitando o aprendizado, e ganhado tempo. </p>
+
+      <p>O autor do site, por estar no 3° semestre do Curso de Análise e desenvolvimento de Sistemas, sentiu a
+        necessidade, de estudar as matérias da faculdade ao mesmo tempo que executo projetos que possam ser uteis para
+        os outros. </p>
+      <p>Caso veja algo que possa melhorar, ficarei muito feliz em estar consertando, favor entrar em contato pelo
+        whatsapp, 419 9123-0585, as correções e atualizações são feitas na hora, caso o desenvolvedor Carlos saiba como
+        concertar, caso precise estudar algo, pode levar um tempo maior, caso já tenha a solução seu código pode ser
+        postado através do whatsapp, caso solicite, o desenvolvedor dará os devidos créditos aqui. </p>
+      <ul class="footer__links">
+        <li><a href="#">List One</a></li>
+        <li><a href="#">Page Two</a></li>
+        <li><a href="#">Design</a></li>
+        <li><a href="#">Work</a></li>
+        <li><a href="#">Contact Me</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="/js/menu.js"></script>
+  <script src="/js/carousel.js"></script>
+
+  <script src="/js/main.js"></script>
+
+  <script src="/js/video.js"></script>
+</body>
+
+</html>
