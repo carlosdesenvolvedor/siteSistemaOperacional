@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Usuário</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Função para carregar contatos
+            function carregarContatos() {
+                $.get("/api/contatos", function (data) {
+                    $("#contactTable tbody").empty();
+                    data.forEach(function (contato) {
+                        var newRow = $("<tr>");
+                        newRow.append("<td>" + contato.nome + "</td>");
+                        newRow.append("<td>" + contato.senha + "</td>");
+                        newRow.append("<td>" + contato.telefone + "</td>");
+                        newRow.append("<td>" + contato.email + "</td>");
+                        newRow.append("<td>" + contato.urlAvatar + "</td>");
+                        newRow.append('<td><a href="/editar-usuario/' + contato.id + '">Editar</a> | <a href="/excluir-usuario/' + contato.id + '">Excluir</a></td>');
+                        $("#contactTable tbody").append(newRow);
+                    });
+                });
+            }
+
+            // Evento de submissão do formulário
+            $("#cadastroForm").submit(function (event) {
+                event.preventDefault();
+                var formData = {
+                    nome: $("#nome").val(),
+                    senha: $("#senha").val(),
+                    telefone: $("#telefone").val(),
+                    email: $("#email").val(),
+                    urlAvatar: $("#urlAvatar").val()
+                };
+
+                // Solicitação POST para cadastrar um novo contato
+                $.ajax({
+                    type: "POST",
+                    url: "/api/contatos",
+                    data: JSON.stringify(formData),
+                    contentType: "application/json",
+                    success: function (response) {
+                        // Limpar os campos do formulário
+                        $("#nome").val("");
+                        $("#senha").val("");
+                        $("#telefone").val("");
+                        $("#email").val("");
+                        $("#urlAvatar").val("");
+
+                        // Recarregar a tabela de contatos
+                        carregarContatos();
+                    },
+                    error: function (error) {
+                        console.error(error);
+                    }
+                });
+            });
+
+            // Inicialmente carregar contatos
+            carregarContatos();
+        });
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="password"],
+        input[type="tel"],
+        input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ccc;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Cadastro de Usuário</h1>
+        
+        <form id="cadastroForm" method="post">
+            <div class="form-group">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
+            <div class="form-group">
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha" required>
+            </div>
+            <div class="form-group">
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone" required>
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="urlAvatar">URL do Avatar:</label>
+                <input type="text" id="urlAvatar" name="urlAvatar" required>
+            </div>
+            <button type="submit">Cadastrar</button>
+        </form>
+        
+        <h2>Lista de Usuários</h2>
+        <table id="contactTable">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Senha</th>
+                    <th>Telefone</th>
+                    <th>E-mail</th>
+                    <th>URL do Avatar</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Os dados serão preenchidos dinamicamente aqui -->
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

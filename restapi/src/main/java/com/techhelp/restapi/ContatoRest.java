@@ -15,7 +15,7 @@ import com.techhelp.restapi.database.RepositorioContato;
 import com.techhelp.restapi.entidade.Contato;
 
 @RestController
-@RequestMapping("/contato")
+@RequestMapping("/contato-usuario")
 public class ContatoRest {
     @Autowired //spring instacia o objeto e injeta no atributo repositorio acriado
     private RepositorioContato repositorio;
@@ -23,24 +23,25 @@ public class ContatoRest {
 
 
     //definição dos métodos no banco de dado
-    @GetMapping("/listar")
+    @GetMapping("/listar-usuario")
     public List<Contato> listar(){
         return repositorio.findAll();
     }
-    @PostMapping("/salvar")
+    @PostMapping("/salvar-usuario")
     public void salvar(@RequestBody Contato contato){
         repositorio.save(contato);
 
     }
-    @PutMapping("/alterar")
+    @PutMapping("/alterar-usuario")
     public void alterar(@RequestBody Contato contato){
         if(contato.getId()>0){
            repositorio.save(contato); 
         }
     }
-    @DeleteMapping("/delete")
+    @DeleteMapping("/delete-usuario")
     public void excluir(@RequestBody Contato contato){
         repositorio.delete(contato);
     }
+
 
 }
