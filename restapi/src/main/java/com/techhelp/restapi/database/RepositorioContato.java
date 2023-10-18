@@ -6,6 +6,6 @@ import com.techhelp.restapi.entidade.Contato;
 
 public interface RepositorioContato extends JpaRepository<Contato,Long>{
     
-
+    Contato findByNomeAndSenha(String nome, String senha);
     
 }

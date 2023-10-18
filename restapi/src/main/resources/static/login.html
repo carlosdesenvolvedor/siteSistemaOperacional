@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -63,10 +64,11 @@
         }
     </style>
 </head>
+
 <body>
     <div class="login-container">
         <h2>Login</h2>
-        <form action="processa_login.php" method="POST">
+        <form id="loginForm">
             <div class="form-group">
                 <label for="username">Usuário:</label>
                 <input type="text" id="username" name="username" required>
@@ -78,7 +80,37 @@
             <div class="form-group">
                 <input type="submit" value="Entrar">
             </div>
+            <p><a href="index.html">cadastre-se</a></p>
         </form>
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#loginForm").submit(function (event) {
+                event.preventDefault();
+                var formData = {
+                    username: $("#username").val(),
+                    password: $("#password").val()
+                };
+
+                $.ajax({
+                    type: "POST",
+                    url: "/contato/verificar-login",
+                    data: JSON.stringify(formData),
+                    contentType: "application/json",
+                    success: function (response) {
+                        // Redirecione o usuário para a página autorizada
+                        window.location.href = response;
+                    },
+                    error: function (error) {
+                        // Trate erros ou exiba mensagens de erro
+                        console.error(error);
+                    }
+                });
+            });
+        });
+    </script>
 </body>
+
 </html>

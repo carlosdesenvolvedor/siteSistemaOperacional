@@ -1,5 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+    <title> Cadastro de usuario, login Administrador</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">  
+    <meta name="author" content="Carlos Cezar">
+    <meta name="description" content="Alterar cadastro do uusário e mandar para banco de dados">
+    <meta name="keywords" content="html5, tecnologia">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,36 +16,64 @@
         $(document).ready(function () {
             // Função para carregar contatos
             function carregarContatos() {
-                $.get("/api/contatos", function (data) {
+                $.get("/contato/listar-usuario", function (data) {
                     $("#contactTable tbody").empty();
                     data.forEach(function (contato) {
                         var newRow = $("<tr>");
                         newRow.append("<td>" + contato.nome + "</td>");
                         newRow.append("<td>" + contato.senha + "</td>");
                         newRow.append("<td>" + contato.telefone + "</td>");
-                        newRow.append("<td>" + contato.email + "</td>");
+                        newRow.append("<td>" + contato.emal + "</td>");
                         newRow.append("<td>" + contato.urlAvatar + "</td>");
-                        newRow.append('<td><a href="/editar-usuario/' + contato.id + '">Editar</a> | <a href="/excluir-usuario/' + contato.id + '">Excluir</a></td>');
+                        newRow.append('<td><a href="/editar-usuario/' + contato.id + '" class="editar-usuario">Editar</a> | <a href="/excluir-usuario/' + contato.id + '" class="excluir-usuario">Excluir</a></td>');
                         $("#contactTable tbody").append(newRow);
                     });
                 });
             }
 
-            // Evento de submissão do formulário
+            // Evento de clique para o link "Editar"
+            $("#contactTable").on("click", "a.editar-usuario", function (event) {
+                event.preventDefault();
+                var userId = $(this).attr("href").split("/").pop();
+
+                // Redirecione o usuário para a página de edição com os parâmetros na URL
+                window.location.href = "alterar.html?id=" + userId;
+            });
+
+            // Evento de clique para o link "Excluir"
+            $("#contactTable").on("click", "a.excluir-usuario", function (event) {
+                event.preventDefault();
+                var userId = $(this).attr("href").split("/").pop();
+
+                // Fazer uma solicitação AJAX para excluir o usuário
+                $.ajax({
+                    type: "DELETE", // Use DELETE para exclusão
+                    url: "/contato/excluir-usuario/" + userId,
+                    success: function () {
+                        // Recarregar a tabela de contatos após a exclusão
+                        carregarContatos();
+                    },
+                    error: function (error) {
+                        console.error(error);
+                    }
+                });
+            });
+
+            // Evento de submissão do formulário de cadastro
             $("#cadastroForm").submit(function (event) {
                 event.preventDefault();
                 var formData = {
                     nome: $("#nome").val(),
                     senha: $("#senha").val(),
                     telefone: $("#telefone").val(),
-                    email: $("#email").val(),
+                    emal: $("#emal").val(),
                     urlAvatar: $("#urlAvatar").val()
                 };
 
                 // Solicitação POST para cadastrar um novo contato
                 $.ajax({
                     type: "POST",
-                    url: "/api/contatos",
+                    url: "/contato/salvar-usuario",
                     data: JSON.stringify(formData),
                     contentType: "application/json",
                     success: function (response) {
@@ -46,13 +81,54 @@
                         $("#nome").val("");
                         $("#senha").val("");
                         $("#telefone").val("");
-                        $("#email").val("");
+                        $("#emal").val("");
                         $("#urlAvatar").val("");
 
                         // Recarregar a tabela de contatos
                         carregarContatos();
+                        alert("Cadastro realizado com sucesso");
                     },
                     error: function (error) {
+                        console.error(error);
+                    }
+                });
+            });
+
+            // Evento de submissão do formulário de edição
+            $("#editarForm").submit(function (event) {
+                event.preventDefault();
+                var formData = {
+                    id: $("#editarForm #userId").val(),
+                    nome: $("#editarForm #editNome").val(),
+                    senha: $("#editarForm #editSenha").val(),
+                    telefone: $("#editarForm #editTelefone").val(),
+                    emal: $("#editarForm #editEmal").val(),
+                    urlAvatar: $("#editarForm #editUrlAvatar").val()
+                };
+
+                // Solicitação PUT para editar o usuário
+                $.ajax({
+                    type: "PUT",
+                    url: "/contato/editar-usuario/" + formData.id,
+                    data: JSON.stringify(formData),
+                    contentType: "application/json",
+                    success: function (response) {
+                        // Limpar os campos do formulário de edição
+                        $("#editarForm #userId").val("");
+                        $("#editarForm #editNome").val("");
+                        $("#editarForm #editSenha").val("");
+                        $("#editarForm #editTelefone").val("");
+                        $("#editarForm #editEmal").val("");
+                        $("#editarForm #editUrlAvatar").val("");
+
+                        // Feche o modal de edição ou termine a edição na interface do usuário
+                        // ...
+
+                        // Recarregue a tabela de contatos após a edição
+                        carregarContatos();
+                    },
+                    error: function (error) {
+
                         console.error(error);
                     }
                 });
@@ -62,11 +138,13 @@
             carregarContatos();
         });
     </script>
+
     <style>
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
         }
+
         .container {
             max-width: 600px;
             margin: 0 auto;
@@ -75,21 +153,25 @@
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         }
+
         .form-group {
             margin-bottom: 15px;
         }
+
         label {
             font-weight: bold;
         }
+
         input[type="text"],
         input[type="password"],
         input[type="tel"],
-        input[type="email"] {
+        input[type="emal"] {
             width: 100%;
             padding: 10px;
             border: 1px solid #ccc;
             border-radius: 4px;
         }
+
         button {
             background-color: #007BFF;
             color: #fff;
@@ -98,24 +180,31 @@
             border-radius: 4px;
             cursor: pointer;
         }
+
         table {
             width: 100%;
             border-collapse: collapse;
             margin-top: 20px;
         }
-        table, th, td {
+
+        table,
+        th,
+        td {
             border: 1px solid #ccc;
         }
-        th, td {
+
+        th,
+        td {
             padding: 10px;
             text-align: left;
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <h1>Cadastro de Usuário</h1>
-        
+
         <form id="cadastroForm" method="post">
             <div class="form-group">
                 <label for="nome">Nome:</label>
@@ -130,8 +219,8 @@
                 <input type="tel" id="telefone" name="telefone" required>
             </div>
             <div class="form-group">
-                <label for="email">E-mail:</label>
-                <input type="email" id="email" name="email" required>
+                <label for="emal">E-mail:</label>
+                <input type="emal" id="emal" name="emal" required>
             </div>
             <div class="form-group">
                 <label for="urlAvatar">URL do Avatar:</label>
@@ -139,7 +228,7 @@
             </div>
             <button type="submit">Cadastrar</button>
         </form>
-        
+
         <h2>Lista de Usuários</h2>
         <table id="contactTable">
             <thead>
@@ -158,4 +247,5 @@
         </table>
     </div>
 </body>
+
 </html>
