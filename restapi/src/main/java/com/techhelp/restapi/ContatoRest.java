@@ -39,7 +39,7 @@ public class ContatoRest {
         }
     }
     @DeleteMapping("/delete")
-    public void excluir(Contato contato){
+    public void excluir(@RequestBody Contato contato){
         repositorio.delete(contato);
     }
 
