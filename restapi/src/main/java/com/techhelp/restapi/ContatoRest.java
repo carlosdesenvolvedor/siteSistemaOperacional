@@ -110,7 +110,7 @@ public class ContatoRest {
             // Se o login for válido, você pode gerar um token de autenticação, 
             // armazená-lo em uma sessão e redirecionar para a página autorizada.
             // Neste exemplo, apenas retornarei a mensagem de sucesso.
-            return ResponseEntity.ok("https://silly-brigadeiros-a18f43.netlify.app/index_menu.html");
+            return ResponseEntity.ok("https://sistemacompletoapiads.netlify.app");
         } else {
             // Se o login for inválido, retorne uma mensagem de erro
             return ResponseEntity.badRequest().body("Login inválido. Verifique seu usuário e senha.");
