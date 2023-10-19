@@ -1,3 +1,8 @@
+//correções ortograficas.
+let errosOrtograficos1 = window.document.getElementsByClassName("sub_linha")[22].textContent = 'ae3';
+let errosOrtograficos2 = window.document.getElementsByClassName("sub_linha")[21].textContent = 'ae2';
+let errosOrtograficos3 = window.document.getElementsByClassName("sub_linha")[20].textContent = 'ae1';
+let menu_atualizado = window.document.getElementsByClassName("logo-text")[0].innerHTML = 'tech help ';
 function Menu(config){
     this.nav = ( typeof config.container === 'string') ? document.querySelector(config.container) : config.container
     
@@ -66,7 +71,8 @@ function Menu(config){
         _opened = false;
     }
     
-}
+}   
+
 
 
 

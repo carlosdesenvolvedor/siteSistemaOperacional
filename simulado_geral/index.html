@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulado</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style/main.css">
+    <link rel="stylesheet" href="/style/normalize.css">
+</head>
+<body>
+    
+    <div class="home-box custom-box ">
+        <h3 class="hero__title" style="color: white;">Questões referente a todos os tópicos do curso de Sistemas operacionais.</h3>
+        <p style="margin-bottom: 60px;"><ol>
+            <li>Responda atentamente as questões e de um <b>Next</b> para seguir!</li>
+            <li>Se não souber a resposta, chute ou de um <b>Next</b> para pular a questão</li>
+            <li>No final das questões, verá seus resultados.</li>
+            <li>Aperte <b>Tentar de novo</b> para nova chance.</li>
+            
+            <li>Se quiser <b>recomeçar</b> o simulado, apenas atualize a pagina!</li>
+        </ol></p>
+        <p>Total de questões: <span class="total-questions"></span> </p>
+        <button type="button" class="btn" onclick="goToHome()" style="margin-left: 60px;">Alterar qtd de questões</button>
+        <button type="button" class="btn" onclick="startQuiz()" style="margin-left: 70px;">Começar o simulado</button>
+        
+    </div>
+
+    <div class="quiz-box custom-box hide ">
+        <div class="question-number">
+         
+        </div>
+        <div class="question-text">
+            
+            
+        </div>         
+        
+        <div class="option-container ">
+            
+   
+        </div>
+        <div class="next-question-btn">
+            <button type="button" class="btn" onclick="next()">Next</button>
+            <button type="button" class="btn" onclick="tryAgainQuiz()">Recomeçar</button>
+            
+        </div>
+        <div class="answers-indicator">
+            <a href="" target="_top"></a>
+        </div>
+    </div>
+    <div class="result-box custom-box hide">
+        <h1>Resultado do simulado</h1>
+        <table>
+            <tr>
+                <td>Total de Questões: </td>
+                <td><span class="total-questions"></span></td>
+            </tr>
+            <tr>
+                <td>Tentativas: </td>
+                <td><span class="total-attempt"></span></td>
+            </tr>
+            <tr>
+                <td>Corretas: </td>
+                <td><span class="total-correct"></span></td>
+            </tr>
+            <tr>
+                <td>Errou: </td>
+                <td><span class="total-wrong"></span></td>
+            </tr>
+            <tr>
+                <td>Porcentagem: </td>
+                <td><span class="percentage"></span></td>
+            </tr>
+            <tr>
+                <td>Sua pontuação:  </td>
+                <td><span class="total-score"></span></td>
+            </tr>
+        </table>
+        <button type="button" class="btn" onclick="tryAgainQuiz()">Tentar de novo</button>
+        <button type="menu" class="btn" onclick="voltarHome()">Voltar ao site Tech Help</button> 
+        <button type="button" class="btn" onclick="goToHome()">alterar qtd de questões</button>
+    </div>
+    <script src="js/question.js"></script>
+    <script src="js/app.js"></script>
+    <footer class="footer">
+        <a href="/1_modulo_t1.html" class="footer">Home thu</a>
+        <h1>Desenvolvido por: Carlos Cezar Nunes de Souza copyright &copf; </h1>
+    </footer>
+</body>
+</html>

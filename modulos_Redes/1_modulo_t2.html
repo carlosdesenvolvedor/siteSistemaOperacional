@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <title>Sistemas Operacionais</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Carlos">
+  <meta name="description" content="descrição bacanuda">
+  <meta name="keywords" content="html5, tecnologia">
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <!-- Corrija o caminho do ícone Font Awesome via CDN -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+    integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+  <!-- Fonts (pode manter as fontes do Google) -->
+  <link href='http://fonts.googleapis.com/css?family=Sintony:400,700' rel='stylesheet' type='/text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='/text/css'>
+
+  <!-- Corrija os caminhos dos arquivos CSS -->
+  <link rel="stylesheet" href="/style/normalize.css">
+  <link rel="stylesheet" href="/style/main.css">
+  <style>
+    h1 {
+      color: #333;
+      font-size: 24px;
+    }
+
+    h2 {
+      color: #555;
+      font-size: 20px;
+    }
+
+    p {
+      color: #777;
+      font-size: 16px;
+      line-height: 1.4;
+      margin-bottom: 15px;
+    }
+
+    .lis {
+      color: #535353;
+      font-size: 16px;
+      line-height: 1.4;
+      margin-bottom: 15px;
+
+    }
+
+    strong {
+      font-weight: bold;
+    }
+
+    /* Adicione mais estilos conforme necessário */
+  </style>
+
+</head>
+
+<body class="no-js">
+
+  <header class="header">
+    <a href="/index.html" class="logo-text">Unicesumar</a>
+
+    <button style="display: none;" class="header__btnMenu"> <i class="fas fa-bars fa-2x"></i> <span
+        class="sr-only">Menu</span></button>
+
+    <nav class="header__nav">
+      <ul class="partechata">
+        <li class="menu"><a>1° Módulo</a>
+
+          <ul class="enderecos">
+            <li style="background-color: rgba(19, 11, 11, 0.295);"><a class="sub_linha" href="1_modulo_t1.html">tópico
+                1</a></li>
+            <li style="background-color: rgba(19, 11, 11, 0.295);"><a class="sub_linha" href="1_modulo_t2.html">tópico
+                2</a></li>
+            <li style="background-color: rgba(19, 11, 11, 0.295);"><a class="sub_linha" href="1_modulo_t3.html">tópico
+                3</a></li>
+            <li style="background-color: rgba(19, 11, 11, 0.295);"><a class="sub_linha" href="1_modulo_t4.html">tópico
+                4</a></li>
+          </ul>
+        </li>
+
+        <li class="menu"><a>2° Módulo</a>
+
+          <ul class="enderecos">
+            <li style="background-color: rgba(19, 11, 11, 0.295);"><a class="sub_linha" href="2_modulo_t1.html">tópico
+                1</a></li>
+            <li style="background-color: rgba(19, 11, 11, 0.295);"><a class="sub_linha" href="2_modulo_t2.html">tópico
+                2</a></li>
+            <li style="background-color: rgba(19, 11, 11, 0.295);"><a class="sub_linha" href="2_modulo_t3.html">tópico
+                3</a></li>
+            <li style="background-color: rgba(19, 11, 11, 0.295);"><a class="sub_linha" href="2_modulo_t4.html">tópico
+                4</a></li>
+          </ul>
+        </li>
+        <li class="menu"><a>3° Módulo</a>
+
+          <ul class="enderecos">
+            <li style="background-color: rgba(19, 11, 11, 0.295);"><a class="sub_linha" href="3_modulo_t1.html">tópico
+                1</a></li>
+            <li style="background-color: rgba(19, 11, 11, 0.295);"><a class="sub_linha" href="3_modulo_t2.html">tópico
+                2</a></li>
+            <li style="background-color: rgba(19, 11, 11, 0.295);"><a class="sub_linha" href="3_modulo_t3.html">tópico
+                3</a></li>
+            <li style="background-color: rgba(19, 11, 11, 0.295);"><a class="sub_linha" href="">home</a></li>
+
+          </ul>
+        </li>
+        <li class="menu"><a>4° Módulo</a>
+
+          <ul class="enderecos">
+            <li style="background-color: rgba(19, 11, 11, 0.295);"><a class="sub_linha" href="4_modulo_t1.html">tópico
+                1</a></li>
+            <li style="background-color: rgba(19, 11, 11, 0.295);"><a class="sub_linha" href="4_modulo_t2.html">tópico
+                2</a></li>
+            <li style="background-color: rgba(19, 11, 11, 0.295);"><a class="sub_linha" href="4_modulo_t3.html">tópico
+                3</a></li>
+            <li style="background-color: rgba(19, 11, 11, 0.295);"><a class="sub_linha" href="">home</a></li>
+
+          </ul>
+        </li>
+        <li class="menu"><a>5° Módulo</a>
+
+          <ul class="enderecos">
+            <li style="background-color: rgba(19, 11, 11, 0.295);"><a class="sub_linha menuCor"
+                href="5_modulo_t1.html">tópico 1</a></li>
+            <li style="background-color: rgba(19, 11, 11, 0.295);"><a class="sub_linha" href="5_modulo_t2.html">tópico
+                2</a></li>
+            <li style="background-color: rgba(19, 11, 11, 0.295);"><a class="sub_linha" href="5_modulo_t3.html">tópico
+                3</a></li>
+            <li style="background-color: rgba(19, 11, 11, 0.295);"><a class="sub_linha" href="">home</a></li>
+
+          </ul>
+        </li>
+        <li class="menu"><a>Atividades</a>
+
+          <ul class="enderecos">
+            <li style="background-color: rgba(19, 11, 11, 0.295);"><a class="sub_linha" href="atv1.html">AE1</a></li>
+            <li style="background-color: rgba(19, 11, 11, 0.295);"><a class="sub_linha"
+                href="img/atv2revisado.pdf">AE2</a></li>
+            <li style="background-color: rgba(19, 11, 11, 0.295);"><a class="sub_linha" href="img/atv3.pdf">AE3</a></li>
+            <li style="background-color: rgba(19, 11, 11, 0.295);"><a class="sub_linha" href="mapa1.html">mapa</a></li>
+
+          </ul>
+        </li>
+        <li class="menu"><a style="color: red;">ao vivo</a>
+
+          <ul class="enderecos">
+            <li style="background-color: rgba(19, 11, 11, 0.295);"><a class="sub_linha "
+                href="ao_vivo.html">Maratonar</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1 class="hero__title">unidade I: ENTENDENDO REDES DE
+      COMPUTADORES
+      <p class="hero__text">Tópico II: Hardware e Software de Rede
+      </p>
+      <a href="img/Slides - Aulas Conceituais/Conceitual I.pdf" target="_blank" class="hero__btn">Slids aulas
+        conceitual</a>
+  </section>
+
+
+  <div class="container">
+
+
+    <article>
+
+      <h1 class="hero__title">Plano de Estudo</h1>
+      <p>A seguir, apresentam-se os tópicos que você estudará nesta unidade:</p>
+      <ul>
+        <li>Aplicações das Redes de Computadores</li>
+        <li>Tipos de Redes de Computadores</li>
+        <li>Hardware e Software de Rede</li>
+        <li>Meios de Transmissão</li>
+        <li>Topologias de Redes</li>
+      </ul>
+      <a href="1_modulo_t1.html" class="button button-primary">Tópico 1 </a>
+      <a href="1_modulo_t2.html" class="button button-primary">Tópico 2 </a>
+      <a href="1_modulo_t3.html" class="button button-primary">Tópico 3</a>
+      <a href="1_modulo_t4.html" class="button button-primary">Tópico 4</a>
+
+
+
+      <section id="parteVideo">
+        <video class="video-screen" width="100%" height="50%" controls="controls"
+          src="video_aulas/aula2_rede.mp4"></video>
+        <button class="hero__btn" onclick="tempo(12)">pular intro</button>
+      </section>
+      <br>
+      <h2>HARDWARE E SOFTWARE DE REDE</h2>
+
+
+      <br>
+      <a href="#parteVideo"><button onclick="tempo(50)" class="button-secundary">Ir para trexo da aula</button>
+        <img src="slides_fotos/hsr.png" alt="" onclick="tempo(50)">
+      </a>
+      <br>
+      <h2>Padrão Ethernet</h2>
+      <br>
+      <a href="#parteVideo"><button onclick="tempo(92)" class="button-secundary">Ir para trexo da aula</button>
+        <img src="slides_fotos/padrao.png" alt="" onclick="tempo(92)">
+      </a>
+      <div id="player1"></div>
+      <section id="parteVideo1">
+        <button style="width: 100%;" class="hero__btn" onclick="inicializarPlayer('KIxPinooy9M', 1, 'player1')">Video
+          sobre Padrão
+          Ethernet</button>
+      </section>
+
+      <p>O padrão Ethernet foi desenvolvido pela Xerox na década de 1980 e posteriormente padronizado pelo IEEE como
+        802.3. Seu objetivo era estabelecer um padrão de comunicação entre dispositivos em redes locais, especificando
+        padrões para as camadas física e de enlace do Modelo OSI (TANENBAUM; WETHERALL, 2011).</p>
+
+      <p>Conforme Tanenbaum e Wetherall (2011, p. 18), o padrão IEEE 802.3, mais conhecido como Ethernet, é uma rede de
+        difusão de barramento com controle descentralizado. Geralmente, opera em velocidades de 10 Mbps a 10 Gbps. Os
+        dispositivos em uma rede Ethernet podem transmitir a qualquer momento. Se dois ou mais pacotes colidirem, cada
+        dispositivo espera por um período aleatório e tenta novamente mais tarde.</p>
+
+      <p>A tecnologia Ethernet possui uma série de padrões que especificam as instalações físicas, conexões elétricas e
+        lógicas entre os dispositivos de uma rede. Existem vários padrões além da Ethernet, incluindo Fast Ethernet e
+        Gigabit Ethernet. A velocidade inicial da Ethernet era de 10 Mbps, que evoluiu para Fast Ethernet com 100 Mbps e
+        depois para 1000 Gbps. Hoje, existem tecnologias que suportam velocidades superiores a 10 Gbps.</p>
+      <ul>
+        <li>
+          <a href="#parteVideo"><button onclick="tempo(164)" class="button-secundary">Ir para trexo da aula
+              <br></button>
+            <strong onclick="tempo(211)"><br> Half-duplex:</strong>
+          </a>
+          Cada estação transmite ou recebe informações, não acontecendo transmissão
+          simultânea, ou seja, enquanto a estação estiver enviando, a mesma não recebe, e vice-versa.
+        </li>
+        <li>
+          <a href="#parteVideo"><button onclick="tempo(270)" class="button-secundary">Ir para trexo da aula
+              <br></button>
+            <strong onclick="tempo(270)"><br> Full-duplex:</strong>
+          </a>
+          Cada estação transmite e/ou recebe, podendo ocorrer transmissões simultâneas,
+          desta forma, pode enviar e receber ao mesmo tempo.
+        </li>
+
+        <br>
+
+        <br>
+        <h2>Placa de Redes</h2>
+        <a href="#parteVideo"><button onclick="tempo(313)" class="button-secundary">Ir para trexo da aula</button>
+          <img src="slides_fotos/placaRede.png" alt="" onclick="tempo(313)">
+        </a>
+        <div id="player2"></div>
+        <section id="parteVideo2">
+          <button class="hero__btn" onclick="inicializarPlayer('VAnNoXZ7yt8', 1, 'player2')">Video sobre Placa de
+            Rede</button>
+        </section>
+        <p>Para que um computador se conecte a outro computador ou dispositivo de rede, é necessário que cada
+          dispositivo possua uma placa de rede que atenda aos padrões Ethernet ou um NIC (Network Interface Card). Isso
+          permite que eles se conectem a mídias de transmissão com ou sem fio, usando métodos como Ethernet, Fast
+          Ethernet, entre outros.</p>
+
+        <p>Alguns dispositivos, como impressoras, já vêm com suas próprias placas de rede, o que facilita a conexão a
+          dispositivos de rede. Existem também placas de rede on-board, integradas às placas-mãe (Mother Board), que
+          funcionam como interfaces de rede.</p>
+
+        <p>No passado, redes de computadores antigas usavam placas seguindo o padrão de slots ISA, com velocidade máxima
+          de 10 Mbps. Posteriormente, as placas PCI atingiram uma velocidade máxima de 100 Mbps, e o PCMCIA era usado em
+          dispositivos portáteis. A velocidade de transmissão desses equipamentos pode chegar a 1 Gbps. No entanto, a
+          velocidade da rede é sempre limitada pela taxa mais baixa de transferência de um dispositivo. Por exemplo, se
+          você tem um dispositivo com velocidade de 10 Mbps em sua rede, e o restante com 100 Mbps, a velocidade da rede
+          será limitada a 10 Mbps.</p>
+
+
+        <h2>HUB</h2>
+        <a href="#parteVideo"><button onclick="tempo(366)" class="button-secundary">Ir para trexo da aula</button>
+          <img src="slides_fotos/hub.png" alt="" onclick="tempo(366)">
+        </a>
+        <br>
+        <div id="player7"></div>
+        <section id="parteVideo2">
+          <button style="width: 100%;" class="hero__btn" onclick="inicializarPlayer('afNzzBauPuc', 1, 'player7')">video
+            sobre:
+            HUB
+          </button>
+        </section>
+
+        <p>O HUB é um dispositivo de rede que tem uma única função: interligar fisicamente os dispositivos de uma rede,
+          e seu funcionamento se assemelha a uma régua de energia. No entanto, o HUB está caindo em desuso, pois envia
+          apenas um pacote por vez, sem controle de fluxo, rota ou conhecimento do remetente e destinatário dos pacotes.
+        </p>
+
+        <p>Outro fator que torna esse dispositivo obsoleto é a maneira como iguala a velocidade da rede para baixo. Por
+          exemplo, se você tem dispositivos com diferentes velocidades em sua rede, a velocidade será limitada ao
+          dispositivo mais lento.</p>
+
+        <p>A maioria dos HUBs possui de 8 a 32 portas, e é possível conectar vários HUBs em uma mesma rede, criando um
+          cascata de HUBs. Eles são frequentemente usados em redes domésticas ou pequenas organizações com dispositivos
+          de mesma velocidade e adotam a topologia estrela, tendo o HUB como dispositivo centralizador.</p>
+
+        <p>É importante notar que o HUB utiliza uma topologia de barramento, com apenas um único canal de comunicação, o
+          que significa que envia ou recebe um dado por vez em toda a rede.</p>
+
+        <p>Como alternativa ao HUB, surgiu o hub-switch, que combina características de HUB e switch. O hub-switch atua
+          nas camadas 2 e 3 do modelo OSI, ao contrário do HUB que atua na camada 1. Isso permite que o hub-switch envie
+          um pacote por vez, mas diferentemente do HUB, ele conhece o endereço do destinatário, não precisando
+          retransmitir para toda a rede, o que permite um tráfego mais eficiente.</p>
+        <br>
+
+        <h2>Switch</h2>
+        <a href="#parteVideo"><button onclick="tempo(474)" class="button-secundary">Ir para trexo da aula</button>
+          <img src="slides_fotos/switch.png" alt="" onclick="tempo(474)">
+        </a>
+        <br>
+
+        <div id="player6"></div>
+        <section id="parteVideo2">
+          <button style="width: 100%;" class="hero__btn" onclick="inicializarPlayer('SgXfI7UIwto', 1, 'player6')">video
+            sobre:
+            Switch
+          </button>
+        </section>
+
+        <p>O SWITCH, diferentemente do hub e do hub-switch, é o dispositivo mais utilizado nas redes atuais, atuando na
+          camada 2 e 3 do modelo OSI. Embora seja um pouco mais caro que o hub e o hub-switch, o switch consegue enviar
+          e receber vários pacotes simultaneamente, operando no modo full-duplex, o que permite transmissão e recepção
+          ao mesmo tempo, tornando o gerenciamento da rede eficiente.</p>
+
+        <p>O switch controla o tráfego da rede, determinando a melhor rota com base nos endereços MAC de cada
+          dispositivo. Isso aumenta a velocidade da rede e evita colisões de pacotes. Por exemplo, quando dois
+          computadores ou dispositivos desejam trocar informações, o switch cria um canal de comunicação exclusivo entre
+          eles, garantindo a eficiência da transmissão.</p>
+
+        <p>Além disso, o switch pode controlar individualmente cada porta, permitindo que dispositivos com diferentes
+          velocidades operem sem afetar a velocidade da rede como um todo. Existem diversos modelos de switch no
+          mercado, incluindo switches programáveis via software que possibilitam a criação de redes distintas para cada
+          porta, exigindo configuração especializada para seu uso.</p>
+
+
+        <h2>ROTEADOR</h2>
+        <a href="#parteVideo"><button onclick="tempo(571)" class="button-secundary">Ir para trexo da aula</button>
+          <img src="slides_fotos/roteador.png" alt="" onclick="tempo(571)">
+        </a>
+        <br>
+        <div id="player5"></div>
+        <section id="parteVideo2">
+          <button style="width: 100%;" class="hero__btn" onclick="inicializarPlayer('FVkSR1wQb58', 1, 'player5')">video
+            sobre:
+            ROTEADOR
+          </button>
+        </section>
+
+        <p>O roteador é semelhante a um switch, mas possui funções adicionais e requer mais habilidade técnica para
+          configuração. Enquanto um switch lida com o tráfego interno em uma rede, o roteador conecta redes diferentes,
+          sejam locais, metropolitanas ou geográficas, permitindo a interconexão de várias redes.</p>
+
+        <p>Uma função fundamental do roteador é a atribuição de endereços IP aos dispositivos que se conectam à rede.
+          Além
+          disso, ele organiza o encaminhamento dos dados pela rede, determinando o melhor caminho para a transmissão.
+        </p>
+
+        <p>Atualmente, alguns roteadores também funcionam como modems, roteando o sinal Wi-Fi para redes domésticas e
+          empresariais, simplificando assim a conectividade sem fio.</p>
+        <br>
+        <div id="player3"></div>
+        <section id="parteVideo2">
+          <button style="width: 100%;" class="hero__btn"
+            onclick="inicializarPlayer('BmBPhA5b-Lc', 1, 'player3')">Diferença entre HUB, SWITCH
+            e ROTEADOR
+          </button>
+
+          
+
+            </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <br>
+            <a href="//sim_mod_1/index.html" class="button button-secundary">Fazer simulado referente ao tópico 2 </a>
+    </article>
+    <a href="1_modulo_t1.html" class="button button-primary">Tópico 1 </a>
+    <a href="1_modulo_t2.html" class="button button-primary">Tópico 2</a>
+    <a href="1_modulo_t3.html" class="button button-primary">Tópico 3</a>
+    <a href="1_modulo_t4.html" class="button button-primary">Tópico 4</a>
+
+
+  </div>
+  </section>
+
+
+
+  <div class="laptop-slider">
+    <div class="slideshow">
+      <figure><img alt="" src="img/para_aula1.png" width="70%" style="margin-left: 5%;" /></figure>
+      <figure><img alt="" src="img/articles/slid_1.png" width="70%" style="margin-left: 5%;" /></figure>
+      <figure><img alt="" src="img/articles/slid2.png" width="70%" style="margin-left: 5%;" /></figure>
+      <figure><img alt="" src="img/articles/slid3.png" width="70%" style="margin-left: 5%;" /></figure>
+      <figure><img alt="" src="img/articles/slid4.png" width="70%" style="margin-left: 5%;" /></figure>
+      <figure><img alt="" src="img/articles/slid5.png" width="70%" style="margin-left: 5%;" /></figure>
+      <span class="prev" style="display: none;"><i class="fas fa-angle-left fa-4x"></i></span>
+      <span class="next" style="display: none;"><i class="fas fa-angle-right fa-4x"></i></span>
+    </div>
+  </div>
+
+
+  <section class="quote-container">
+
+    <div class="quote-slideshow">
+      <figure>
+        <h2>Cada vez mais as redes de computadores estão adentrando em nossas residências e nas organizações. Nesse
+          sentido, será possível uma organização
+          ou uma residência ficar sem acesso à rede de comunicação? </h2>
+        <figcaption>
+          Reflita
+        </figcaption>
+      </figure>
+      <figure>
+        <h2>Com a popularização dos dispositivos móveis (celulares, notebooks, smartphones e tablets), e dos
+          dispositivos “vestíveis” que podem ser utilizados
+          por pessoas (tais como: relógios inteligentes, marca passo, entre outros) que
+          se comunicam via rede, de acordo com o site CisoAdviso, 72% do total de
+          dispositivos terão conexões móveis em 2020. Os dispositivos inteligentes
+          serão responsáveis por 98% do tráfego de dados móveis em 2020</h2>
+        <figcaption>
+          saima mais
+        </figcaption>
+      </figure>
+      <span class="prev" style="display:none;"><i class="fas fa-angle-left fa-2x"></i></span>
+      <span class="next" style="display:none;"><i class="fas fa-angle-right fa-2x"></i></span>
+    </div>
+
+
+
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <h2 class="footer__logo">Carlos Souza</h2>
+
+      <p>Esse conteúdo interativo tem o objetivo e auxiliar os alunos nas matérias do curso unicesumar, tendo em vista
+        que as aulas e a apostilas estão separados, ou seja, dessa forma interativa o aluno terá a oportunidade de
+        estudar a apostila junto ao video conceitual, facilitando o aprendizado, e ganhado tempo. </p>
+
+      <p>O autor do site, por estar no 3° semestre do Curso de Análise e desenvolvimento de Sistemas, sentiu a
+        necessidade, de estudar as matérias da faculdade ao mesmo tempo que executo projetos que possam ser uteis para
+        os outros. </p>
+      <p>Caso veja algo que possa melhorar, ficarei muito feliz em estar consertando, favor entrar em contato pelo
+        whatsapp, 419 9123-0585, as correções e atualizações são feitas na hora, caso o desenvolvedor Carlos saiba como
+        concertar, caso precise estudar algo, pode levar um tempo maior, caso já tenha a solução seu código pode ser
+        postado através do whatsapp, caso solicite, o desenvolvedor dará os devidos créditos aqui. </p>
+      <ul class="footer__links">
+        <li><a href="#">List One</a></li>
+        <li><a href="#">Page Two</a></li>
+        <li><a href="#">Design</a></li>
+        <li><a href="#">Work</a></li>
+        <li><a href="#">Contact Me</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="/js/menu.js"></script>
+  <script src="/js/carousel.js"></script>
+
+  <script src="/js/main.js"></script>
+
+  <script src="/js/video.js"></script>
+</body>
+
+</html>

@@ -26,8 +26,10 @@ li ul{
     transition: height 1.5s;
 }
 li:hover ul{
-    height: 200px;
+    height: 128px;
+    
 }
+
 
 .header{
     background: #fff;
@@ -79,7 +81,9 @@ li:hover ul{
     transition: .8s ease;
 }
 .header__nav a:hover {
-    color: #63c6ae;   
+    color: #63c6ae; 
+    background-color: #454e51e3;
+    cursor: pointer;  
 }
 .header__btnMenu{
     float: right;
@@ -87,7 +91,13 @@ li:hover ul{
     background: transparent;
     border: none;
     font-size: 14px;
+    
 }
+.enderecos li a{
+    padding: 5px;
+}
+
+
 /*Aqui começa Javascript*/
 .js .header__nav{
     transition: max-height 1s;
@@ -205,7 +215,7 @@ li:hover ul{
 }
 
 .hero__text{
-    background-color: #271907;
+    background-color: chocolate;
     margin: 5px 30px 35px;
     color: rgba(255, 255, 255, 0.664);
     
@@ -215,7 +225,7 @@ li:hover ul{
     padding-bottom: 10px;
     font-size: 16px;
     
-    border-radius: 10px;
+    border-radius: 30px;
     
 
 }
@@ -430,26 +440,67 @@ li:hover ul{
 }
 
 @media screen and (min-width: 1024px){
+   
     .header{
-        position: fixed;
+        position: relative;
+        
+        background-color: transparent;
+        
+        
     }
+
+
     li:hover ul{
-        height: 80px;
+        height: 165px;
+        
+    
+    }
+    .enderecos li a{
+        padding: 13px;
+    }
+    
+    .header__nav li {
+        list-style-type: none;
+        background-color: transparent;
+        
+        text-align: center;
+        border-bottom: 1px dotted rgba(255,255,255, 0.2);
+        
+    }
+   
+    
+    .enderecos{
+        display: flex; 
+        flex-direction: column;
+        letter-spacing: 0.05em;        
+        
     }    
+   
+    .enderecos a{
+        padding: 10px;
+    }
+    .sub_linha:hover{
+        background-color: rgba(10, 9, 10, 0.705);
+    }
+ 
     .logo-text{
         width: 25%;
         box-sizing: border-box;
+        height: 71px;
+        
     }
     
     .header__btnMenu{
         display: none;
     }
     
+    
     .header__nav{
         float: left;
         width: 75%;
         clear: none;
-        max-width: 800px;
+       
+        
     }
     
     .header__nav ul{
@@ -500,6 +551,9 @@ li:hover ul{
     
         text-align: center;
         
+    }
+     .button-pc{
+        margin-left: 361px;
     }
 }
 

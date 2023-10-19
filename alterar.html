@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <title> Alterar Cadastro </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">  
+    <meta name="author" content="Carlos Cezar">
+    <meta name="description" content="Alterar cadastro do uusário e mandar para banco de dados">
+    <meta name="keywords" content="html5, tecnologia">
+
+<head>
+    <!-- Outros cabeçalhos aqui -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            function getUrlParameter(name) {
+                name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+                var regex = new RegExp("[\\?&]" + name + "=([^&#]*)");
+                var results = regex.exec(location.search);
+                return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+            }
+
+            var userId = getUrlParameter("id");
+            console.log("userId:", userId);
+
+            if (userId) {
+                $.get("/contato/editar-usuario/" + userId, function (data) {
+                    console.log("Dados do cliente:", data);
+
+                    // Preencha os campos do formulário com os dados do cliente
+                    $("#userId").val(data.id);
+                    $("#editNome").val(data.nome);
+                    $("#editSenha").val(data.senha);
+                    $("#editTelefone").val(data.telefone);
+                    $("#editEmal").val(data.emal);
+                    $("#editUrlAvatar").val(data.urlAvatar);
+                });
+            }
+
+            // Evento de submissão do formulário de edição
+            $("#editarForm").submit(function (event) {
+                event.preventDefault();
+                var formData = {
+                    id: $("#userId").val(),
+                    nome: $("#editNome").val(),
+                    senha: $("#editSenha").val(),
+                    telefone: $("#editTelefone").val(),
+                    emal: $("#editEmal").val(),
+                    urlAvatar: $("#editUrlAvatar").val()
+                };
+
+                // Solicitação PUT para editar o usuário
+                $.ajax({
+                    type: "PUT",
+                    url: "/contato/editar-usuario/" + formData.id,
+                    data: JSON.stringify(formData),
+                    contentType: "application/json",
+                    success: function (response) {
+                        alert("Alteração efetuada com sucesso!!!!")
+                        // Resto do seu código
+                    },
+                    error: function (error) {
+                        alert("Erro ao cadastrar")
+                        console.error(error);
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <h1>Editar Cliente</h1>
+
+    <form id="editarForm" method="put">
+        <input type="hidden" id="userId" name="userId" value="">
+        <div class="form-group">
+            <label for="editNome">Nome:</label>
+            <input type="text" id="editNome" name="editNome" required>
+        </div>
+        <div class="form-group">
+            <label for="editSenha">Senha:</label>
+            <input type="password" id="editSenha" name="editSenha" required>
+        </div>
+        <div class="form-group">
+            <label for="editTelefone">Telefone:</label>
+            <input type="tel" id="editTelefone" name="editTelefone" required>
+        </div>
+        <div class="form-group">
+            <label for="editEmal">E-mail:</label>
+            <input type="email" id="editEmal" name="editEmal" required>
+        </div>
+        <div class="form-group">
+            <label for="editUrlAvatar">URL do Avatar:</label>
+            <input type="text" id="editUrlAvatar" name="editUrlAvatar" required>
+        </div>
+        <button type="submit">Salvar Alterações</button>
+    </form>
+</body>
+
+</html>

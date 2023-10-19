@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <title>Sistemas Operacionais</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Daniel">
+  <meta name="description" content="descrição bacanuda">
+  <meta name="keywords" content="html5, tecnologia">
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <!-- Corrija o caminho do ícone Font Awesome via CDN -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+    integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+  <!-- Fonts (pode manter as fontes do Google) -->
+  <link href='http://fonts.googleapis.com/css?family=Sintony:400,700' rel='stylesheet' type='/text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='/text/css'>
+
+  <!-- Corrija os caminhos dos arquivos CSS -->
+  <link rel="stylesheet" href="/style/normalize.css">
+  <link rel="stylesheet" href="/style/main.css">
+  <style>
+    h1 {
+      color: #333;
+      font-size: 24px;
+    }
+
+    h2 {
+      color: #555;
+      font-size: 20px;
+    }
+
+    p {
+      color: #777;
+      font-size: 16px;
+      line-height: 1.4;
+      margin-bottom: 15px;
+    }
+
+    strong {
+      font-weight: bold;
+    }
+
+    /* Adicione mais estilos conforme necessário */
+  </style>
+
+</head>
+
+<body class="no-js">
+
+  <header class="header">
+    <a href="/index.html" class="logo-text">Unicesumar</a>
+
+    <button style="display: none;" class="header__btnMenu"> <i class="fas fa-bars fa-2x"></i> <span
+        class="sr-only">Menu</span></button>
+
+    <nav class="header__nav">
+      <ul class="partechata">
+        <li class="menu"><a>1° Módulo</a>
+
+          <ul class="enderecos">
+            <li style="background-color: rgba(19, 11, 11, 0.295);"><a class="sub_linha" href="1_modulo_t1.html">tópico
+                1</a></li>
+            <li style="background-color: rgba(19, 11, 11, 0.295);"><a class="sub_linha" href="1_modulo_t2.html">tópico
+                2</a></li>
+            <li style="background-color: rgba(19, 11, 11, 0.295);"><a class="sub_linha" href="1_modulo_t3.html">tópico
+                3</a></li>
+            <li style="background-color: rgba(19, 11, 11, 0.295);"><a class="sub_linha" href="1_modulo_t4.html">tópico
+                4</a></li>
+          </ul>
+        </li>
+
+        <li class="menu"><a>2° Módulo</a>
+
+          <ul class="enderecos">
+            <li style="background-color: rgba(19, 11, 11, 0.295);"><a class="sub_linha" href="2_modulo_t1.html">tópico
+                1</a></li>
+            <li style="background-color: rgba(19, 11, 11, 0.295);"><a class="sub_linha" href="2_modulo_t2.html">tópico
+                2</a></li>
+            <li style="background-color: rgba(19, 11, 11, 0.295);"><a class="sub_linha" href="2_modulo_t3.html">tópico
+                3</a></li>
+            <li style="background-color: rgba(19, 11, 11, 0.295);"><a class="sub_linha" href="2_modulo_t4.html">tópico
+                4</a></li>
+          </ul>
+        </li>
+        <li class="menu"><a>3° Módulo</a>
+
+          <ul class="enderecos">
+            <li style="background-color: rgba(19, 11, 11, 0.295);"><a class="sub_linha" href="3_modulo_t1.html">tópico
+                1</a></li>
+            <li style="background-color: rgba(19, 11, 11, 0.295);"><a class="sub_linha" href="3_modulo_t2.html">tópico
+                2</a></li>
+            <li style="background-color: rgba(19, 11, 11, 0.295);"><a class="sub_linha" href="3_modulo_t3.html">tópico
+                3</a></li>
+            <li style="background-color: rgba(19, 11, 11, 0.295);"><a class="sub_linha" href="">home</a></li>
+
+          </ul>
+        </li>
+        <li class="menu"><a>4° Módulo</a>
+
+          <ul class="enderecos">
+            <li style="background-color: rgba(19, 11, 11, 0.295);"><a class="sub_linha" href="4_modulo_t1.html">tópico
+                1</a></li>
+            <li style="background-color: rgba(19, 11, 11, 0.295);"><a class="sub_linha" href="4_modulo_t2.html">tópico
+                2</a></li>
+            <li style="background-color: rgba(19, 11, 11, 0.295);"><a class="sub_linha" href="4_modulo_t3.html">tópico
+                3</a></li>
+            <li style="background-color: rgba(19, 11, 11, 0.295);"><a class="sub_linha" href="">home</a></li>
+
+          </ul>
+        </li>
+        <li class="menu"><a>5° Módulo</a>
+
+          <ul class="enderecos">
+            <li style="background-color: rgba(19, 11, 11, 0.295);"><a class="sub_linha menuCor"
+                href="5_modulo_t1.html">tópico 1</a></li>
+            <li style="background-color: rgba(19, 11, 11, 0.295);"><a class="sub_linha" href="5_modulo_t2.html">tópico
+                2</a></li>
+            <li style="background-color: rgba(19, 11, 11, 0.295);"><a class="sub_linha" href="5_modulo_t3.html">tópico
+                3</a></li>
+            <li style="background-color: rgba(19, 11, 11, 0.295);"><a class="sub_linha" href="">home</a></li>
+
+          </ul>
+        </li>
+        <li class="menu"><a>Atividades</a>
+
+          <ul class="enderecos">
+            <li style="background-color: rgba(19, 11, 11, 0.295);"><a class="sub_linha" href="atv1.html">AE1</a></li>
+            <li style="background-color: rgba(19, 11, 11, 0.295);"><a class="sub_linha"
+                href="img/atv2revisado.pdf">AE2</a></li>
+            <li style="background-color: rgba(19, 11, 11, 0.295);"><a class="sub_linha" href="img/atv3.pdf">AE3</a></li>
+            <li style="background-color: rgba(19, 11, 11, 0.295);"><a class="sub_linha" href="mapa1.html">mapa</a></li>
+
+          </ul>
+        </li>
+        <li class="menu"><a style="color: red;">ao vivo</a>
+
+          <ul class="enderecos">
+            <li style="background-color: rgba(19, 11, 11, 0.295);"><a class="sub_linha "
+                href="ao_vivo.html">Maratonar</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1 class="hero__title">unidade I: ENTENDENDO REDES DE
+      COMPUTADORES
+      <p class="hero__text">Tópico I: Aplicações das Redes de Computadores</p>
+      <a href="slides_fotos/apostila.pdf" target="_blank" class="hero__btn">pdf da apostila</a>
+  </section>
+
+
+  <div class="container">
+
+
+    <article>
+
+      <h1 class="hero__title">Plano de Estudo</h1>
+      <p>A seguir, apresentam-se os tópicos que você estudará nesta unidade:</p>
+      <ul>
+        <li>Aplicações das Redes de Computadores</li>
+        <li>Tipos de Redes de Computadores</li>
+        <li>Hardware e Software de Rede</li>
+        <li>Meios de Transmissão</li>
+        <li>Topologias de Redes</li>
+      </ul>
+      <a href="1_modulo_t1.html" class="button button-primary">Tópico 1 </a>
+      <a href="1_modulo_t2.html" class="button button-primary">Tópico 2 </a>
+      <a href="1_modulo_t3.html" class="button button-primary">Tópico 3</a>
+      <a href="1_modulo_t4.html" class="button button-primary">Tópico 4</a>
+
+
+
+      <section id="parteVideo">
+        <video class="video-screen" width="100%" height="50%" controls="controls"
+          src="/modulos_Redes/video_aulas/redes_1.mp4"></video>
+        <button class="hero__btn" onclick="tempo(12)">pular intro</button>
+      </section>
+
+
+      <h2>APLICAÇÕES DAS REDES DE COMPUTADORES</h2>
+
+      <p>
+        Neste tópico, abordaremos conceitos de redes, incluindo surgimento, finalidade e aplicações, além de sua
+        colaboração com as redes internet, intranet e extranet.
+      </p>
+      <p>
+        Redes de computadores são interligações de dispositivos, seja por conexões físicas (cabeada) ou sem fio
+        (wireless), com o objetivo de trocar informações e compartilhar recursos (MORIMOTO, 2011).
+      </p>
+      <p>
+        As primeiras redes de computadores surgiram na década de 60 para transferir informações entre computadores,
+        substituindo o uso de cartões perfurados. Essas redes podem ser encontradas em diversos ambientes, como
+        residencial, comercial e universitário, contanto que haja pelo menos dois dispositivos físicos ou portáteis.
+      </p>
+      <p>
+        Um exemplo prático é um shopping que oferece rede wireless aos clientes, permitindo que as lojas forneçam um
+        atendimento especial, como mensagens de boas-vindas e ofertas exclusivas.
+      </p>
+      <p>
+        Outro exemplo é o compartilhamento de impressoras em empresas, que economiza em despesas de compra, acessórios e
+        manutenção, reduzindo impressões desnecessárias e melhorando a eficiência.
+      </p>
+      <p>
+        O compartilhamento de recursos economiza tempo e melhora a qualidade do serviço, permitindo ajustes em tempo
+        real na escrita e padrões, acelerando e controlando a qualidade da produção. Detalhes sobre o uso da nuvem serão
+        abordados na unidade V (Introdução ao Cloud Computing e virtualização).
+      </p>
+      <p>
+        Redes de computadores em residências conectam dispositivos como desktops, notebooks, tablets e smartphones,
+        possibilitando a troca de informações, jogos em rede e navegação na internet. Essas redes são comumente chamadas
+        de LAN (Local Area Network) e serão explicadas posteriormente.
+      </p>
+      <p>
+        Empresas e universidades usam redes de computadores para conectar departamentos e gerenciar usuários,
+        compartilhar arquivos e serviços. Também é possível conectar redes em longas distâncias, conhecidas como
+        intranet e extranet, assuntos que serão discutidos mais adiante.
+      </p>
+      <h1>Internet e Redes</h1>
+
+      <div id="player"></div>
+      <section id="parteVideo1">
+        <button class="hero__btn" onclick="inicializarPlayer('l94zFTcfpRQ', 1, 'player')">Video sobre: História da
+          internet do curso em video</button>
+
+      </section>
+      <br><br>
+      <a href="#parteVideo"><button onclick="tempo(348)" class="button-secundary">Ir para trexo da aula</button>
+        <img src="slides_fotos/internet.png" alt="" onclick="tempo(348)">
+      </a>
+
+      <p>A internet é um conjunto de redes de computadores conectadas pelo mundo inteiro, com o objetivo de
+        compartilhamento de informações, sejam elas textuais, por vídeos ou imagens.</p>
+
+      <p>De acordo com os autores Tanenbaum e Wetherall (2011) e Ross e Kurose (2005), a internet surgiu em 1969 pela
+        necessidade de comunicação entre laboratórios do Departamento de Defesa do governo norte-americano.</p>
+      <h2>Arpanet</h2>
+      <a href="#parteVideo"><button onclick="tempo(395)" class="button-secundary">Ir para trexo da aula</button>
+        <img src="slides_fotos/arpanet.png" alt="" onclick="tempo(395)">
+      </a>
+      <p>Desde 1970 até os dias atuais, os computadores, os softwares e toda a infraestrutura de redes evoluíram muito,
+        proporcionando à Internet mais agilidade, segurança e uma ampla gama de serviços e informações disponibilizados.
+      </p>
+
+      <p>Para conectar-se à internet, basta ter um dispositivo de conexão, um dispositivo de acesso e navegação, os
+        dados de acesso, como usuário e senha, e um navegador (browser).</p>
+
+      <p>A internet que conhecemos hoje é bem diferente de seu início. Não havia interatividade, usabilidade e
+        navegabilidade, pois tudo era baseado em modo texto, de forma estática.</p>
+
+      <p>Conforme estudos de Bittencourt e Isotani (2015), a Web nasceu em 1991, seu criador foi Tim Berners Lee, que
+        desenvolveu uma linguagem para interligar computadores do laboratório e outras instituições de pesquisa e exibir
+        documentos científicos de forma simples e fácil de acessar.</p>
+
+      <p>A linguagem de programação nativa da internet podemos chamar de HTML (Hypertext Markup Language – Linguagem de
+        Hipertexto de marcação), mesmo que seja uma linguagem interpretativa, pois é por meio dessa e de outras
+        linguagens de programações (PHP, JAVA, ASP etc.), recursos de estilo de páginas (CSS), recursos de efeitos (JS,
+        JQUERY) e de banco de dados (MYSQL, POSTGRE, ORACLE etc.), que podemos encontrar desde sites estáticos (parados
+        sem interação com usuário) a sites dinâmicos, com a interação do usuário.</p>
+
+      <p>Dispomos hoje na internet serviços de correio eletrônico, blogs, portais de notícias, sites de comércio
+        eletrônico, ensino a distância, portais de vídeos, redes sociais, livrarias digitais, compra de passagens
+        terrestres e aéreas, sites de pesquisa, base de dados para pesquisa acadêmica, web conferência, voz sobre IP,
+        internet banking, enfim, temos tantos serviços disponibilizados na internet, que ficaria difícil relacionar
+        todos eles em um livro.</p>
+
+      <p>As páginas WEB são conectadas entre si por meio de hyperlinks (ou links), que podem ser texto ou imagem. Quando
+        você clica em um link, será redirecionado para algum endereço URL (Uniform Resource Locator) indicado.</p>
+      <a href="#parteVideo"><button onclick="tempo(422)" class="button-secundary">Ir para trexo da aula</button>
+        <img src="slides_fotos/brasil.png" alt="" onclick="tempo(422)">
+      </a>
+
+      <p>No Brasil, o site REGISTRO.BR é o responsável pelo registro de todos os sites e domínios. Para ter um domínio,
+        é necessário ter identificação física e jurídica e um local de hospedagem.</p>
+
+
+      <p>A internet só chegou ao Brasil no final da década de 80 (1988). Os primeiros computadores conectados foram os
+        centros acadêmicos de São Paulo e Rio de Janeiro, com intuito de compartilhar as pesquisas científicas
+        (TANENBAUM; WETHERALL, 2011).</p>
+
+      <h2>Intranet</h2>
+      <br>
+      <div id="player2"></div>
+      <section id="parteVideo1">
+        <button class="hero__btn" onclick="inicializarPlayer('XSDZ1y-f-bg', 1, 'player2')">Video sobre:
+          Intranet</button>
+
+      </section>
+      <br>
+      <a href="#parteVideo"><button onclick="tempo(467)" class="button-secundary">Ir para trexo da aula</button>
+        <img src="slides_fotos/intranet.png" alt="" onclick="tempo(467)">
+      </a>
+      <a href="#parteVideo"><button onclick="tempo(534)" class="button-secundary">Ir para trexo da aula</button>
+        <img src="slides_fotos/exemplo_intranet.png" alt="" onclick="tempo(534)">
+      </a>
+      <h2>Resumo carlos sobre intranet: </h2>
+      <p>A intranet é uma rede de computadores interna de uma empresa que não está conectada à internet e tem como
+        objetivo principal o compartilhamento de informações e serviços entre os funcionários ou colaboradores da
+        empresa. Essas redes são protegidas por questões de segurança e oferecem várias funcionalidades, como impressão
+        de folhas de pagamento, abertura de chamados técnicos, solicitação de compras, distribuição de boletins
+        internos, manuais de processos e até mesmo mensagens para facilitar o treinamento de novos colaboradores.</p>
+
+      <p>A intranet é uma ferramenta de comunicação fundamental nas corporações, permitindo um fluxo constante de dados,
+        incluindo documentos, formulários e notícias da empresa, com o objetivo de reduzir custos e agilizar a
+        disseminação de informações. Ela funciona através de navegadores de internet e servidores de hospedagem web
+        privados, utilizando os protocolos da internet (TCP/IP). Além disso, as intranets podem integrar diversos
+        sistemas, como sistemas ERP, SIG e CRM, para melhorar a eficiência operacional da empresa.</p>
+
+
+      <h2>Extranet</h2>
+      <br>
+      <div id="player3"></div>
+      <section id="parteVideo1">
+        <button class="hero__btn" onclick="inicializarPlayer('NEMw9U5_C5g', 1, 'player3')">Video sobre:
+          Intranet</button>
+
+      </section>
+      <br>
+      <a href="#parteVideo"><button onclick="tempo(721)" class="button-secundary">Ir para trexo da aula</button>
+        <img src="slides_fotos/extranet.png" alt="" onclick="tempo(721)">
+      </a>
+      <p>A rede Extranet refere-se a uma rede de computadores que é conectada com alguma outra rede de computadores
+        externa, utilizando a internet como meio de comunicação.</p>
+
+
+      <h2>resumo carlos sobre Extranet</h2>
+      <p>A extranet é uma rede de computadores que se conecta a outras redes externas, utilizando a internet como meio
+        de comunicação, garantindo a segurança por meio de autenticação de login e senha. Um exemplo prático de extranet
+        é quando uma empresa (A) vende produtos e precisa interagir com sua fornecedora (B). Quando a loja A não tem um
+        produto em estoque, seu sistema se comunica automaticamente com a empresa B para fazer um pedido em nome do
+        cliente. Isso ocorre de forma automatizada, conectando as redes das duas empresas.</p>
+
+      <p>Para que essa comunicação aconteça, as duas intranets devem seguir os mesmos padrões de troca de informações,
+        mantendo o relacionamento com seus parceiros, clientes e fornecedores.</p>
+
+      <p>As duas empresas devem possuir sua própria Intranet, ambas com sua gerência, e devem também estar interligadas
+        para troca de informações, pedidos, pagamentos, emissão de relatórios etc. O resultado desta transação fornece
+        às altas gerências subsídios para melhor atender seus clientes em determinadas épocas do ano, pois toda
+        transação realizada resulta em um registro de conhecimento e em uma base de dados, para o relacionamento
+        comercial produtivo entre ambos.</p>
+
+      <p>Outro exemplo de acesso pela rede extranet são as conexões remotas realizadas normalmente pela alta gerência da
+        organização, pois é comum que estes gerentes fiquem a maior parte do tempo fora da organização em reuniões, e
+        precisam estar informados de todas as transações da empresa para que possam tomar decisões a qualquer momento.
+        Geralmente, tais gerentes têm acesso ao sistema SAD (Sistema de Apoio a Decisão), que fornece subsídios para
+        tomadas de decisões.</p>
+
+      <p>Sendo assim as redes intranet e extranet, são utilizadas constantemente pelas empresas de pequeno, médio e
+        grande porte. Para que essas redes funcionem de forma correta, no próximo tópico iremos estudar os tipos de
+        redes de computadores e você perceberá as diferenças entre cada rede disposta, podendo fazer uma correlação em
+        qual a intranet e a extranet se enquadram.</p>
+
+      <br>
+      <div id="player4"></div>
+      <section id="parteVideo1">
+        <button class="hero__btn" onclick="inicializarPlayer('A9P2WusFQU0', 1, 'player4')">Video sobre: Internet,
+          intranet e extranet diferenças</button>
+
+      </section>
+      <br>
+      <h2>Tipos de Redes de Computadores</h2>
+      <a href="#parteVideo"><button onclick="tempo(868)" class="button-secundary">Ir para trexo da aula</button>
+        <img src="slides_fotos/tiposDeRedes.png" alt="" onclick="tempo(868)">
+      </a>
+      <p>As redes locais (LAN), redes metropolitanas (MAN) e redes de longa distância (WAN) são tipos de redes de
+        computadores que variam em alcance geográfico.</p>
+      <a href="#parteVideo"><button onclick="tempo(868)" class="button-secundary">Ir para trexo da aula</button>
+        <img src="slides_fotos/resumoLan.png" alt="" onclick="tempo(868)">
+      </a>
+
+
+      <h2>LAN</h2>
+      <a href="#parteVideo"><button onclick="tempo(916)" class="button-secundary">Ir para trexo da aula</button>
+        <img src="slides_fotos/lan.png" alt="" onclick="tempo(916)">
+      </a>
+      <p>As redes locais (Local Area Networks) são redes de funcionamento interno de uma empresa ou residência. Elas
+        consistem em dispositivos de rede, como switches, hubs e roteadores, que utilizam diferentes meios de
+        transmissão, como cabo (par trançado, coaxial ou fibra ótica) ou conexões sem fio, para interconectar placas de
+        rede em uma topologia específica.</p>
+
+      <p>Essas redes têm alta taxa de transferência, podendo chegar a gigabytes, e utilizam o protocolo TCP/IP para a
+        comunicação entre dispositivos, juntamente com o método de transporte Ethernet.</p>
+
+      <p>Uma rede local pode abranger uma pequena área geográfica, variando de alguns metros a quilômetros, e permite
+        que os usuários executem diversas tarefas, desde tarefas simples, como edição de texto, até conexões remotas
+        locais a partir de suas estações de trabalho ou dispositivos móveis.</p>
+
+      <p>Para o funcionamento adequado de uma LAN, são necessárias estações de trabalho ou dispositivos móveis, meios de
+        transmissão, dispositivos de rede, protocolos de comunicação e o uso de servidores. As redes locais podem ser
+        configuradas de duas maneiras: como redes ponto a ponto (peer-to-peer ou P2P), onde cada dispositivo pode ser um
+        servidor, ou como redes "cliente/servidor", onde um servidor dedicado fornece serviços de rede, como
+        autenticação, backup, impressão, firewall e proxy, tornando a administração e manutenção mais eficientes.</p>
+      <h2>MAN</h2>
+      <a href="#parteVideo"><button onclick="tempo(1049)" class="button-secundary">Ir para trexo da aula</button>
+        <img src="slides_fotos/man.png" alt="" onclick="tempo(1049)">
+      </a>
+      <p>Uma "Metropolitan Area Network" (MAN) é uma rede LAN com alcance metropolitano, abrangendo no máximo uma
+        cidade. Elas são utilizadas para interligar redes locais de empresas, universidades e outras organizações
+        localizadas em uma cidade.</p>
+
+      <p>Normalmente, as redes MAN são interligadas por meio de internet, TV a cabo, fibra ótica ou rádio, o que permite
+        alcançar altas velocidades de transmissão, muitas vezes na faixa de Gbits.</p>
+
+      <h2>WAN</h2>
+      <a href="#parteVideo"><button onclick="tempo(1140)" class="button-secundary">Ir para trexo da aula</button>
+        <img src="slides_fotos/wam.png" alt="" onclick="tempo(1140)">
+      </a>
+
+      <p>A Wide Area Network (WAN), ou Rede de Longa Distância, é uma rede que abrange áreas maiores do que as redes
+        MAN, estendendo-se para além das fronteiras da cidade, englobando estados, países e até continentes.</p>
+
+      <p>Normalmente, essa rede utiliza linhas de transmissão de dados fornecidas por empresas de telecomunicações,
+        provedores de internet e empresas de cabeamento. A WAN está em constante atualização devido às novas tecnologias
+        de telecomunicações, suportando transmissões de áudio, vídeo, teleconferências, Voz-IP em tempo real (Real Time)
+        e muito mais.</p>
+
+      <p>O limite de velocidade desta rede é determinado pelos computadores ou dispositivos conectados, uma vez que a
+        mídia de transmissão atualmente utilizada é a fibra ótica, que viaja à velocidade da luz.</p>
+
+
+
+      <h2>Redes Domesticas</h2>
+      <a href="#parteVideo"><button onclick="tempo(1211)" class="button-secundary">Ir para trexo da aula</button>
+        <img src="slides_fotos/redesDomesticas.png" alt="" onclick="tempo(1211)">
+      </a>
+      <p>O uso de redes domésticas está em constante expansão. Imagine ter uma rede em sua própria casa, onde você pode
+        compartilhar impressoras, jogar em rede com amigos e familiares, e realizar diversas outras tarefas. Para isso,
+        você precisa de uma rede LAN (Local Area Network), que pode ser conectada por fio ou sem fio (Wireless).</p>
+
+      <p>Além de computadores, notebooks, smartphones e tablets, hoje em dia, dispositivos da Internet das Coisas (IoT)
+        também se conectam a essas redes domésticas, incluindo televisores e geladeiras, entre outros (mais informações
+        sobre este assunto serão abordadas na Unidade V).</p>
+
+      <h2>Redes Wireless</h2>
+      <a href="#parteVideo"><button onclick="tempo(1252)" class="button-secundary">Ir para trexo da aula</button>
+        <img src="slides_fotos/wireless.png" alt="" onclick="tempo(1252)">
+      </a>
+      <p>A rede Wireless, ou sem fio, é um meio de transmissão que conecta dois ou mais dispositivos sem a necessidade
+        de cabos. Essa rede é amplamente utilizada em locais como shoppings, conveniências, supermercados,
+        universidades, organizações e residências.</p>
+
+      <p>Devido à facilidade e praticidade das redes sem fio, elas são uma escolha ideal para redes domésticas.
+        Anteriormente, em nossas residências, tínhamos modems, HUBs e cabos espalhados nos cômodos onde eram necessários
+        computadores. Hoje, com as redes sem fio, podemos usar um único dispositivo, chamado modem roteador, conectando
+        apenas o cabo telefônico e o de energia, e automaticamente estamos interligados.</p>
+
+      <p>Além da comunicação sem fio, existem outras formas de comunicação, como satélite, rádio, código Morse e
+        infravermelho, todas com o mesmo objetivo: a troca de mensagens entre dispositivos. As redes sem fio também são
+        utilizadas fora de residências ou empresas e têm várias classificações, como WPAN, WLAN, WMAN e WWAN, cada uma
+        com detalhes específicos.</p>
+
+
+      <a href="#parteVideo"><button onclick="tempo(1289)" class="button-secundary">Ir para trexo da aula</button>
+        <img src="slides_fotos/wpan.png" alt="" onclick="tempo(1289)">
+      </a>
+
+      <p>As redes WPAN (Wireless Personal Area Network), ou redes pessoais sem fio de curto alcance, são restritas em
+        termos de distância e são frequentemente usadas com tecnologias como infravermelho ou Bluetooth.</p>
+
+      <a href="#parteVideo"><button onclick="tempo(1395)" class="button-secundary">Ir para trexo da aula</button>
+        <img src="slides_fotos/wlan.png" alt="" onclick="tempo(1395)">
+      </a>
+
+      <p>As redes WLAN (Wireless Local Area Network) são projetadas para uso em redes domésticas, redes particulares de
+        organizações, shoppings, restaurantes, entre outros. Essas redes eliminam a necessidade de cabos para conexão
+        com dispositivos e permitem o compartilhamento do sinal Wi-Fi, oferecendo benefícios aos usuários.</p>
+
+      <a href="#parteVideo"><button onclick="tempo(1426)" class="button-secundary">Ir para trexo da aula</button>
+        <img src="slides_fotos/wman.png" alt="" onclick="tempo(1426)">
+      </a>
+
+      <p>As redes WMAN (Wireless Metropolitan Area Network) são semelhantes às redes metropolitanas, mas agora são sem
+        fio e têm um alcance de alguns quilômetros. A comunicação via rádio é predominante nesse tipo de rede.</p>
+      <a href="#parteVideo"><button onclick="tempo(1447)" class="button-secundary">Ir para trexo da aula</button>
+        <img src="slides_fotos/wwam.png" alt="" onclick="tempo(1447)">
+      </a>
+      <p>As redes WWAN (Wireless Wide Area Network), também conhecidas como redes celulares móveis, são usadas para
+        pacotes de internet pelas operadoras de telefonia. Suas principais tecnologias incluem GSM (Global System for
+        Mobile Communication), GPRS (General Packet Radio Service) e UMTS (Universal Mobile Telecommunication System). A
+        tecnologia mais amplamente usada atualmente é o GSM, que evoluiu do sinal 2G para o 4G devido ao avanço das
+        telecomunicações.</p>
+
+      <div id="player5"></div>
+      <section id="parteVideo1">
+        <button class="hero__btn" onclick="inicializarPlayer('9UJ0vUV8llY', 1, 'player5')">Video sobre:
+          PAN LAN MAN e WAN</button>
+
+      </section>
+      <br>
+</body>
+
+
+
+
+
+
+
+
+
+<a href="//sim_mod_1/index.html" class="button button-secundary">Fazer simulado referente ao tópico 1 </a>
+</article>
+<a href="1_modulo_t1.html" class="button button-primary">Tópico 1 </a>
+<a href="1_modulo_t2.html" class="button button-primary">Tópico 2</a>
+<a href="1_modulo_t3.html" class="button button-primary">Tópico 3</a>
+<a href="1_modulo_t4.html" class="button button-primary">Tópico 4</a>
+
+
+</div>
+</section>
+
+
+
+<div class="laptop-slider">
+  <div class="slideshow">
+    <figure><img alt="" src="img/para_aula1.png" width="70%" style="margin-left: 5%;" /></figure>
+    <figure><img alt="" src="img/articles/slid_1.png" width="70%" style="margin-left: 5%;" /></figure>
+    <figure><img alt="" src="img/articles/slid2.png" width="70%" style="margin-left: 5%;" /></figure>
+    <figure><img alt="" src="img/articles/slid3.png" width="70%" style="margin-left: 5%;" /></figure>
+    <figure><img alt="" src="img/articles/slid4.png" width="70%" style="margin-left: 5%;" /></figure>
+    <figure><img alt="" src="img/articles/slid5.png" width="70%" style="margin-left: 5%;" /></figure>
+    <span class="prev" style="display: none;"><i class="fas fa-angle-left fa-4x"></i></span>
+    <span class="next" style="display: none;"><i class="fas fa-angle-right fa-4x"></i></span>
+  </div>
+</div>
+
+
+<section class="quote-container">
+
+  <div class="quote-slideshow">
+    <figure>
+      <h2>Cada vez mais as redes de computadores estão adentrando em nossas residências e nas organizações. Nesse
+        sentido, será possível uma organização
+        ou uma residência ficar sem acesso à rede de comunicação? </h2>
+      <figcaption>
+        Reflita
+      </figcaption>
+    </figure>
+    <figure>
+      <h2>Com a popularização dos dispositivos móveis (celulares, notebooks, smartphones e tablets), e dos
+        dispositivos “vestíveis” que podem ser utilizados
+        por pessoas (tais como: relógios inteligentes, marca passo, entre outros) que
+        se comunicam via rede, de acordo com o site CisoAdviso, 72% do total de
+        dispositivos terão conexões móveis em 2020. Os dispositivos inteligentes
+        serão responsáveis por 98% do tráfego de dados móveis em 2020</h2>
+      <figcaption>
+        saima mais
+      </figcaption>
+    </figure>
+    <span class="prev" style="display:none;"><i class="fas fa-angle-left fa-2x"></i></span>
+    <span class="next" style="display:none;"><i class="fas fa-angle-right fa-2x"></i></span>
+  </div>
+
+
+
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <h2 class="footer__logo">Carlos Souza</h2>
+
+    <p>Esse conteúdo interativo tem o objetivo e auxiliar os alunos nas matérias do curso unicesumar, tendo em vista
+      que as aulas e a apostilas estão separados, ou seja, dessa forma interativa o aluno terá a oportunidade de
+      estudar a apostila junto ao video conceitual, facilitando o aprendizado, e ganhado tempo. </p>
+
+    <p>O autor do site, por estar no 3° semestre do Curso de Análise e desenvolvimento de Sistemas, sentiu a
+      necessidade, de estudar as matérias da faculdade ao mesmo tempo que executo projetos que possam ser uteis para
+      os outros. </p>
+    <p>Caso veja algo que possa melhorar, ficarei muito feliz em estar consertando, favor entrar em contato pelo
+      whatsapp, 419 9123-0585, as correções e atualizações são feitas na hora, caso o desenvolvedor Carlos saiba como
+      concertar, caso precise estudar algo, pode levar um tempo maior, caso já tenha a solução seu código pode ser
+      postado através do whatsapp, caso solicite, o desenvolvedor dará os devidos créditos aqui. </p>
+    <ul class="footer__links">
+      <li><a href="#">List One</a></li>
+      <li><a href="#">Page Two</a></li>
+      <li><a href="#">Design</a></li>
+      <li><a href="#">Work</a></li>
+      <li><a href="#">Contact Me</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script src="/js/menu.js"></script>
+<script src="/js/carousel.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/video.js"></script>
+</body>
+
+</html>
