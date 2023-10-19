@@ -8,7 +8,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-image: url(../templates/img/familia.png); /* Substitua 'seu-fundo.jpg' pelo caminho da sua imagem de fundo */
+            background-image: url(../templates/img/familia.png);
             background-size: cover;
             background-repeat: no-repeat;
             background-attachment: fixed;
@@ -21,7 +21,7 @@
         }
 
         .login-container {
-            background-color: rgba(255, 255, 255, 0.8); /* Adiciona uma camada transparente sobre a imagem de fundo */
+            background-color: rgba(255, 255, 255, 0.8);
             border-radius: 5px;
             padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -62,9 +62,24 @@
         .form-group input[type="submit"]:hover {
             background-color: #0056b3;
         }
+
+        .form-group p {
+            text-align: center;
+        }
+
+        .form-group a {
+            text-decoration: none;
+            color: #007BFF;
+        }
+
+        /* Estilos responsivos para dispositivos móveis */
+        @media (max-width: 600px) {
+            .login-container {
+                width: 100%;
+            }
+        }
     </style>
 </head>
-
 <body>
     <div class="login-container">
         <h2>Login</h2>
@@ -80,7 +95,7 @@
             <div class="form-group">
                 <input type="submit" value="Entrar">
             </div>
-            <p><a href="index.html">cadastre-se</a></p>
+            <p><a href="index.html">Cadastre-se</a></p>
         </form>
     </div>
 
@@ -100,11 +115,9 @@
                     data: JSON.stringify(formData),
                     contentType: "application/json",
                     success: function (response) {
-                        // Redirecione o usuário para a página autorizada
                         window.location.href = response;
                     },
                     error: function (error) {
-                        // Trate erros ou exiba mensagens de erro
                         console.error(error);
                     }
                 });
@@ -112,5 +125,4 @@
         });
     </script>
 </body>
-
 </html>
