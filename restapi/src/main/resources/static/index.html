@@ -21,10 +21,7 @@
                     data.forEach(function (contato) {
                         var newRow = $("<tr>");
                         newRow.append("<td>" + contato.nome + "</td>");
-                        newRow.append("<td>" + contato.senha + "</td>");
-                        newRow.append("<td>" + contato.telefone + "</td>");
-                        newRow.append("<td>" + contato.emal + "</td>");
-                        newRow.append("<td>" + contato.urlAvatar + "</td>");
+                        
                         newRow.append('<td><a href="/editar-usuario/' + contato.id + '" class="editar-usuario">Editar</a> | <a href="/excluir-usuario/' + contato.id + '" class="excluir-usuario">Excluir</a></td>');
                         $("#contactTable tbody").append(newRow);
                     });
