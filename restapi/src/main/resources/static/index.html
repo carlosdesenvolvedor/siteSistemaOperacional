@@ -22,7 +22,7 @@
                         var newRow = $("<tr>");
                         newRow.append("<td>" + contato.nome + "</td>");
                         
-                        //newRow.append('<td><a href="/editar-usuario/' + contato.id + '" class="editar-usuario">Editar</a> | <a href="/excluir-usuario/' + contato.id + '" class="excluir-usuario">Excluir</a></td>');
+                        newRow.append('<td><a href="/editar-usuario/' + contato.id + '" class="editar-usuario">Editar</a> | <a href="/excluir-usuario/' + contato.id + '" class="excluir-usuario">Excluir</a></td>');
                         
                         $("#contactTable tbody").append(newRow);
                     });
@@ -245,12 +245,13 @@
     <table id="contactTable">
         <thead>
             <tr>
-                <th>Usuario</th>     
+                <th>Usuario</th> 
+                <th><a href="loginalterar.html">alterar cadastro</a></th>    
                 
             </tr>
         </thead>
         <tbody>
-            <!-- Os dados serão preenchidos dinamicamente aqui -->
+            <!-- Os dados serão preenchidos dinamicamente aqui -->  
         </tbody>
     </table>
 </div>

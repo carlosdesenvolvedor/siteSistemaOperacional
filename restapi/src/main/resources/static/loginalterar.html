@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url(/sim_mod_1/img/bg-2.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-container {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            width: 300px;
+        }
+
+        .login-container h2 {
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        .form-group input[type="submit"] {
+            width: 100%;
+            background-color: #007BFF;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .form-group input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .form-group p {
+            text-align: center;
+        }
+
+        .form-group a {
+            text-decoration: none;
+            color: #007BFF;
+        }
+
+        .update-form {
+            display: none;
+        }
+
+        h2 {
+            color: blue;
+        }
+
+        /* Estilos responsivos para dispositivos móveis */
+        @media (max-width: 600px) {
+            .login-container {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Entre com seu usuário e senha</h2>
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="username">Usuário:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Senha:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Entrar">
+            </div>
+            <p><a href="#" id="showUpdateForm">Atualizar Cadastro</a></p>
+        </form>
+    </div>
+
+    <div class="update-form">
+        <h2>Atualize Seus Dados</h2>
+        <form id="updateForm">
+            <div class="form-group">
+                <label for="editNome">Nome:</label>
+                <input type="text" id="editNome" name="editNome" required>
+            </div>
+            <div class="form-group">
+                <label for="editSenha">Nova Senha:</label>
+                <input type="password" id="editSenha" name="editSenha" required>
+            </div>
+            <div class="form-group">
+                <label for="editTelefone">Telefone:</label>
+                <input type="tel" id="editTelefone" name="editTelefone" required>
+            </div>
+            <div class="form-group">
+                <label for="editEmal">E-mail:</label>
+                <input type="email" id="editEmal" name="editEmal" required>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Salvar Alterações">
+            </div>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#loginForm").submit(function (event) {
+                event.preventDefault();
+                // Simule a lógica de login com sucesso
+                // Você pode ajustar isso para sua lógica real de login
+                var username = $("#username").val();
+                var password = $("#password").val();
+                if (username === "seu_usuario" && password === "sua_senha") {
+                    // Se o login for bem-sucedido, exiba o formulário de atualização
+                    $(".login-container").hide();
+                    $(".update-form").show();
+                } else {
+                    alert("Login falhou. Verifique seu usuário e senha.");
+                }
+            });
+
+            $("#showUpdateForm").click(function (event) {
+                event.preventDefault();
+                // Exibe o formulário de atualização ao clicar em "Atualizar Cadastro"
+                $(".login-container").hide();
+                $(".update-form").show();
+            });
+
+            // Evento de submissão do formulário de atualização
+            $("#updateForm").submit(function (event) {
+                event.preventDefault();
+                // Simule a lógica de atualização bem-sucedida
+                // Você pode ajustar isso para sua lógica real de atualização
+                alert("Dados atualizados com sucesso!");
+            });
+        });
+    </script>
+</body>
+</html>
