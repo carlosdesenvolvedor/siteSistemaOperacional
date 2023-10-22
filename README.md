@@ -68,7 +68,30 @@ Aqui estão algumas capturas de tela do nosso simulado:
 
 ![Simulado - Feedback](https://github.com/carlosdesenvolvedor/siteSistemaOperacional/blob/main/fotosREADME/TelaResultados.png)
 *Feedback do Simulado*
+![Tela de Login](https://github.com/carlosdesenvolvedor/siteSistemaOperacional/blob/main/imgReadme/login.png)
+*Tela de Login*
 
+Nesta tela, os usuários podem fazer login na aplicação usando suas credenciais.
+
+![Tela de Alteração de Login](https://github.com/carlosdesenvolvedor/siteSistemaOperacional/blob/main/imgReadme/alterar.png)
+*Tela de Alteração de Login*
+
+Aqui, os usuários podem alterar suas informações de login, como nome de usuário e senha, por meio do recurso de edição fornecido pelo sistema.
+## Sobre a API e o Spring Boot
+
+Nossa plataforma é impulsionada pela força da API construída com Spring Boot. O Spring Boot oferece uma estrutura eficiente e robusta que simplifica o desenvolvimento, focando na qualidade e na experiência do usuário.
+
+### Destaques:
+
+- **Simplificação do Desenvolvimento**: Com configurações padrão sensatas e ferramentas de desenvolvimento, o Spring Boot torna o desenvolvimento ágil e eficaz.
+
+- **Segurança Integrada**: Nossa API é protegida por autenticação e autorização robustas, garantindo a segurança dos dados do usuário.
+
+- **Acesso a Banco de Dados**: Utilizamos ferramentas poderosas para armazenamento seguro e eficiente de informações.
+
+- **Testes Automatizados**: Implementamos testes para assegurar o funcionamento sem falhas.
+
+Junte-se a nós nesta jornada de desenvolvimento. Saiba mais em nosso repositório.
 ## Como Contribuir
 
 Valorizamos as contribuições da comunidade. Se você tiver ideias para melhorar nosso site, fique à vontade para abrir uma issue ou enviar um pull request. Estamos abertos a sugestões e colaborações.
